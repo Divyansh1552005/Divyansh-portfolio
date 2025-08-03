@@ -57,11 +57,14 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] ${
+              className={`cursor-pointer hover:text-[#8245ec] transition-colors duration-200 ${
                 activeSection === item.id ? "text-[#8245ec]" : ""
               }`}
             >
-              <button onClick={() => handleMenuItemClick(item.id)}>
+              <button 
+                onClick={() => handleMenuItemClick(item.id)}
+                className="cursor-pointer"
+              >
                 {item.label}
               </button>
             </li>
@@ -74,7 +77,7 @@ const Navbar = () => {
             href="https://github.com/Divyansh1552005"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200 cursor-pointer"
           >
             <FaGithub size={24} />
           </a>
@@ -82,14 +85,35 @@ const Navbar = () => {
             href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200 cursor-pointer"
           >
             <FaLinkedin size={24} />
           </a>
         </div>
 
         {/* Mobile Menu Icon */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center space-x-4">
+          {/* Mobile Social Icons - Left of menu icon */}
+          <div className="flex space-x-3">
+            <a
+              href="https://github.com/Divyansh1552005"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200 cursor-pointer"
+            >
+              <FaGithub size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200 cursor-pointer"
+            >
+              <FaLinkedin size={20} />
+            </a>
+          </div>
+          
+          {/* Menu Toggle Icon */}
           {isOpen ? (
             <FiX
               className="text-3xl text-[#8245ec] cursor-pointer"
@@ -106,38 +130,23 @@ const Navbar = () => {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-90 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-xl border border-gray-700/30 md:hidden">
+          <ul className="flex flex-col items-center space-y-4 py-6 text-gray-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-white ${
+                className={`cursor-pointer hover:text-[#8245ec] transition-colors duration-200 w-full text-center ${
                   activeSection === item.id ? "text-[#8245ec]" : ""
                 }`}
               >
-                <button onClick={() => handleMenuItemClick(item.id)}>
+                <button 
+                  onClick={() => handleMenuItemClick(item.id)}
+                  className="cursor-pointer w-full py-2 px-4 rounded-md hover:bg-[#8245ec]/10"
+                >
                   {item.label}
                 </button>
               </li>
             ))}
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/codingmastr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaGithub size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/tarun-kaushik-553b441a4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaLinkedin size={24} />
-              </a>
-            </div>
           </ul>
         </div>
       )}

@@ -32,7 +32,7 @@ import socketioLogo from './assets/tech_logo/socketio.png';
 import viteLogo from './assets/tech_logo/vite.png';
 
 // Experience Section Logo's
-import companyLogo from './assets/company_logo/company_placeholder.png';
+import companyLogo from './assets/company_logo/outlier.png';
 
 // Education Section Logo's
 import iiitLogo from './assets/education_logo/iiit_logo.png';
