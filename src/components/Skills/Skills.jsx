@@ -38,21 +38,23 @@ const Skills = () => {
               {category.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className={`flex items-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 sm:py-2 sm:px-3 ${
+                  className={`flex items-center bg-transparent border-2 border-gray-700 rounded-3xl h-12 sm:h-14 px-3 transition-all duration-300 cursor-pointer hover:bg-gradient-to-r hover:from-purple-900/40 hover:to-indigo-900/40 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105 ${
                     category.title === 'Core Subjects' 
-                      ? 'justify-start text-left' 
-                      : 'justify-center text-center'
+                      ? 'justify-center text-center' 
+                      : 'justify-center text-center space-x-2'
                   }`}
                 >
-                  <img
-                    src={skill.logo}
-                    alt={`${skill.name} logo`}
-                    className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0"
-                  />
-                  <span className={`text-gray-300 ${
+                  {category.title !== 'Core Subjects' && (
+                    <img
+                      src={skill.logo}
+                      alt={`${skill.name} logo`}
+                      className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0 transition-all duration-300"
+                    />
+                  )}
+                  <span className={`text-gray-300 text-xs sm:text-sm transition-all duration-300 hover:text-white ${
                     category.title === 'Core Subjects' 
-                      ? 'text-xs sm:text-sm' 
-                      : 'text-xs sm:text-sm'
+                      ? 'text-center' 
+                      : 'text-center'
                   }`}>
                     {skill.name}
                   </span>

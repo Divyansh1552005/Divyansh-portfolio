@@ -19,7 +19,7 @@ import gitLogo from './assets/tech_logo/git.png';
 import githubLogo from './assets/tech_logo/github.png';
 import vscodeLogo from './assets/tech_logo/vscode.png';
 import postmanLogo from './assets/tech_logo/postman.png';
-import dockerLogo from './assets/tech_logo/docker.png';
+// import dockerLogo from './assets/tech_logo/docker.png';
 import awsLogo from './assets/tech_logo/aws.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 import netlifyLogo from './assets/tech_logo/netlify.png';
@@ -41,7 +41,7 @@ import bhiwaniLogo from './assets/education_logo/bhiwani_logo.png';
 // Project Section Logo's
 import medicalChatbotLogo from './assets/work_logo/medical_chatbot.png';
 import hospitalManagementLogo from './assets/work_logo/hospital_management.png';
-import pdfToolkitLogo from './assets/work_logo/pdf_toolkit.png';
+import pdfToolkitLogo from './assets/work_logo/pdf-toolkit.png';
 import portfolioLogo from './assets/work_logo/portfolio.png';
 import todoAppLogo from './assets/work_logo/todo_app.png';
 import passwordGenLogo from './assets/work_logo/password_gen.png';
@@ -115,7 +115,6 @@ export const SkillsInfo = [
       { name: 'GitHub', logo: githubLogo },
       { name: 'VS Code', logo: vscodeLogo },
       { name: 'Postman', logo: postmanLogo },
-      { name: 'Docker', logo: dockerLogo },
       { name: 'AWS', logo: awsLogo },
       { name: 'Vercel', logo: vercelLogo },
       { name: 'Netlify', logo: netlifyLogo },
