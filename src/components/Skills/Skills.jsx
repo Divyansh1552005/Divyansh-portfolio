@@ -36,8 +36,11 @@ const Skills = () => {
                 : 'grid-cols-2 sm:grid-cols-3'
             }`}>
               {category.skills.map((skill) => (
-                <div
+                <a
                   key={skill.name}
+                  href={skill.docs}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`flex items-center bg-transparent border-2 border-gray-700 rounded-3xl h-12 sm:h-14 px-3 transition-all duration-300 cursor-pointer hover:bg-gradient-to-r hover:from-blue-900/40 hover:to-sky-900/40 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-105 ${
                     category.title === 'Core Subjects' 
                       ? 'justify-center text-center' 
@@ -58,7 +61,7 @@ const Skills = () => {
                   }`}>
                     {skill.name}
                   </span>
-                </div>
+                </a>
               ))}
             </div>
           </div>
