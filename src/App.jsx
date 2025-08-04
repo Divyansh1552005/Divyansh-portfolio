@@ -20,9 +20,25 @@ function App() {
         <Navbar />
         <About />
         <Skills />
+        
+        {/* Separator Line */}
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+        
         <Experience />
+        
+        {/* Separator Line */}
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+        
         <Work />
+        
+        {/* Separator Line */}
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+        
         <Education />
+        
+        {/* Separator Line */}
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+        
         <Contact />
         <Footer />
       </div>

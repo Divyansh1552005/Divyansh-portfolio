@@ -63,7 +63,7 @@ const Contact = () => {
       </div>
       
       {/* Contact Form */}
-      <div className="mt-4 w-full max-w-md md:max-w-lg lg:max-w-xl bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
+      <div className="mt-4 w-full max-w-md md:max-w-lg lg:max-w-xl bg-[#0f1419] p-6 rounded-lg shadow-lg border border-gray-700">
         <h3 className="text-xl font-semibold text-white text-center">
           Connect With Me <span className="ml-1">🚀</span>
         </h3>
@@ -73,28 +73,28 @@ const Contact = () => {
             name="user_email"
             placeholder="Your Email"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-blue-500"
+            className="w-full p-3 rounded-md bg-[#1a2332] text-white border border-gray-600 focus:outline-none focus:border-blue-500"
           />
           <input
             type="text"
             name="user_name"
             placeholder="Your Name"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-blue-500"
+            className="w-full p-3 rounded-md bg-[#1a2332] text-white border border-gray-600 focus:outline-none focus:border-blue-500"
           />
           <input
             type="text"
             name="subject"
             placeholder="Subject"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-blue-500"
+            className="w-full p-3 rounded-md bg-[#1a2332] text-white border border-gray-600 focus:outline-none focus:border-blue-500"
           />
           <textarea
             name="message"
             placeholder="Message"
             rows="4"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-blue-500"
+            className="w-full p-3 rounded-md bg-[#1a2332] text-white border border-gray-600 focus:outline-none focus:border-blue-500"
           />
           
           {/* Send Button */}
