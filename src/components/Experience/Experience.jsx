@@ -10,7 +10,7 @@ const Experience = () => {
       {/* Section Title */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">EXPERIENCE</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
+        <div className="w-32 h-1 bg-blue-500 mx-auto mt-4"></div>
         <p className="text-gray-400 mt-4 text-lg font-semibold">
           A collection of my work experience and the roles I have taken in
           various organizations
@@ -24,10 +24,10 @@ const Experience = () => {
 
         {/* Currently Looking for Opportunities */}
         <div className="flex flex-col items-center justify-center text-center">
-          <div className="w-full max-w-2xl p-8 sm:p-12 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transition-all duration-300 hover:shadow-purple-500/50">
+          <div className="w-full max-w-2xl p-8 sm:p-12 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] transition-all duration-300 hover:shadow-blue-500/50">
             
             {/* Icon/Visual Element */}
-            <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+            <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-sky-600 rounded-full mx-auto mb-6 flex items-center justify-center">
               <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
               </svg>
@@ -39,14 +39,14 @@ const Experience = () => {
             </h3>
             
             {/* Subtitle */}
-            <h4 className="text-xl sm:text-2xl text-purple-400 mb-6 font-semibold">
+            <h4 className="text-xl sm:text-2xl text-blue-400 mb-6 font-semibold">
               Full-Stack and Gen AI Developer 
             </h4>
             
             {/* Description */}
             <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-              I am actively seeking exciting opportunities in <span className="text-purple-400 font-semibold">full-stack development</span>, 
-              <span className="text-purple-400 font-semibold"> generative AI</span>, and <span className="text-purple-400 font-semibold">cloud technologies</span>. 
+              I am actively seeking exciting opportunities in <span className="text-blue-400 font-semibold">full-stack development</span>, 
+              <span className="text-blue-400 font-semibold"> generative AI</span>, and <span className="text-blue-400 font-semibold">cloud technologies</span>. 
               Ready to contribute to innovative projects and collaborate with dynamic teams to build impactful solutions.
             </p>
 
@@ -62,7 +62,7 @@ const Experience = () => {
                 ].map((skill, index) => (
                   <span
                     key={index}
-                    className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 text-sm rounded-full border border-purple-400 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+                    className="bg-gradient-to-r from-blue-600 to-sky-600 text-white px-4 py-2 text-sm rounded-full border border-blue-400 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
                   >
                     {skill}
                   </span>
@@ -76,8 +76,8 @@ const Experience = () => {
                 href="mailto:officialdslc1552005@gmail.com"
                 className="inline-block text-white px-8 py-3 rounded-full font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
                 style={{
-                  background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-                  boxShadow: '0 0 1px #8245ec, 0 0 8px #8245ec',
+                  background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
+                  boxShadow: '0 0 1px #3b82f6, 0 0 8px #3b82f6',
                 }}
               >
                 Let's Connect
@@ -88,8 +88,8 @@ const Experience = () => {
                 rel="noopener noreferrer"
                 className="inline-block text-white px-8 py-3 rounded-full font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
                 style={{
-                  background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-                  boxShadow: '0 0 1px #8245ec, 0 0 8px #8245ec',
+                  background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
+                  boxShadow: '0 0 1px #3b82f6, 0 0 8px #3b82f6',
                 }}
               >
                 Download Resume

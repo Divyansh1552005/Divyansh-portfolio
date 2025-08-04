@@ -20,7 +20,7 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="text-center">
           {/* Name / Logo */}
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
           Divyansh Sharma
           </h2>
           <p className="text-gray-500 mt-2 text-sm">Full Stack and Gen AI Developer</p>
@@ -38,10 +38,10 @@ const Footer = () => {
               <button
                 key={index}
                 onClick={() => handleScroll(item.id)}
-                className="cursor-pointer hover:text-purple-400 text-sm sm:text-base transition-colors duration-300 relative group"
+                className="cursor-pointer hover:text-blue-400 text-sm sm:text-base transition-colors duration-300 relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </nav>

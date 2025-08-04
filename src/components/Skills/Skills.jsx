@@ -12,7 +12,7 @@ const Skills = () => {
       {/* Section Title */}
       <div className="text-center mb-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-        <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
+        <div className="w-24 h-1 bg-[#3b82f6] mx-auto mt-2"></div>
         <p className="text-gray-400 mt-4 text-lg font-semibold">
           A collection of my technical skills and expertise honed through various projects and experiences
         </p>
@@ -23,7 +23,7 @@ const Skills = () => {
         {SkillsInfo.map((category) => (
           <div
             key={category.title}
-            className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
+            className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white shadow-[0_0_20px_1px_rgba(59,130,246,0.3)]"
           >
             <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
               {category.title}
@@ -38,7 +38,7 @@ const Skills = () => {
               {category.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className={`flex items-center bg-transparent border-2 border-gray-700 rounded-3xl h-12 sm:h-14 px-3 transition-all duration-300 cursor-pointer hover:bg-gradient-to-r hover:from-purple-900/40 hover:to-indigo-900/40 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105 ${
+                  className={`flex items-center bg-transparent border-2 border-gray-700 rounded-3xl h-12 sm:h-14 px-3 transition-all duration-300 cursor-pointer hover:bg-gradient-to-r hover:from-blue-900/40 hover:to-sky-900/40 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-105 ${
                     category.title === 'Core Subjects' 
                       ? 'justify-center text-center' 
                       : 'justify-center text-center space-x-2'

@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
+        isScrolled ? "bg-[#0a0f1c] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
     >
       <div className="text-white py-5 flex justify-between items-center">
@@ -48,11 +48,11 @@ const Navbar = () => {
           className="text-lg font-semibold cursor-pointer hover:opacity-80 transition-opacity duration-300"
           onClick={() => handleMenuItemClick('about')}
         >
-          <span className="text-[#8245ec]">&lt;</span>
+          <span className="text-[#3b82f6]">&lt;</span>
           <span className="text-white">Divyansh </span>
-          <span className="text-[#8245ec]">/</span>
+          <span className="text-[#3b82f6]">/</span>
           <span className="text-white">Sharma</span>
-          <span className="text-[#8245ec]">&gt;</span>
+          <span className="text-[#3b82f6]">&gt;</span>
         </div>
 
         {/* Desktop Menu */}
@@ -60,8 +60,8 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] transition-colors duration-300 relative group ${
-                activeSection === item.id ? "text-[#8245ec]" : ""
+              className={`cursor-pointer hover:text-[#3b82f6] transition-colors duration-300 relative group ${
+                activeSection === item.id ? "text-[#3b82f6]" : ""
               }`}
             >
               <button 
@@ -69,7 +69,7 @@ const Navbar = () => {
                 className="cursor-pointer relative"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#8245ec] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#3b82f6] transition-all duration-300 group-hover:w-full"></span>
               </button>
             </li>
           ))}
@@ -120,12 +120,12 @@ const Navbar = () => {
           {/* Menu Toggle Icon */}
           {isOpen ? (
             <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-[#3b82f6] cursor-pointer"
               onClick={() => setIsOpen(false)}
             />
           ) : (
             <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-[#3b82f6] cursor-pointer"
               onClick={() => setIsOpen(true)}
             />
           )}
@@ -134,21 +134,21 @@ const Navbar = () => {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-90 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-xl border border-gray-700/30 md:hidden">
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#0a0f1c] bg-opacity-90 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-xl border border-gray-700/30 md:hidden">
           <ul className="flex flex-col items-center space-y-4 py-6 text-gray-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-[#8245ec] transition-colors duration-300 w-full text-center relative group ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
+                className={`cursor-pointer hover:text-[#3b82f6] transition-colors duration-300 w-full text-center relative group ${
+                  activeSection === item.id ? "text-[#3b82f6]" : ""
                 }`}
               >
                 <button 
                   onClick={() => handleMenuItemClick(item.id)}
-                  className="cursor-pointer w-full py-2 px-4 rounded-md hover:bg-[#8245ec]/10 relative"
+                  className="cursor-pointer w-full py-2 px-4 rounded-md hover:bg-[#3b82f6]/10 relative"
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-[#8245ec] transition-all duration-300 group-hover:w-1/2"></span>
+                  <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-[#3b82f6] transition-all duration-300 group-hover:w-1/2"></span>
                 </button>
               </li>
             ))}
