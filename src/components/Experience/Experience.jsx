@@ -1,9 +1,148 @@
-import React from 'react'
+import React from "react";
+import { experiences } from "../../constants"; // Import your data
 
-function Experience() {
+const Experience = () => {
   return (
-    <div>Experience</div>
-  )
-}
+    <section
+      id="experience"
+      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
+    >
+      {/* Section Title */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-bold text-white">EXPERIENCE</h2>
+        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
+        <p className="text-gray-400 mt-4 text-lg font-semibold">
+          A collection of my work experience and the roles I have taken in
+          various organizations
+        </p>
+      </div>
 
-export default Experience
+      {/* Experience Timeline */}
+      <div className="relative">
+        {/* Vertical line */}
+        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-white h-full"></div>
+
+        {/* Currently Looking for Opportunities */}
+        <div className="flex flex-col items-center justify-center text-center">
+          <div className="w-full max-w-2xl p-8 sm:p-12 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transform transition-transform duration-300 hover:scale-105">
+            
+            {/* Icon/Visual Element */}
+            <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+              <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
+              </svg>
+            </div>
+
+            {/* Title */}
+            <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Open to New Opportunities
+            </h3>
+            
+            {/* Subtitle */}
+            <h4 className="text-xl sm:text-2xl text-purple-400 mb-6 font-semibold">
+              Full-Stack and Gen AI Developer 
+            </h4>
+            
+            {/* Description */}
+            <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+              I am actively seeking exciting opportunities in <span className="text-purple-400 font-semibold">full-stack development</span>, 
+              <span className="text-purple-400 font-semibold"> generative AI</span>, and <span className="text-purple-400 font-semibold">cloud technologies</span>. 
+              Ready to contribute to innovative projects and collaborate with dynamic teams to build impactful solutions.
+            </p>
+
+            {/* Skills/Interests */}
+            <div className="mb-8">
+              <h5 className="font-semibold text-white mb-4 text-lg">Areas of Interest:</h5>
+              <div className="flex flex-wrap justify-center gap-3">
+                {[
+                  'MERN Stack',
+                  'Generative AI',
+                  'Cloud Computing',
+                  'System Design',
+                ].map((skill, index) => (
+                  <span
+                    key={index}
+                    className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 text-sm rounded-full border border-purple-400 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="mailto:officialdslc1552005@gmail.com"
+                className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+              >
+                Let's Connect
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1iWRlRQvPRE6LgJaNOQVpqk3_bpezbf3t/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+              >
+                Download Resume
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Commented out previous experience data - uncomment when you have work experience */}
+        {/* {experiences.map((experience, index) => (
+          <div
+            key={experience.id}
+            className={`flex flex-col sm:flex-row items-center mb-16 ${
+              index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
+            }`}
+          >
+            <div
+              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
+                index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
+              } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
+            >
+              <div className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
+                  <img
+                    src={experience.img}
+                    alt={experience.company}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-semibold text-white">
+                      {experience.role}
+                    </h3>
+                    <h4 className="text-md sm:text-sm text-gray-300">
+                      {experience.company}
+                    </h4>
+                  </div>
+                  <p className="text-sm text-gray-500 mt-2">{experience.date}</p>
+                </div>
+              </div>
+              <p className="mt-4 text-gray-400">{experience.desc}</p>
+              <div className="mt-4">
+                <h5 className="font-medium text-white">Skills:</h5>
+                <ul className="flex flex-wrap mt-2">
+                  {experience.skills.map((skill, index) => (
+                    <li
+                      key={index}
+                      className="bg-[#8245ec] text-gray-300 px-4 py-1 text-xs sm:text-sm rounded-lg mr-2 mb-2 border border-gray-400"
+                    >
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))} */}
+      </div>
+    </section>
+  );
+};
+
+export default Experience;

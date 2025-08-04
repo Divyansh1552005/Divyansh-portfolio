@@ -44,7 +44,10 @@ const Navbar = () => {
     >
       <div className="text-white py-5 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-lg font-semibold cursor-pointer">
+        <div 
+          className="text-lg font-semibold cursor-pointer hover:opacity-80 transition-opacity duration-300"
+          onClick={() => handleMenuItemClick('about')}
+        >
           <span className="text-[#8245ec]">&lt;</span>
           <span className="text-white">Divyansh </span>
           <span className="text-[#8245ec]">/</span>
@@ -57,15 +60,16 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] transition-colors duration-200 ${
+              className={`cursor-pointer hover:text-[#8245ec] transition-colors duration-300 relative group ${
                 activeSection === item.id ? "text-[#8245ec]" : ""
               }`}
             >
               <button 
                 onClick={() => handleMenuItemClick(item.id)}
-                className="cursor-pointer"
+                className="cursor-pointer relative"
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#8245ec] transition-all duration-300 group-hover:w-full"></span>
               </button>
             </li>
           ))}
@@ -77,7 +81,7 @@ const Navbar = () => {
             href="https://github.com/Divyansh1552005"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200 cursor-pointer"
+            className="text-gray-300 hover:text-white hover:drop-shadow-[0_0_8px_rgba(156,163,175,0.8)] transition-all duration-300 cursor-pointer"
           >
             <FaGithub size={24} />
           </a>
@@ -85,7 +89,7 @@ const Navbar = () => {
             href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200 cursor-pointer"
+            className="text-gray-300 hover:text-blue-500 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)] transition-all duration-300 cursor-pointer"
           >
             <FaLinkedin size={24} />
           </a>
@@ -99,7 +103,7 @@ const Navbar = () => {
               href="https://github.com/Divyansh1552005"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200 cursor-pointer"
+              className="text-gray-300 hover:text-white hover:drop-shadow-[0_0_6px_rgba(156,163,175,0.8)] transition-all duration-300 cursor-pointer"
             >
               <FaGithub size={20} />
             </a>
@@ -107,7 +111,7 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200 cursor-pointer"
+              className="text-gray-300 hover:text-blue-500 hover:drop-shadow-[0_0_6px_rgba(59,130,246,0.8)] transition-all duration-300 cursor-pointer"
             >
               <FaLinkedin size={20} />
             </a>
@@ -135,15 +139,16 @@ const Navbar = () => {
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-[#8245ec] transition-colors duration-200 w-full text-center ${
+                className={`cursor-pointer hover:text-[#8245ec] transition-colors duration-300 w-full text-center relative group ${
                   activeSection === item.id ? "text-[#8245ec]" : ""
                 }`}
               >
                 <button 
                   onClick={() => handleMenuItemClick(item.id)}
-                  className="cursor-pointer w-full py-2 px-4 rounded-md hover:bg-[#8245ec]/10"
+                  className="cursor-pointer w-full py-2 px-4 rounded-md hover:bg-[#8245ec]/10 relative"
                 >
                   {item.label}
+                  <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-[#8245ec] transition-all duration-300 group-hover:w-1/2"></span>
                 </button>
               </li>
             ))}

@@ -28,8 +28,10 @@ import openaiLogo from './assets/tech_logo/openai.png';
 import pineconeLogo from './assets/tech_logo/pinecone.png';
 import appwriteLogo from './assets/tech_logo/appwrite.png';
 import linuxLogo from './assets/tech_logo/linux.png';
-import socketioLogo from './assets/tech_logo/socketio.png';
+import socketioLogo from './assets/tech_logo/socket.io.png';
 import viteLogo from './assets/tech_logo/vite.png';
+import reacthookform from './assets/tech_logo/react_hook_form.png'
+
 
 // Experience Section Logo's
 import companyLogo from './assets/company_logo/outlier.png';
@@ -58,7 +60,7 @@ export const SkillsInfo = [
       { name: 'Redux', logo: reduxLogo },
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
       { name: 'React Router', logo: reactjsLogo },
-      { name: 'React Hook Form', logo: reactjsLogo },
+      { name: 'React Hook Form', logo: reacthookform },
       { name: 'Vite', logo: viteLogo },
     ],
   },
@@ -85,14 +87,11 @@ export const SkillsInfo = [
     ],
   },
   {
-    title: 'Generative AI & ML',
+    title: 'Generative AI',
     skills: [
       { name: 'LangChain', logo: langchainLogo },
       { name: 'OpenAI', logo: openaiLogo },
       { name: 'Pinecone', logo: pineconeLogo },
-      { name: 'Vector Databases', logo: pineconeLogo },
-      { name: 'RAG Systems', logo: langchainLogo },
-      { name: 'NLP', logo: pythonLogo },
     ],
   },
   {
@@ -103,9 +102,9 @@ export const SkillsInfo = [
       { name: 'Computer Networks', logo: linuxLogo },
       { name: 'Object-Oriented Programming', logo: cppLogo },
       { name: 'RDBMS', logo: mysqlLogo },
-      { name: 'Computer Organisation & Architecture', logo: cppLogo },
+      { name: 'Computer Organisation', logo: cppLogo },
       { name: 'Theory of Computation', logo: cppLogo },
-      { name: 'Digital System Design', logo: cppLogo },
+      { name: 'System Design', logo: cppLogo },
     ],
   },
   {
