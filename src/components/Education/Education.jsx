@@ -5,7 +5,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
+      className="py-16 pb-16 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
     >
       {/* Section Title */}
       <div className="text-center mb-16">
@@ -47,11 +47,11 @@ const Education = () => {
               {/* Flex container for image and text */}
               <div className="flex items-center space-x-6">
                 {/* School Logo/Image */}
-                <div className="w-24 h-16 bg-white rounded-md overflow-hidden">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full overflow-hidden flex-shrink-0">
                   <img
                     src={edu.img}
                     alt={edu.school}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain p-2"
                   />
                 </div>
 
@@ -70,7 +70,7 @@ const Education = () => {
                 </div>
               </div>
 
-              <p className="mt-4 text-gray-400 font-bold">Grade: {edu.grade}</p>
+              <p className="mt-4 text-gray-400 font-bold">Grade: <span className="text-purple-400">{edu.grade}</span></p>
               <p className="mt-4 text-gray-400">{edu.desc}</p>
             </div>
           </div>

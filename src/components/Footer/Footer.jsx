@@ -11,8 +11,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0a0a0a] text-white py-12 px-[12vw] md:px-[7vw] lg:px-[20vw]">
-      <div className="container mx-auto">
+    <div>
+      {/* Separator Line */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+      
+      <footer className="bg-[#0a0a0a] text-white py-12 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+        <div className="container mx-auto">
         {/* Main Footer Content */}
         <div className="text-center">
           {/* Name / Logo */}
@@ -88,9 +92,8 @@ const Footer = () => {
             </div> */}
           </div>
         </div>
-      </div>
-    </footer>
+        </div>
+      </footer>
+    </div>
   );
-};
-
-export default Footer;
+};export default Footer;

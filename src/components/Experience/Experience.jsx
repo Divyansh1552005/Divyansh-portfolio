@@ -5,7 +5,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
+      className="py-16 pb-16 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
     >
       {/* Section Title */}
       <div className="text-center mb-16">
@@ -24,7 +24,7 @@ const Experience = () => {
 
         {/* Currently Looking for Opportunities */}
         <div className="flex flex-col items-center justify-center text-center">
-          <div className="w-full max-w-2xl p-8 sm:p-12 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transform transition-transform duration-300 hover:scale-105">
+          <div className="w-full max-w-2xl p-8 sm:p-12 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transition-all duration-300 hover:shadow-purple-500/50">
             
             {/* Icon/Visual Element */}
             <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full mx-auto mb-6 flex items-center justify-center">
@@ -74,7 +74,11 @@ const Experience = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:officialdslc1552005@gmail.com"
-                className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+                className="inline-block text-white px-8 py-3 rounded-full font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
+                style={{
+                  background: 'linear-gradient(90deg, #8245ec, #a855f7)',
+                  boxShadow: '0 0 1px #8245ec, 0 0 8px #8245ec',
+                }}
               >
                 Let's Connect
               </a>
@@ -82,7 +86,11 @@ const Experience = () => {
                 href="https://drive.google.com/file/d/1iWRlRQvPRE6LgJaNOQVpqk3_bpezbf3t/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                className="inline-block text-white px-8 py-3 rounded-full font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
+                style={{
+                  background: 'linear-gradient(90deg, #8245ec, #a855f7)',
+                  boxShadow: '0 0 1px #8245ec, 0 0 8px #8245ec',
+                }}
               >
                 Download Resume
               </a>
