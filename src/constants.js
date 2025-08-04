@@ -181,12 +181,12 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: iiitLogo,
-    school: "Indian Institute of Information Technology Una",
-    date: "Aug 2023 - Jul 2027",
-    grade: "Current CGPA: 8.2",
-    desc: "Currently pursuing Bachelor of Technology in Computer Science from IIIT Una. Gaining comprehensive knowledge in computer science fundamentals, software engineering, and emerging technologies. Actively participating in coding competitions, hackathons, and technical workshops. Developing strong foundation in algorithms, data structures, and system design.",
-    degree: "Bachelor of Technology - BTech, Computer Science",
+    img: bhiwaniLogo,
+    school: "Bhiwani Public School",
+    date: "Mar 2019 - Mar 2020",
+    grade: "96.8%",
+    desc: "Completed High School (Class 10th) with outstanding academic performance across all core subjects. Achieved the following scores: Mathematics (100), Science (95), English (94), Social Science (97), Hindi (98), and Information Technology (96) as an additional subject. Demonstrated a strong aptitude in both STEM and humanities subjects.",
+    degree: "CBSE(X), All Subjects with Information Technology",
   },
   {
     id: 1,
@@ -199,12 +199,12 @@ export const education = [
   },
   {
     id: 2,
-    img: bhiwaniLogo,
-    school: "Bhiwani Public School",
-    date: "Mar 2019 - Mar 2020",
-    grade: "96.8%",
-    desc: "Completed High School (Class 10th) with outstanding academic performance across all core subjects. Achieved the following scores: Mathematics (100), Science (95), English (94), Social Science (97), Hindi (98), and Information Technology (96) as an additional subject. Demonstrated a strong aptitude in both STEM and humanities subjects.",
-    degree: "CBSE(X), All Subjects with Information Technology",
+    img: iiitLogo,
+    school: "Indian Institute of Information Technology Una",
+    date: "Aug 2023 - Jul 2027",
+    grade: "Current CGPA: 8.66",
+    desc: "Currently pursuing Bachelor of Technology in Computer Science from IIIT Una. Gaining comprehensive knowledge in computer science fundamentals, software engineering, and emerging technologies. Actively participating in coding competitions, hackathons, and technical workshops. Developing strong foundation in algorithms, data structures, and system design.",
+    degree: "Bachelor of Technology - BTech, Computer Science",
   },
 ];
 
