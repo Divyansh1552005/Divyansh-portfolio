@@ -9,7 +9,7 @@ const About = () => {
 
   const texts = [
     'Fullstack Developer',
-    'Gen AI Developer', 
+    'Gen AI Developer',
     'Cloud Architect'
   ];
 
@@ -47,12 +47,12 @@ const About = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
             Hi, I am
           </h1>
-          
+
           {/* Name */}
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight bg-gradient-to-r from-blue-400 via-cyan-400 to-sky-400 bg-clip-text text-transparent">
             Divyansh Sharma
           </h2>
-          
+
           {/* Skills Heading with Custom Typing Effect */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#3b82f6] leading-tight">
             <span className="text-white">I am a </span>
@@ -61,15 +61,15 @@ const About = () => {
               <span className="animate-pulse text-[#3b82f6]">|</span>
             </span>
           </h3>
-          
+
           {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a Full-Stack Developer specializing in the MERN stack and modern web technologies. I enjoy building clean, functional applications with a focus on backend development and creating smooth user experiences. Currently exploring AI integration and cloud technologies to build scalable solutions.
+          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed text-justify">
+            I am a Full-Stack Developer specializing in the MERN stack and modern web technologies, with a strong focus on backend development and building clean, functional applications that deliver smooth user experiences. Alongside web development, I enjoy working on Linux development, creating desktop applications, and exploring system administration. Currently, I am expanding my skills in AI integration and cloud technologies to design and implement scalable, future-ready solutions.
           </p>
-          
+
           {/* Resume Button */}
           <a
-            href="https://drive.google.com/file/d/1iWRlRQvPRE6LgJaNOQVpqk3_bpezbf3t/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1BbydskQ4dldy-QOdRZt8rFbAJ4qBykAO/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
@@ -81,7 +81,7 @@ const About = () => {
             DOWNLOAD CV
           </a>
         </div>
-        
+
         {/* Right Side */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-blue-600 rounded-full">
