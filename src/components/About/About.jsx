@@ -67,19 +67,30 @@ const About = () => {
             I am a Full-Stack Developer specializing in the MERN stack and modern web technologies, with a strong focus on backend development and building clean, functional applications that deliver smooth user experiences. Alongside web development, I enjoy working on Linux development, creating desktop applications, and exploring system administration. Currently, I am expanding my skills in AI integration and cloud technologies to design and implement scalable, future-ready solutions.
           </p>
 
-          {/* Resume Button */}
-          <a
-            href="https://drive.google.com/file/d/1BbydskQ4dldy-QOdRZt8rFbAJ4qBykAO/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
-            style={{
-              background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
-              boxShadow: '0 0 1px #3b82f6, 0 0 8px #3b82f6',
-            }}
-          >
-            DOWNLOAD CV
-          </a>
+          {/* Resume and Blog Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mt-5">
+            <a
+              href="https://drive.google.com/file/d/1BbydskQ4dldy-QOdRZt8rFbAJ4qBykAO/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
+              style={{
+                background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
+                boxShadow: '0 0 1px #3b82f6, 0 0 8px #3b82f6',
+              }}
+            >
+              DOWNLOAD CV
+            </a>
+            
+            <a
+              href="https://divyanshblogs.hashnode.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg border-2 border-blue-500 hover:bg-blue-500"
+            >
+              READ MY BLOG
+            </a>
+          </div>
         </div>
 
         {/* Right Side */}

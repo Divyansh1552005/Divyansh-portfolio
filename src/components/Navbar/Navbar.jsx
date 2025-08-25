@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { SiHashnode } from "react-icons/si";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +35,7 @@ const Navbar = () => {
     { id: "experience", label: "Experience" },
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },
+    { id: "contact", label: "Contact" },
   ];
 
   return (
@@ -86,12 +88,28 @@ const Navbar = () => {
             <FaGithub size={24} />
           </a>
           <a
+            href="mailto:officialdslc1552005@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-red-400 hover:drop-shadow-[0_0_8px_rgba(248,113,113,0.8)] transition-all duration-300 cursor-pointer"
+          >
+            <FaEnvelope size={24} />
+          </a>
+          <a
             href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-blue-500 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)] transition-all duration-300 cursor-pointer"
           >
             <FaLinkedin size={24} />
+          </a>
+          <a
+            href="https://divyanshblogs.hashnode.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-blue-400 hover:drop-shadow-[0_0_8px_rgba(96,165,250,0.8)] transition-all duration-300 cursor-pointer"
+          >
+            <SiHashnode size={24} />
           </a>
         </div>
 
@@ -108,12 +126,28 @@ const Navbar = () => {
               <FaGithub size={20} />
             </a>
             <a
+              href="mailto:officialdslc1552005@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-red-400 hover:drop-shadow-[0_0_6px_rgba(248,113,113,0.8)] transition-all duration-300 cursor-pointer"
+            >
+              <FaEnvelope size={20} />
+            </a>
+            <a
               href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-blue-500 hover:drop-shadow-[0_0_6px_rgba(59,130,246,0.8)] transition-all duration-300 cursor-pointer"
             >
               <FaLinkedin size={20} />
+            </a>
+            <a
+              href="https://divyanshblogs.hashnode.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-blue-400 hover:drop-shadow-[0_0_6px_rgba(96,165,250,0.8)] transition-all duration-300 cursor-pointer"
+            >
+              <SiHashnode size={20} />
             </a>
           </div>
           
