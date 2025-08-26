@@ -83,7 +83,7 @@ const Experience = () => {
                 Let's Connect
               </a>
               <a
-                href="https://drive.google.com/file/d/1iWRlRQvPRE6LgJaNOQVpqk3_bpezbf3t/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1BbydskQ4dldy-QOdRZt8rFbAJ4qBykAO/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block text-white px-8 py-3 rounded-full font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
