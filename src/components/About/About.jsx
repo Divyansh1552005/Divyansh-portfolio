@@ -64,7 +64,7 @@ const About = () => {
 
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed text-justify">
-            I am a Full-Stack Developer specializing in the MERN stack and modern web technologies, with a strong focus on backend development and building clean, functional applications that deliver smooth user experiences. Alongside web development, I enjoy working on Linux development, creating desktop applications, and exploring system administration. Currently, I am expanding my skills in AI integration and cloud technologies to design and implement scalable, future-ready solutions.
+            I love creating what is in my mind and things that can help me or others. I am a Full-Stack Developer who works mainly with the MERN stack, focusing on backend development and building clean, reliable applications. I also enjoy exploring Linux and learning how its systems work. Recently, I have been learning about Generative AI and cloud technologies to build projects that can scale well.
           </p>
 
           {/* Resume and Blog Buttons */}
@@ -79,7 +79,7 @@ const About = () => {
                 boxShadow: '0 0 1px #3b82f6, 0 0 8px #3b82f6',
               }}
             >
-              DOWNLOAD CV
+              View My Resume
             </a>
             
             <a
@@ -88,7 +88,7 @@ const About = () => {
               rel="noopener noreferrer"
               className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg border-2 border-blue-500 hover:bg-blue-500"
             >
-              READ MY BLOG
+              Read My Blog
             </a>
           </div>
         </div>
