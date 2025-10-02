@@ -116,7 +116,7 @@ export const SkillsInfo = [
       { name: 'Postman', logo: postmanLogo, docs: 'https://learning.postman.com/docs/getting-started/introduction/' },
       { name: 'AWS', logo: awsLogo, docs: 'https://docs.aws.amazon.com/' },
       { name: 'Vercel', logo: vercelLogo, docs: 'https://vercel.com/docs' },
-      { name: 'Netlify', logo: netlifyLogo, docs: 'https://docs.netlify.com/' },
+      // { name: 'Netlify', logo: netlifyLogo, docs: 'https://docs.netlify.com/' },
       { name: 'Linux', logo: linuxLogo, docs: 'https://www.kernel.org/doc/html/latest/' },
     ],
   },

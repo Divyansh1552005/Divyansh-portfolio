@@ -1,71 +1,78 @@
-// src/components/Skills/Skills.jsx
 import React from "react";
 import { SkillsInfo } from "../../constants";
 
 const Skills = () => {
-
   return (
     <section
       id="skills"
-      className="py-16 pb-16 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
+      className="relative py-16 px-4 sm:px-6 lg:px-8 font-sans"
+      aria-labelledby="skills-heading"
     >
-      {/* Section Title */}
-      <div className="text-center mb-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-        <div className="w-24 h-1 bg-[#3b82f6] mx-auto mt-2"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          A collection of my technical skills and expertise honed through various projects and experiences
-        </p>
-      </div>
+      <div className="max-w-6xl mx-auto">
+        {/* Section Title */}
+        <div className="text-center mb-12">
+          <h2 id="skills-heading" className="text-3xl sm:text-4xl font-bold text-white mb-3">
+            Skills & Expertise
+          </h2>
+          <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
+            A comprehensive showcase of my technical proficiencies and domain knowledge
+          </p>
+        </div>
 
-      {/* Skill Categories */}
-      <div className="flex flex-wrap gap-1 lg:gap-5 py-10 justify-between">
-        {SkillsInfo.map((category) => (
-          <div
-            key={category.title}
-            className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white shadow-[0_0_20px_1px_rgba(59,130,246,0.3)]"
-          >
-            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
-              {category.title}
-            </h3>
+        {/* Skill Categories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {SkillsInfo.map((category) => {
+            const isCoreSubjects = category.title === 'Core Subjects';
+            const gridCols = isCoreSubjects 
+              ? 'grid-cols-2 sm:grid-cols-3' 
+              : 'grid-cols-3 sm:grid-cols-4';
 
-            {/* Skill Items */}
-            <div className={`grid gap-3 w-full ${
-              category.title === 'Core Subjects' 
-                ? 'grid-cols-1 sm:grid-cols-2' 
-                : 'grid-cols-2 sm:grid-cols-3'
-            }`}>
-              {category.skills.map((skill) => (
-                <a
-                  key={skill.name}
-                  href={skill.docs}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`flex items-center bg-transparent border-2 border-gray-700 rounded-3xl h-12 sm:h-14 px-3 transition-all duration-300 cursor-pointer hover:bg-gradient-to-r hover:from-blue-900/40 hover:to-sky-900/40 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-105 ${
-                    category.title === 'Core Subjects' 
-                      ? 'justify-center text-center' 
-                      : 'justify-center text-center space-x-2'
-                  }`}
-                >
-                  {category.title !== 'Core Subjects' && (
-                    <img
-                      src={skill.logo}
-                      alt={`${skill.name} logo`}
-                      className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0 transition-all duration-300"
-                    />
-                  )}
-                  <span className={`text-gray-300 text-xs sm:text-sm transition-all duration-300 hover:text-white ${
-                    category.title === 'Core Subjects' 
-                      ? 'text-center' 
-                      : 'text-center'
-                  }`}>
-                    {skill.name}
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-        ))}
+            return (
+              <article
+                key={category.title}
+                className="bg-gray-900 rounded-2xl p-6 border border-gray-700"
+              >
+                {/* Category Header */}
+                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6 text-center">
+                  {category.title}
+                </h3>
+
+                {/* Skills Grid */}
+                <div className={`grid gap-3 ${gridCols}`}>
+                  {category.skills.map((skill) => (
+                    <a
+                      key={skill.name}
+                      href={skill.docs}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex flex-col items-center justify-center gap-2 bg-[#0f1629] rounded-xl p-3 border border-[#1e2749] hover:border-[#3b82f6] transition-all duration-300 hover:bg-[#141b3a] focus:outline-none focus:ring-2 focus:ring-[#3b82f6] focus:ring-offset-2 focus:ring-offset-[#0a0e27]"
+                      aria-label={`Learn more about ${skill.name}`}
+                    >
+                      {/* Skill Logo */}
+                      {!isCoreSubjects && skill.logo && (
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
+                          <img
+                            src={skill.logo}
+                            alt=""
+                            className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+                      
+                      {/* Skill Name */}
+                      <span className={`text-gray-300 group-hover:text-white font-medium transition-colors duration-300 text-center leading-tight ${
+                        isCoreSubjects ? 'text-xs sm:text-sm' : 'text-xs'
+                      }`}>
+                        {skill.name}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
