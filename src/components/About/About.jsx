@@ -40,7 +40,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-8 md:mt-12 lg:mt-16"
+      className="pt-4 pb-16 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-8 md:mt-12 lg:mt-16"
     >
       <div className="flex flex-col-reverse md:flex-row justify-between items-center">
         {/* Left Side */}
@@ -116,7 +116,13 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      
     </section>
+     
+
+     
+    
   );
 };
 

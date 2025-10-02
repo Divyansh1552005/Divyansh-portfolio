@@ -3,18 +3,31 @@ import { SkillsInfo } from "../../constants";
 
 const Skills = () => {
   return (
+
+    <>
+
+    <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
     <section
       id="skills"
       className="relative py-16 px-4 sm:px-6 lg:px-8 font-sans"
       aria-labelledby="skills-heading"
     >
+      
+      
+      
+
       <div className="max-w-6xl mx-auto">
+
+        
+        
         {/* Section Title */}
         <div className="text-center mb-12">
           <h2 id="skills-heading" className="text-3xl sm:text-4xl font-bold text-white mb-3">
-            Skills & Expertise
+            SKILLS & TECHNOLOGIES
+            <div className="w-32 h-1 bg-blue-500 mx-auto mt-4"></div>
           </h2>
-          <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
+          
+          <p className="text-gray-400 mt-4 text-lg font-semibold">
             A comprehensive showcase of my technical proficiencies and domain knowledge
           </p>
         </div>
@@ -75,6 +88,10 @@ const Skills = () => {
         </div>
       </div>
     </section>
+
+    
+
+    </>
   );
 };
 

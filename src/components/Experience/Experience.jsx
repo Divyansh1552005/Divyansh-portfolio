@@ -22,8 +22,8 @@ const Experience = () => {
 
       {/* Experience Timeline */}
       <div className="relative">
-        {/* Vertical line */}
-        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-white h-full"></div>
+        {/* Vertical line - hidden on mobile, visible on desktop */}
+        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-white h-full hidden sm:block"></div>
 
         {/* Currently Looking for Opportunities */}
         <div className="flex flex-col items-center justify-center text-center">
@@ -93,7 +93,7 @@ const Experience = () => {
                   background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
                 }}
               >
-                Download Resume
+                View Resume
               </a>
             </div>
           </div>

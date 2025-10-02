@@ -59,8 +59,8 @@ const Education = () => {
 
         {/* Mobile: Vertical Layout (Original) */}
         <div className="md:hidden">
-          {/* Vertical line */}
-          <div className="absolute left-0 transform -translate-x-1/2 w-1 bg-white h-full"></div>
+          {/* Vertical line - hidden on mobile */}
+          <div className="absolute left-0 transform -translate-x-1/2 w-1 bg-white h-full hidden"></div>
 
           {education.map((edu, index) => (
             <div
