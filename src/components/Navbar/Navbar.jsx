@@ -92,7 +92,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="p-2 rounded-full text-gray-300 hover:text-white hover:bg-white/10 hover:scale-110 transition-all duration-300 cursor-pointer"
           >
-            <FaGithub size={18} />
+            <FaGithub size={22} />
           </a>
           <a
             href="mailto:officialdslc1552005@gmail.com"
@@ -100,7 +100,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="p-2 rounded-full text-gray-300 hover:text-red-400 hover:bg-red-400/10 hover:scale-110 transition-all duration-300 cursor-pointer"
           >
-            <FaEnvelope size={18} />
+            <FaEnvelope size={22} />
           </a>
           <a
             href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
@@ -108,7 +108,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="p-2 rounded-full text-gray-300 hover:text-blue-500 hover:bg-blue-500/10 hover:scale-110 transition-all duration-300 cursor-pointer"
           >
-            <FaLinkedin size={18} />
+            <FaLinkedin size={22} />
           </a>
           <a
             href="https://divyanshblogs.hashnode.dev/"
@@ -116,7 +116,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="p-2 rounded-full text-gray-300 hover:text-blue-400 hover:bg-blue-400/10 hover:scale-110 transition-all duration-300 cursor-pointer"
           >
-            <SiHashnode size={18} />
+            <SiHashnode size={22} />
           </a>
         </div>
 
@@ -129,7 +129,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="p-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
             >
-              <FaGithub size={16} />
+              <FaGithub size={18} />
             </a>
             <a
               href="mailto:officialdslc1552005@gmail.com"
@@ -137,7 +137,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="p-1.5 rounded-full text-gray-300 hover:text-red-400 hover:bg-red-400/10 transition-all duration-300"
             >
-              <FaEnvelope size={16} />
+              <FaEnvelope size={18} />
             </a>
             <a
               href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
@@ -145,7 +145,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="p-1.5 rounded-full text-gray-300 hover:text-blue-500 hover:bg-blue-500/10 transition-all duration-300"
             >
-              <FaLinkedin size={16} />
+              <FaLinkedin size={18} />
             </a>
             <a
               href="https://divyanshblogs.hashnode.dev/"

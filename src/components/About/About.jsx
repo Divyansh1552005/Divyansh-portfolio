@@ -69,12 +69,12 @@ const About = () => {
           </p>
 
           {/* Resume and Blog Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-5">
+          <div className="flex flex-col sm:flex-row gap-4 mt-5 items-center sm:items-start">
             <a
               href="https://drive.google.com/file/d/1BbydskQ4dldy-QOdRZt8rFbAJ4qBykAO/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
+              className="inline-flex items-center justify-center gap-2 text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-auto"
               style={{
                 background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
               }}
@@ -87,7 +87,7 @@ const About = () => {
               href="https://divyanshblogs.hashnode.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg border-2 border-blue-500 hover:bg-blue-500"
+              className="inline-flex items-center justify-center text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg border-2 border-blue-500 hover:bg-blue-500 w-full sm:w-auto"
             >
               Read My Blog
             </a>

@@ -92,10 +92,8 @@ const Experience = () => {
                   background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
                 }}
               >
-                Download Resume 
-                
+                Download Resume
               </a>
-              
             </div>
           </div>
         </div>
