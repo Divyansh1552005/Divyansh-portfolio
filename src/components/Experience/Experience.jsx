@@ -30,7 +30,7 @@ const Experience = () => {
           <div className="w-full max-w-2xl p-8 sm:p-12 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] transition-all duration-300 hover:shadow-blue-500/50">
 
             {/* Icon/Visual Element */}
-            
+
             <div className="flex justify-center">
               <FiBriefcase size={60} className="text-white-500 mb-4" />
             </div>
@@ -47,9 +47,10 @@ const Experience = () => {
 
             {/* Description */}
             <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-              I am actively seeking exciting opportunities in <span className="text-blue-400 font-semibold">full-stack development</span>,
-              <span className="text-blue-400 font-semibold"> generative AI</span>, and <span className="text-blue-400 font-semibold">cloud technologies</span>.
-              Ready to contribute to innovative projects and collaborate with dynamic teams to build impactful solutions.
+              I am actively seeking opportunities in <span className="text-blue-400 font-semibold">full-stack development</span>,
+              <span className="text-blue-400 font-semibold">generative AI</span>, and <span className="text-blue-400 font-semibold">cloud technologies</span>.
+              Eager to contribute to real world projects and collaborate with teams.
+
             </p>
 
             {/* Skills/Interests */}
