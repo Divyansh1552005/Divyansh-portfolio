@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FiExternalLink } from 'react-icons/fi';
 import profileImage from '../../assets/profile.png';
 
 const About = () => {
@@ -73,12 +74,13 @@ const About = () => {
               href="https://drive.google.com/file/d/1BbydskQ4dldy-QOdRZt8rFbAJ4qBykAO/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
+              className="inline-flex items-center gap-2 text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
               style={{
                 background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
               }}
             >
               View My Resume
+              <FiExternalLink size={20} />
             </a>
             
             <a
