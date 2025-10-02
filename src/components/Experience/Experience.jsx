@@ -1,6 +1,8 @@
 import React from "react";
 import { experiences } from "../../constants"; // Import your data
 import { FiExternalLink } from "react-icons/fi";
+import { FiBriefcase } from "react-icons/fi";
+
 
 const Experience = () => {
   return (
@@ -26,28 +28,27 @@ const Experience = () => {
         {/* Currently Looking for Opportunities */}
         <div className="flex flex-col items-center justify-center text-center">
           <div className="w-full max-w-2xl p-8 sm:p-12 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] transition-all duration-300 hover:shadow-blue-500/50">
-            
+
             {/* Icon/Visual Element */}
-            <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-sky-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-              <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
-              </svg>
+            
+            <div className="flex justify-center">
+              <FiBriefcase size={60} className="text-white-500 mb-4" />
             </div>
 
             {/* Title */}
             <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Open to New Opportunities
             </h3>
-            
+
             {/* Subtitle */}
             <h4 className="text-xl sm:text-2xl text-blue-400 mb-6 font-semibold">
-              Full-Stack and Gen AI Developer 
+              Full-Stack and Gen AI Developer
             </h4>
-            
+
             {/* Description */}
             <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-              I am actively seeking exciting opportunities in <span className="text-blue-400 font-semibold">full-stack development</span>, 
-              <span className="text-blue-400 font-semibold"> generative AI</span>, and <span className="text-blue-400 font-semibold">cloud technologies</span>. 
+              I am actively seeking exciting opportunities in <span className="text-blue-400 font-semibold">full-stack development</span>,
+              <span className="text-blue-400 font-semibold"> generative AI</span>, and <span className="text-blue-400 font-semibold">cloud technologies</span>.
               Ready to contribute to innovative projects and collaborate with dynamic teams to build impactful solutions.
             </p>
 
@@ -78,7 +79,7 @@ const Experience = () => {
                 className="inline-block text-white px-8 py-3 rounded-full font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
                 style={{
                   background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
-          
+
                 }}
               >
                 Let's Connect

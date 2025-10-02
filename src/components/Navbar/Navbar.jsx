@@ -84,8 +84,8 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Social Icons - Pill Style */}
-        <div className="hidden md:flex items-center space-x-1 bg-[#0a0f1c]/60 backdrop-blur-md rounded-full px-3 py-2 border border-white/10 shadow-lg">
+        {/* Social Icons - No Pill Style */}
+        <div className="hidden md:flex items-center space-x-2">
           <a
             href="https://github.com/Divyansh1552005"
             target="_blank"
@@ -121,8 +121,8 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Icon */}
-        <div className="md:hidden flex items-center space-x-3">
-          <div className="flex space-x-2 bg-[#0a0f1c]/60 backdrop-blur-md rounded-full px-2 py-1.5 border border-white/10">
+        <div className="md:hidden flex items-center space-x-4">
+          <div className="flex space-x-1">
             <a
               href="https://github.com/Divyansh1552005"
               target="_blank"
