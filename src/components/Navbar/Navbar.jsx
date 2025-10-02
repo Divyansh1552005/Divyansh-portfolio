@@ -110,14 +110,14 @@ const Navbar = () => {
           >
             <FaLinkedin size={22} />
           </a>
-          <a
+          {/* <a
             href="https://divyanshblogs.hashnode.dev/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-full text-gray-300 hover:text-blue-400 hover:bg-blue-400/10 hover:scale-110 transition-all duration-300 cursor-pointer"
           >
             <SiHashnode size={22} />
-          </a>
+          </a> */}
         </div>
 
         {/* Mobile Menu Icon */}
@@ -147,14 +147,14 @@ const Navbar = () => {
             >
               <FaLinkedin size={18} />
             </a>
-            <a
+            {/* <a
               href="https://divyanshblogs.hashnode.dev/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-1.5 rounded-full text-gray-300 hover:text-blue-400 hover:bg-blue-400/10 transition-all duration-300"
             >
               <SiHashnode size={16} />
-            </a>
+            </a> */}
           </div>
           
           <button 

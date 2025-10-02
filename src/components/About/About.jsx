@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
+import { FaHashnode } from "react-icons/fa6";
 import profileImage from '../../assets/profile.png';
 
 const About = () => {
@@ -87,9 +88,18 @@ const About = () => {
               href="https://divyanshblogs.hashnode.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg border-2 border-blue-500 hover:bg-blue-500 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 text-white py-3 px-6 sm:px-8 rounded-full text-base sm:text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-xl border-2 border-blue-500 hover:border-blue-400 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-500 w-full sm:w-auto relative overflow-hidden group"
+              style={{
+                background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(29, 78, 216, 0.1))',
+                backdropFilter: 'blur(10px)',
+              }}
             >
-              Read My Blog
+              <span className="relative z-10 flex items-center gap-2">
+                Read My Blog
+                <FaHashnode className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" />
+              </span>
+              {/* Subtle background animation on hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
           </div>
         </div>
