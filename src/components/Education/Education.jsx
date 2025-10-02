@@ -68,7 +68,7 @@ const Education = () => {
               className="flex flex-col items-center mb-16"
             >
               {/* Content Section */}
-              <div className="w-full max-w-md p-4 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] ml-8 transform transition-transform duration-300 hover:scale-105">
+              <div className="w-full max-w-md p-4 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] mx-auto transform transition-transform duration-300 hover:scale-105">
                 {/* Flex container for image and text */}
                 <div className="flex items-center space-x-6">
                   {/* School Logo/Image */}
@@ -83,20 +83,20 @@ const Education = () => {
                   {/* Degree, School Name, and Date */}
                   <div className="flex flex-col justify-between">
                     <div>
-                      <h3 className="text-xl font-semibold text-white">
+                      <h3 className="text-lg font-semibold text-white mb-2">
                         {edu.degree}
                       </h3>
-                      <h4 className="text-sm text-gray-300">
+                      <h4 className="text-sm text-gray-300 mb-2">
                         {edu.school}
                       </h4>
                     </div>
                     {/* Date at the bottom */}
-                    <p className="text-sm text-gray-500 mt-2">{edu.date}</p>
+                    <p className="text-sm text-gray-500 mb-2">{edu.date}</p>
+                    <p className="text-gray-400 font-bold">Grade: <span className="text-blue-400">{edu.grade}</span></p>
                   </div>
                 </div>
 
-                <p className="mt-4 text-gray-400 font-bold">Grade: <span className="text-blue-400">{edu.grade}</span></p>
-                <p className="mt-4 text-gray-400">{edu.desc}</p>
+                <p className="mt-4 text-gray-400 text-sm leading-relaxed">{edu.desc}</p>
               </div>
             </div>
           ))}
