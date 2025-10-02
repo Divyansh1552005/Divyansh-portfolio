@@ -76,7 +76,6 @@ const About = () => {
               className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
               style={{
                 background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
-                boxShadow: '0 0 1px #3b82f6, 0 0 8px #3b82f6',
               }}
             >
               View My Resume
