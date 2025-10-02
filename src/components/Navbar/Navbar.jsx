@@ -8,7 +8,6 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Detect scroll and change navbar background
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -18,7 +17,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll function
   const handleMenuItemClick = (sectionId) => {
     setActiveSection(sectionId);
     setIsOpen(false);
@@ -40,14 +38,18 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled ? "bg-[#0a0f1c] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        isScrolled ? "" : "px-[7vw] md:px-[7vw] lg:px-[20vw]"
       }`}
     >
-      <div className="text-white py-5 flex justify-between items-center">
+      <div className={`text-white flex justify-between items-center transition-all duration-500 ${
+        isScrolled 
+          ? "bg-[#0a0f1c]/80 backdrop-blur-xl shadow-2xl border-b border-white/5 px-[7vw] md:px-[7vw] lg:px-[20vw] py-3" 
+          : "px-0 py-4"
+      }`}>
         {/* Logo */}
         <div 
-          className="text-lg font-semibold cursor-pointer hover:opacity-80 transition-opacity duration-300"
+          className="text-lg font-bold cursor-pointer hover:opacity-80 transition-opacity duration-300"
           onClick={() => handleMenuItemClick('about')}
         >
           <span className="text-[#3b82f6]">&lt;</span>
@@ -57,132 +59,135 @@ const Navbar = () => {
           <span className="text-[#3b82f6]">&gt;</span>
         </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
-          {menuItems.map((item) => (
-            <li
-              key={item.id}
-              className={`cursor-pointer hover:text-[#3b82f6] transition-colors duration-300 relative group ${
-                activeSection === item.id ? "text-[#3b82f6]" : ""
-              }`}
-            >
-              <button 
-                onClick={() => handleMenuItemClick(item.id)}
-                className="cursor-pointer relative"
+        {/* Desktop Menu - Pill Style */}
+        <div className="hidden md:flex items-center bg-[#0a0f1c]/60 backdrop-blur-md rounded-full px-2 py-2 border border-white/10 shadow-lg">
+          <ul className="flex space-x-1 text-gray-300">
+            {menuItems.map((item) => (
+              <li
+                key={item.id}
+                className={`cursor-pointer transition-all duration-300 ${
+                  activeSection === item.id ? "text-white" : ""
+                }`}
               >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#3b82f6] transition-all duration-300 group-hover:w-full"></span>
-              </button>
-            </li>
-          ))}
-        </ul>
+                <button 
+                  onClick={() => handleMenuItemClick(item.id)}
+                  className={`px-5 py-2 rounded-full transition-all duration-300 font-medium text-sm ${
+                    activeSection === item.id 
+                      ? "bg-[#3b82f6] text-white shadow-lg shadow-[#3b82f6]/30" 
+                      : "hover:bg-white/5 hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        {/* Social Icons */}
-        <div className="hidden md:flex space-x-4">
+        {/* Social Icons - Pill Style */}
+        <div className="hidden md:flex items-center space-x-1 bg-[#0a0f1c]/60 backdrop-blur-md rounded-full px-3 py-2 border border-white/10 shadow-lg">
           <a
             href="https://github.com/Divyansh1552005"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-white hover:drop-shadow-[0_0_8px_rgba(156,163,175,0.8)] transition-all duration-300 cursor-pointer"
+            className="p-2 rounded-full text-gray-300 hover:text-white hover:bg-white/10 hover:scale-110 transition-all duration-300 cursor-pointer"
           >
-            <FaGithub size={24} />
+            <FaGithub size={18} />
           </a>
           <a
             href="mailto:officialdslc1552005@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-red-400 hover:drop-shadow-[0_0_8px_rgba(248,113,113,0.8)] transition-all duration-300 cursor-pointer"
+            className="p-2 rounded-full text-gray-300 hover:text-red-400 hover:bg-red-400/10 hover:scale-110 transition-all duration-300 cursor-pointer"
           >
-            <FaEnvelope size={24} />
+            <FaEnvelope size={18} />
           </a>
           <a
             href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-blue-500 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)] transition-all duration-300 cursor-pointer"
+            className="p-2 rounded-full text-gray-300 hover:text-blue-500 hover:bg-blue-500/10 hover:scale-110 transition-all duration-300 cursor-pointer"
           >
-            <FaLinkedin size={24} />
+            <FaLinkedin size={18} />
           </a>
           <a
             href="https://divyanshblogs.hashnode.dev/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-blue-400 hover:drop-shadow-[0_0_8px_rgba(96,165,250,0.8)] transition-all duration-300 cursor-pointer"
+            className="p-2 rounded-full text-gray-300 hover:text-blue-400 hover:bg-blue-400/10 hover:scale-110 transition-all duration-300 cursor-pointer"
           >
-            <SiHashnode size={24} />
+            <SiHashnode size={18} />
           </a>
         </div>
 
         {/* Mobile Menu Icon */}
-        <div className="md:hidden flex items-center space-x-4">
-          {/* Mobile Social Icons - Left of menu icon */}
-          <div className="flex space-x-3">
+        <div className="md:hidden flex items-center space-x-3">
+          <div className="flex space-x-2 bg-[#0a0f1c]/60 backdrop-blur-md rounded-full px-2 py-1.5 border border-white/10">
             <a
               href="https://github.com/Divyansh1552005"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white hover:drop-shadow-[0_0_6px_rgba(156,163,175,0.8)] transition-all duration-300 cursor-pointer"
+              className="p-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
             >
-              <FaGithub size={20} />
+              <FaGithub size={16} />
             </a>
             <a
               href="mailto:officialdslc1552005@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-red-400 hover:drop-shadow-[0_0_6px_rgba(248,113,113,0.8)] transition-all duration-300 cursor-pointer"
+              className="p-1.5 rounded-full text-gray-300 hover:text-red-400 hover:bg-red-400/10 transition-all duration-300"
             >
-              <FaEnvelope size={20} />
+              <FaEnvelope size={16} />
             </a>
             <a
               href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-blue-500 hover:drop-shadow-[0_0_6px_rgba(59,130,246,0.8)] transition-all duration-300 cursor-pointer"
+              className="p-1.5 rounded-full text-gray-300 hover:text-blue-500 hover:bg-blue-500/10 transition-all duration-300"
             >
-              <FaLinkedin size={20} />
+              <FaLinkedin size={16} />
             </a>
             <a
               href="https://divyanshblogs.hashnode.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-blue-400 hover:drop-shadow-[0_0_6px_rgba(96,165,250,0.8)] transition-all duration-300 cursor-pointer"
+              className="p-1.5 rounded-full text-gray-300 hover:text-blue-400 hover:bg-blue-400/10 transition-all duration-300"
             >
-              <SiHashnode size={20} />
+              <SiHashnode size={16} />
             </a>
           </div>
           
-          {/* Menu Toggle Icon */}
-          {isOpen ? (
-            <FiX
-              className="text-3xl text-[#3b82f6] cursor-pointer"
-              onClick={() => setIsOpen(false)}
-            />
-          ) : (
-            <FiMenu
-              className="text-3xl text-[#3b82f6] cursor-pointer"
-              onClick={() => setIsOpen(true)}
-            />
-          )}
+          <button 
+            className="p-2 rounded-full bg-[#3b82f6]/20 border border-[#3b82f6]/30 hover:bg-[#3b82f6]/30 transition-all duration-300"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? (
+              <FiX className="text-2xl text-[#3b82f6]" />
+            ) : (
+              <FiMenu className="text-2xl text-[#3b82f6]" />
+            )}
+          </button>
         </div>
       </div>
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#0a0f1c] bg-opacity-90 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-xl border border-gray-700/30 md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-6 text-gray-300">
+        <div className="absolute top-[70px] left-1/2 transform -translate-x-1/2 w-[85%] bg-[#0a0f1c]/95 backdrop-blur-xl z-50 rounded-2xl shadow-2xl border border-white/10 md:hidden overflow-hidden">
+          <ul className="flex flex-col items-center space-y-1 py-3 text-gray-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-[#3b82f6] transition-colors duration-300 w-full text-center relative group ${
-                  activeSection === item.id ? "text-[#3b82f6]" : ""
-                }`}
+                className="w-[90%]"
               >
                 <button 
                   onClick={() => handleMenuItemClick(item.id)}
-                  className="cursor-pointer w-full py-2 px-4 rounded-md hover:bg-[#3b82f6]/10 relative"
+                  className={`w-full py-3 px-6 rounded-xl transition-all duration-300 font-medium ${
+                    activeSection === item.id 
+                      ? "bg-[#3b82f6] text-white shadow-lg shadow-[#3b82f6]/30" 
+                      : "hover:bg-white/5 hover:text-white text-center"
+                  }`}
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-[#3b82f6] transition-all duration-300 group-hover:w-1/2"></span>
                 </button>
               </li>
             ))}
