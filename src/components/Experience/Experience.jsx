@@ -1,5 +1,6 @@
 import React from "react";
 import { experiences } from "../../constants"; // Import your data
+import { FiExternalLink } from "react-icons/fi";
 
 const Experience = () => {
   return (
@@ -77,7 +78,7 @@ const Experience = () => {
                 className="inline-block text-white px-8 py-3 rounded-full font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
                 style={{
                   background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
-                  boxShadow: '0 0 1px #3b82f6, 0 0 8px #3b82f6',
+          
                 }}
               >
                 Let's Connect
@@ -89,11 +90,12 @@ const Experience = () => {
                 className="inline-block text-white px-8 py-3 rounded-full font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
                 style={{
                   background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
-                  boxShadow: '0 0 1px #3b82f6, 0 0 8px #3b82f6',
                 }}
               >
-                Download Resume
+                Download Resume 
+                
               </a>
+              
             </div>
           </div>
         </div>

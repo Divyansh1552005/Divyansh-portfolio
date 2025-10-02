@@ -239,16 +239,16 @@ export const projects = [
     github: "https://github.com/Divyansh1552005/PDF-IMG-Toolkit.git",
     webapp: "https://pdf-img-editor-converter-toolkit-so.vercel.app/",
   },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    description:
-      "A modern, responsive personal portfolio built with the latest web technologies, showcasing projects, skills, and the developer's journey with smooth performance and clean UI. Features dark/light theme, smooth animations, and optimized performance.",
-    image: portfolioLogo,
-    tags: ["React JS", "Tailwind CSS", "EmailJS", "React Toastify", "JavaScript", "Responsive Design"],
-    github: "https://github.com/Divyansh1552005/Divyansh-portfolio",
-    webapp: "#",
-  },
+  // {
+  //   id: 3,
+  //   title: "Portfolio Website",
+  //   description:
+  //     "A modern, responsive personal portfolio built with the latest web technologies, showcasing projects, skills, and the developer's journey with smooth performance and clean UI. Features dark/light theme, smooth animations, and optimized performance.",
+  //   image: portfolioLogo,
+  //   tags: ["React JS", "Tailwind CSS", "EmailJS", "React Toastify", "JavaScript", "Responsive Design"],
+  //   github: "https://github.com/Divyansh1552005/Divyansh-portfolio",
+  //   webapp: "#",
+  // },
   {
     id: 4,
     title: "List-Tasks Application",
