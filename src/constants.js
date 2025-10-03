@@ -19,7 +19,7 @@ import gitLogo from './assets/tech_logo/git.png';
 import githubLogo from './assets/tech_logo/github.png';
 import vscodeLogo from './assets/tech_logo/vscode.png';
 import postmanLogo from './assets/tech_logo/postman.png';
-// import dockerLogo from './assets/tech_logo/docker.png';
+import dockerLogo from './assets/tech_logo/dockerlogo.png';
 import awsLogo from './assets/tech_logo/aws.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 import netlifyLogo from './assets/tech_logo/netlify.png';
@@ -118,6 +118,7 @@ export const SkillsInfo = [
       { name: 'Vercel', logo: vercelLogo, docs: 'https://vercel.com/docs' },
       // { name: 'Netlify', logo: netlifyLogo, docs: 'https://docs.netlify.com/' },
       { name: 'Linux', logo: linuxLogo, docs: 'https://www.kernel.org/doc/html/latest/' },
+      { name: 'Docker', logo: dockerLogo, docs: 'https://docs.docker.com/' },
     ],
   },
 ];
