@@ -8,6 +8,8 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
 
+
+  // Change navbar style on scroll ie animation style sa laga diya uspe
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -17,15 +19,60 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Handle menu item click ie scroll to section and close mobile menu 
   const handleMenuItemClick = (sectionId) => {
     setActiveSection(sectionId);
     setIsOpen(false);
 
     const section = document.getElementById(sectionId);
-    if (section) {
+    if (section){
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+
+  // Update active section on scroll in the page
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const sections = document.querySelectorAll("section"); // all your page sections
+  //     let current = "";
+
+  //     sections.forEach((section) => {
+  //       const sectionTop = section.offsetTop;
+  //       const sectionHeight = section.clientHeight;
+
+  //       if (window.scrollY >= sectionTop - sectionHeight / 3){
+  //         current = section.getAttribute("id");
+  //       }
+  //     });
+
+  //     if (current && current !== activeSection){
+  //       setActiveSection(current);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [activeSection]);
+
+  // better and optimized way using Intersection Observer API
+  useEffect(() => {
+  const sections = document.querySelectorAll("section");
+  const options = { threshold: 0.5 }; // 50% visible hote hi trigger hoga
+    
+  const observer = new IntersectionObserver((entries) => {
+    // looping entries to find which section is in viewport since we are observing multiple sections
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { // isIntersecting means visible in viewport
+        setActiveSection(entry.target.id);
+      }
+    });
+  }, options); 
+
+  sections.forEach((section) => observer.observe(section));
+  return () => observer.disconnect();
+}, []);
+
 
   const menuItems = [
     { id: "about", label: "About" },
