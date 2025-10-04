@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { projects } from "../../constants";
+import { motion } from 'framer-motion';
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -30,10 +31,36 @@ const Work = () => {
       {/* Projects Grid */}
       <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
         {projects.map((project) => (
-          <div
+          <motion.div
             key={project.id}
             onClick={() => handleOpenModal(project)}
-            className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-500/50 hover:-translate-y-2 transition-transform duration-300"
+            initial={{
+              opacity: 0,
+              y: 60,
+              scale: 0.9,
+              rotateX: -15
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              rotateX: 0
+            }}
+            transition={{
+              duration: 0.7,
+              ease: [0.23, 1, 0.32, 1], // custom easing for smoother motion
+              delay: 0.1
+            }}
+            viewport={{ once: false, amount: 0.2 }}
+            whileHover={{
+              y: -12,
+              scale: 1.02,
+              rotateY: 5,
+              transition: { duration: 0.3, ease: "easeOut" }
+            }}
+            whileTap={{ scale: 0.98 }}
+            className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-500/50 transition-shadow duration-300"
+            style={{ transformStyle: "preserve-3d" }}
           >
             <div className="p-6">
               <img
@@ -60,17 +87,17 @@ const Work = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
-       {/* Enhanced Modal */}
+      {/* Enhanced Modal */}
       {selectedProject && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md p-4 animate-in fade-in duration-300"
           onClick={handleCloseModal}
         >
-          <div 
+          <div
             className="bg-gray-900 border border-gray-800/50 rounded-3xl shadow-2xl w-full max-w-5xl overflow-hidden relative animate-in zoom-in-95 duration-300"
             onClick={(e) => e.stopPropagation()}
           >
@@ -97,19 +124,19 @@ const Work = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
               </div>
-              
+
               {/* Content */}
               <div className="p-6 md:p-10">
                 {/* Title */}
                 <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 leading-tight">
                   {selectedProject.title}
                 </h3>
-                
+
                 {/* Description */}
                 <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-8">
                   {selectedProject.description}
                 </p>
-                
+
                 {/* Tech Stack Section */}
                 <div className="mb-8">
                   <h4 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Tech Stack</h4>
@@ -124,7 +151,7 @@ const Work = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a

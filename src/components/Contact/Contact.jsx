@@ -65,7 +65,7 @@ const Contact = () => {
       {/* Contact Form */}
       <div className="mt-4 w-full max-w-md md:max-w-lg lg:max-w-xl bg-[#0f1419] p-6 rounded-lg shadow-lg border border-gray-700">
         <h3 className="text-xl font-semibold text-white text-center">
-          Connect With Me <span className="ml-1">🚀</span>
+          Connect With Me 
         </h3>
         <form ref={form} onSubmit={sendEmail} className="mt-4 flex flex-col space-y-4">
           <input
