@@ -29,8 +29,7 @@ import pineconeLogo from './assets/tech_logo/pinecone.png';
 import appwriteLogo from './assets/tech_logo/appwrite.png';
 import linuxLogo from './assets/tech_logo/linux.png';
 import socketioLogo from './assets/tech_logo/socket.io.png';
-import viteLogo from './assets/tech_logo/vite.png';
-import reacthookform from './assets/tech_logo/react_hook_form.png'
+import framermotionlogo from './assets/tech_logo/framer-motion.svg';
 
 
 // Experience Section Logo's
@@ -62,6 +61,7 @@ export const SkillsInfo = [
       // { name: 'React Router', logo: reactjsLogo, docs: 'https://reactrouter.com/' },
       // { name: 'React Hook Form', logo: reacthookform, docs: 'https://react-hook-form.com/' },
       // { name: 'Vite', logo: viteLogo, docs: 'https://vitejs.dev/' },
+      { name: 'Framer Motion', logo: framermotionlogo, docs: 'https://www.framer.com/motion/' },
     ],
   },
   {
