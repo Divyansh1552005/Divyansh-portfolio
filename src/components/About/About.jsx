@@ -13,7 +13,7 @@ const About = () => {
     'Fullstack Developer',
     'Gen AI Developer',
     'Cloud Architect',
-    'Linux fan'
+    'Linux Enthusiast',
   ];
 
   useEffect(() => {
@@ -78,8 +78,9 @@ const About = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg w-full sm:w-auto"
               style={{
-                background: 'linear-gradient(90deg, #3b82f6, #1d4ed8)',
-              }}
+  background: 'linear-gradient(90deg, #2563eb, #1d4ed8)',
+}}
+
             >
               View My Resume
               <FiExternalLink size={20} />

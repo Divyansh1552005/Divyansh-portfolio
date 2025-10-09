@@ -153,7 +153,7 @@ const Contact = () => {
         variants={formContainerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="mt-4 w-full max-w-md md:max-w-lg lg:max-w-xl bg-[#0f1419] p-6 rounded-lg shadow-lg border border-gray-700 relative perspective-1000"
+        className="mt-4 w-full max-w-md md:max-w-lg lg:max-w-xl bg-[#0d0d0d] p-6 rounded-lg shadow-lg border border-gray-700 relative perspective-1000"
       >
         {/* Animated background glow */}
         <motion.div
@@ -213,7 +213,7 @@ const Contact = () => {
                         required
                         onFocus={() => setFocusedField(fieldName)}
                         onBlur={() => setFocusedField(null)}
-                        className="w-full p-3 rounded-md bg-[#1a2332] text-white border border-gray-600 focus:outline-none focus:border-blue-500 transition-all duration-300"
+                        className="w-full p-3 rounded-md bg-[#0d0d0d] text-white border border-gray-600 focus:outline-none focus:border-blue-500 transition-all duration-300"
                         whileFocus={{ boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)" }}
                       />
                     ) : (
@@ -224,7 +224,7 @@ const Contact = () => {
                         required
                         onFocus={() => setFocusedField(fieldName)}
                         onBlur={() => setFocusedField(null)}
-                        className="w-full p-3 rounded-md bg-[#1a2332] text-white border border-gray-600 focus:outline-none focus:border-blue-500 transition-all duration-300"
+                        className="w-full p-3 rounded-md bg-[#0d0d0d] text-white border border-gray-600 focus:outline-none focus:border-blue-500 transition-all duration-300"
                         whileFocus={{ boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)" }}
                       />
                     )}
@@ -241,13 +241,10 @@ const Contact = () => {
           >
             <motion.button
               type="submit"
-              className="w-full bg-gradient-to-r from-blue-600 to-sky-500 py-3 text-white font-semibold rounded-md relative overflow-hidden"
-              whileHover={{
-                boxShadow: "0 0 30px rgba(59, 130, 246, 0.6)",
-              }}
+              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 py-3 text-white font-semibold rounded-md relative overflow-hidden cursor-pointer"
             >
               <motion.span
-                className="absolute inset-0 bg-gradient-to-r from-sky-500 to-blue-600"
+                className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600"
                 initial={{ x: "-100%" }}
                 whileHover={{ x: "0%" }}
                 transition={{ duration: 0.3 }}

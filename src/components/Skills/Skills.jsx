@@ -91,11 +91,10 @@ const Skills = () => {
                 : 'grid-cols-3 sm:grid-cols-4';
 
               return (
-                <motion.article
-                  key={category.title}
-                  variants={categoryVariants}
-                  className="bg-gray-900 rounded-2xl p-6 border border-gray-700"
-                >
+                              <motion.article
+                key={category.title}
+                className="bg-[#0d0d0d] rounded-2xl p-6 border border-gray-700"
+              >
                   {/* Category Header */}
                   <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6 text-center">
                     {category.title}
@@ -122,7 +121,7 @@ const Skills = () => {
                         href={skill.docs}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex flex-col items-center justify-center gap-2 bg-[#0f1629] rounded-xl p-3 border border-[#1e2749] hover:border-[#3b82f6] transition-colors duration-300 hover:bg-[#141b3a] focus:outline-none focus:ring-2 focus:ring-[#3b82f6] focus:ring-offset-2 focus:ring-offset-[#0a0e27]"
+                        className="group flex flex-col items-center justify-center gap-2 bg-[#0d0d0d] rounded-xl p-3 border border-[#1e2749] hover:border-[#3b82f6] transition-colors duration-300 hover:bg-[#0d0d0d] focus:outline-none focus:ring-2 focus:ring-[#3b82f6] focus:ring-offset-2 focus:ring-offset-[#0a0e27]"
                         aria-label={`Learn more about ${skill.name}`}
                       >
                         {/* Skill Logo */}

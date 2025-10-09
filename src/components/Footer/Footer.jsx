@@ -16,7 +16,7 @@ const Footer = () => {
       {/* Separator Line */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
       
-      <footer className="bg-[#0a0a0a] text-white py-12 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+      <footer className="bg-[#0d0d0d] text-white py-12 px-[12vw] md:px-[7vw] lg:px-[20vw]">
         <div className="container mx-auto">
         {/* Main Footer Content */}
         <div className="text-center">
@@ -61,12 +61,12 @@ const Footer = () => {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group relative p-3 rounded-full bg-[#1a1a1a] transition-all duration-300 transform hover:scale-110 text-gray-300 ${item.hoverClass}`}
+                className={`group relative p-3 rounded-full bg-[#0d0d0d] transition-all duration-300 transform hover:scale-110 text-gray-300 ${item.hoverClass}`}
                 aria-label={item.label}
               >
                 <span className="text-xl">{item.icon}</span>
                 {/* Tooltip */}
-                <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-[#1a1a1a] text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-[#0d0d0d] text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {item.label}
                 </span>
               </a>

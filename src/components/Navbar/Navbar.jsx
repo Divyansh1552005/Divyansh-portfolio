@@ -91,7 +91,7 @@ const Navbar = () => {
     >
       <div className={`text-white flex justify-between items-center transition-all duration-500 ${
         isScrolled 
-          ? "bg-[#0a0f1c]/80 backdrop-blur-xl shadow-2xl border-b border-white/5 px-[7vw] md:px-[7vw] lg:px-[20vw] py-3" 
+          ? "bg-[#0d0d0d]/80 backdrop-blur-xl shadow-2xl border-b border-white/5 px-[7vw] md:px-[7vw] lg:px-[20vw] py-3" 
           : "px-0 py-4"
       }`}>
         {/* Logo */}
@@ -107,7 +107,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu - Pill Style */}
-        <div className="hidden md:flex items-center bg-[#0a0f1c]/60 backdrop-blur-md rounded-full px-2 py-2 border border-white/10 shadow-lg">
+        <div className="hidden md:flex items-center bg-[#0d0d0d]/60 backdrop-blur-md rounded-full px-2 py-2 border border-white/10 shadow-lg">
           <ul className="flex space-x-1 text-gray-300">
             {menuItems.map((item) => (
               <li
@@ -120,7 +120,7 @@ const Navbar = () => {
                   onClick={() => handleMenuItemClick(item.id)}
                   className={`px-5 py-2 rounded-full transition-all duration-300 font-medium text-sm ${
                     activeSection === item.id 
-                      ? "bg-[#3b82f6] text-white shadow-lg shadow-[#3b82f6]/30" 
+                      ? "bg-[#1e50d6] text-white" 
                       : "hover:bg-white/5 hover:text-white"
                   }`}
                 >
@@ -209,7 +209,7 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              <FiX className="text-2xl text-[#3b82f6]" />
+              <FiX className="text-2xl text-[#1e50d6]" />
             ) : (
               <FiMenu className="text-2xl text-[#3b82f6]" />
             )}
@@ -219,7 +219,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-[70px] left-1/2 transform -translate-x-1/2 w-[85%] bg-[#0a0f1c]/95 backdrop-blur-xl z-50 rounded-2xl shadow-2xl border border-white/10 md:hidden overflow-hidden">
+        <div className="absolute top-[70px] left-1/2 transform -translate-x-1/2 w-[85%] bg-[#0d0d0d]/95 backdrop-blur-xl z-50 rounded-2xl shadow-2xl border border-white/10 md:hidden overflow-hidden">
           <ul className="flex flex-col items-center space-y-1 py-3 text-gray-300">
             {menuItems.map((item) => (
               <li
@@ -230,7 +230,7 @@ const Navbar = () => {
                   onClick={() => handleMenuItemClick(item.id)}
                   className={`w-full py-3 px-6 rounded-xl transition-all duration-300 font-medium ${
                     activeSection === item.id 
-                      ? "bg-[#3b82f6] text-white shadow-lg shadow-[#3b82f6]/30" 
+                      ? "bg-[#1e50d6] text-white" 
                       : "hover:bg-white/5 hover:text-white text-center"
                   }`}
                 >

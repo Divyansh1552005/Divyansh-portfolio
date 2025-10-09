@@ -36,7 +36,7 @@ const Education = () => {
               viewport={{ once: false, amount: 0.3 }} // animate when 30% visible (once)
             >
               {/* Content Section */}
-              <div className="w-full p-4 sm:p-6 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] transform transition-transform duration-300 hover:scale-105 flex flex-col h-full">
+              <div className="w-full p-4 sm:p-6 rounded-2xl border border-white bg-[#0d0d0d] backdrop-blur-md shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] transform transition-transform duration-300 hover:scale-105 flex flex-col h-full">
                 {/* Flex container for image and text */}
                 <div className="flex flex-col items-center text-center space-y-4 flex-shrink-0">
                   <div className="w-16 h-16 bg-white rounded-full overflow-hidden flex-shrink-0">
@@ -83,7 +83,7 @@ const Education = () => {
               viewport={{ once: false, amount: 0.3 }}
             >
               {/* Content Section */}
-              <div className="w-full max-w-md p-4 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] mx-auto transform transition-transform duration-300 hover:scale-105">
+              <div className="w-full max-w-md p-4 rounded-2xl border border-white bg-[#0d0d0d] backdrop-blur-md shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] mx-auto transform transition-transform duration-300 hover:scale-105">
                 {/* Flex container for image and text */}
                 <div className="flex items-center space-x-6">
                   {/* School Logo/Image */}

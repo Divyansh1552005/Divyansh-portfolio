@@ -33,7 +33,7 @@ const Work = () => {
           whileInView={{ width: 128 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="h-1 bg-blue-500 mx-auto mt-4"
+          className="h-1 bg-blue-600 mx-auto mt-4"
         />
         <p className="text-gray-400 mt-4 text-lg font-semibold">
           A showcase of the projects I have worked on, highlighting my skills
@@ -67,7 +67,7 @@ const Work = () => {
               transition: { duration: 0.3, ease: "easeOut" }
             } : {}}
             whileTap={{ scale: 0.98 }}
-            className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-500/50 transition-shadow duration-300"
+            className="border border-white bg-[#0d0d0d] backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-white/20 hover:shadow-lg transition-all duration-300"
           >
             <div className="p-6">
               <img
@@ -87,7 +87,7 @@ const Work = () => {
                 {project.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="inline-block bg-[#1e3a5f] text-xs font-semibold text-blue-400 rounded-full px-3 py-1 mr-2 mb-2"
+                    className="inline-block text-xs font-semibold text-blue-300 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-500/30 rounded-xl px-3 py-1.5 mr-2 mb-2 hover:border-blue-400/50 hover:bg-blue-500/20 transition-all duration-300"
                   >
                     {tag}
                   </span>
@@ -105,7 +105,7 @@ const Work = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md p-4"
             onClick={handleCloseModal}
           >
@@ -117,7 +117,7 @@ const Work = () => {
                 duration: 0.3,
                 ease: [0.23, 1, 0.32, 1]
               }}
-              className="bg-gray-900 border border-gray-800/50 rounded-3xl shadow-2xl w-full max-w-5xl overflow-hidden relative"
+              className="bg-[#0d0d0d] border border-gray-800/50 rounded-3xl shadow-2xl w-full max-w-5xl overflow-hidden relative"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal header with close button */}
@@ -231,7 +231,7 @@ const Work = () => {
                       href={selectedProject.webapp}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 group relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50"
+                      className="flex-1 group relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300"
                     >
                       <span className="relative z-10 flex items-center justify-center gap-3 text-lg">
                         <motion.svg
