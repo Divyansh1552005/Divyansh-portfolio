@@ -50,11 +50,11 @@ const Footer = () => {
           {/* Social Media Icons - Responsive */}
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             {[
+              { icon: <FaEnvelope />, link: "mailto:officialdslc1552005@gmail.com", label: "Email", hoverClass: "hover:bg-red-600 hover:text-white hover:shadow-lg hover:shadow-red-500/25" },
               { icon: <FaGithub />, link: "https://github.com/Divyansh1552005", label: "GitHub", hoverClass: "hover:bg-gray-800 hover:text-white hover:shadow-lg hover:shadow-gray-500/25" },
               { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/divyansh-sharma-b05897286/", label: "LinkedIn", hoverClass: "hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-500/25" },
               { icon: <FaTwitter />, link: "https://twitter.com/Divyansh1552005", label: "Twitter", hoverClass: "hover:bg-black hover:text-white hover:shadow-lg hover:shadow-gray-400/25" },
               { icon: <FaInstagram />, link: "https://instagram.com/divyanshsharma1552005", label: "Instagram", hoverClass: "hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-600 hover:text-white hover:shadow-lg hover:shadow-pink-500/25" },
-              { icon: <FaEnvelope />, link: "mailto:officialdslc1552005@gmail.com", label: "Email", hoverClass: "hover:bg-red-600 hover:text-white hover:shadow-lg hover:shadow-red-500/25" },
             ].map((item, index) => (
               <a
                 key={index}

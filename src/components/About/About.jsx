@@ -12,7 +12,8 @@ const About = () => {
   const texts = [
     'Fullstack Developer',
     'Gen AI Developer',
-    'Cloud Architect'
+    'Cloud Architect',
+    'Linux fan'
   ];
 
   useEffect(() => {
@@ -66,7 +67,7 @@ const About = () => {
 
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed text-justify">
-            I love creating what is in my mind and things that can help me or others. I am a Full-Stack Developer who works mainly with the MERN stack, focusing on backend development and building clean, reliable applications. I also enjoy exploring Linux and learning how its systems work. Recently, I have been learning about Generative AI and cloud technologies to build projects that can scale well.
+         I love creating things which can be helpful for either me or others. Mostly a JS full-stack dev (I like working on the backend more heh!) and exploring cloud and Devops stuff like AWS, Docker & K8s. I also like Linux — it’s made me more tech-savvy, and now I actually enjoy using the terminal over GUI. Lately exploring Generative AI and making useful RAG chatbots for my web applications.
           </p>
 
           {/* Resume and Blog Buttons */}
