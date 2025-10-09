@@ -16,7 +16,7 @@ import cLogo from './assets/tech_logo/c.png';
 import cppLogo from './assets/tech_logo/cpp.png';
 import pythonLogo from './assets/tech_logo/python.png';
 import gitLogo from './assets/tech_logo/git.png';
-import githubLogo from './assets/tech_logo/github.png';
+import githubLogo from './assets/tech_logo/github.jpg';
 import vscodeLogo from './assets/tech_logo/vscode.png';
 import postmanLogo from './assets/tech_logo/postman.png';
 import dockerLogo from './assets/tech_logo/dockerlogo.png';
@@ -30,6 +30,7 @@ import appwriteLogo from './assets/tech_logo/appwrite.png';
 import linuxLogo from './assets/tech_logo/linux.png';
 import socketioLogo from './assets/tech_logo/socket.io.png';
 import framermotionlogo from './assets/tech_logo/framer-motion.svg';
+import { SiExpress } from "react-icons/si";
 
 
 // Experience Section Logo's
