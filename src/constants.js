@@ -281,7 +281,7 @@ export const projects = [
   image: ticmepng,
   tags: ["HTML", "CSS" , "JavaScript", "Browser Extension", "Notifications API", "Task Manager"],
   github: "https://github.com/Divyansh1552005/TickMe",
-  webapp: "https://tickme.vercel.app/",
+  webapp: "https://github.com/Divyansh1552005/TickMe",
 },
   
 ];
