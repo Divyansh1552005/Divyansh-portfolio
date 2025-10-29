@@ -41,12 +41,14 @@ import iiitLogo from './assets/education_logo/iiit_logo.png';
 import bhiwaniLogo from './assets/education_logo/bhiwani_logo.png';
 
 // Project Section Logo's
-import medicalChatbotLogo from './assets/work_logo/medical_chatbot.png';
-import hospitalManagementLogo from './assets/work_logo/hospital_management.png';
+import medicalChatbotLogo from './assets/work_logo/medi.png';
+import hospitalManagementLogo from './assets/work_logo/curedesk.png';
 import pdfToolkitLogo from './assets/work_logo/pdf-toolkit.png';
 import portfolioLogo from './assets/work_logo/portfolio2.png';
 import todoAppLogo from './assets/work_logo/todo_app.png';
 import passwordGenLogo from './assets/work_logo/password_gen.png';
+import ticmepng from './assets/work_logo/tickme.png';
+import blogspace from './assets/work_logo/blogspace.png';
 
 export const SkillsInfo = [
   {
@@ -213,27 +215,37 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "AI Medical Chatbot (RAG)",
-    description:
-      "Intelligent Healthcare Assistant powered by Retrieval-Augmented Generation. Built with advanced NLP techniques for accurate medical query responses. The system uses vector databases for efficient document retrieval and provides contextually relevant medical information while maintaining safety and accuracy.",
-    image: medicalChatbotLogo,
-    tags: ["Python", "LangChain", "Pinecone", "OpenAI", "RAG", "NLP", "Vector DB"],
-    github: "https://github.com/Divyansh1552005/Medical_Chatbot_OpenAI.git",
-    webapp: "#",
-  },
-  {
-    id: 1,
-    title: "Hospital Management System",
+    title: "Cure Desk - Hospital Management System",
     description:
       "Comprehensive MERN Stack Healthcare Platform with integrated AI chatbot, patient management, and appointment scheduling system. Features include doctor profiles, patient records, appointment booking, prescription management, and real-time notifications for enhanced healthcare delivery.",
     image: hospitalManagementLogo,
     tags: ["React JS", "Node.js", "Express.js", "MongoDB", "Socket.io", "JWT", "Redux", "JavaScript"],
-    github: "https://github.com/Divyansh1552005/prescripto-full-stack",
+    github: "https://github.com/Divyansh1552005/Cure_Desk",
+    webapp: "https://curedesk.vercel.app/",
+  },
+  {
+    id: 1,
+    title: "Medibot - AI Medical Chatbot (RAG)",
+    description:
+      "Intelligent Healthcare Assistant powered by Retrieval-Augmented Generation. Built with advanced NLP techniques for accurate medical query responses. The system uses vector databases for efficient document retrieval and provides contextually relevant medical information while maintaining safety and accuracy.",
+    image: medicalChatbotLogo,
+    tags: ["Python", "LangChain", "Pinecone", "OpenAI", "RAG", "NLP", "Vector DB", "Embeddings", "Flask"],
+    github: "https://github.com/Divyansh1552005/Medical_Chatbot_OpenAI.git",
     webapp: "#",
   },
   {
-    id: 2,
-    title: "PDF IMG Toolkit",
+  id: 3,
+  title: "BlogSpace - Modern Blogging Platform",
+  description:
+    "A full-featured blogging platform built with React and Appwrite, designed for seamless content creation and discovery. Includes a rich text editor, secure authentication, image uploads, dark mode, real-time notifications, and a personalized dashboard for managing posts and profiles.",
+  image: blogspace,
+  tags: ["React JS", "Tailwind CSS", "Redux Toolkit", "Appwrite", "React Hook Form", "TinyMCE", "Vite"],
+  github: "https://github.com/Divyansh1552005/BlogSpace",
+  webapp: "https://blogspace-alpha.vercel.app/",
+},
+  {
+    id: 4,
+    title: "Pdf Img Toolkit",
     description:
       "Professional desktop application for PDF and image manipulation. Features PDF-to-image conversion, image-to-PDF, batch processing, and cross-platform support for Windows & Linux. Built with modern web technologies and packaged as a desktop application.",
     image: pdfToolkitLogo,
@@ -252,7 +264,7 @@ export const projects = [
   //   webapp: "#",
   // },
   {
-    id: 4,
+    id: 5,
     title: "List-Tasks Application",
     description:
       "A feature-rich, mobile-responsive React Todo app with categorized task management, real-time search, progress tracking, Tailwind UI, and full CRUD via collapsible sidebar navigation. Includes task priorities, due dates, and completion statistics.",
@@ -262,15 +274,16 @@ export const projects = [
     webapp: "https://listtasks.vercel.app/",
   },
   {
-    id: 5,
-    title: "Password Generator",
-    description:
-      "A secure password generator built with React, featuring customizable length, character sets, and real-time strength indicators for enhanced security. Includes password history, copy to clipboard functionality, and security recommendations.",
-    image: passwordGenLogo,
-    tags: ["React JS", "Tailwind CSS", "JavaScript", "Lucide Icons"],
-    github: "https://github.com/Divyansh1552005/React_Beginner_Projects/tree/main/5_Password_generator",
-    webapp: "https://securepasswordgeneratordsc.vercel.app/",
-  },
+  id: 6,
+  title: "TickMe - Task Manager Extension",
+  description:
+    "A clean and efficient browser extension for managing daily tasks with reminder notifications. Features include task creation, time-based reminders, dark/light theme toggle, and an intuitive minimal interface built with vanilla JavaScript.",
+  image: ticmepng,
+  tags: ["HTML", "CSS" , "JavaScript", "Browser Extension", "Notifications API", "Task Manager"],
+  github: "https://github.com/Divyansh1552005/TickMe",
+  webapp: "https://tickme.vercel.app/",
+},
+  
 ];
 
 export const contactInfo = {
