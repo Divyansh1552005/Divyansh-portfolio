@@ -67,7 +67,7 @@ const About = () => {
 
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed text-justify">
-         I love creating things which can be helpful for either me or others. Mostly a JS full-stack dev (I like working on the backend more heh!) and exploring cloud and Devops stuff like AWS, Docker & K8s. I also like Linux — it’s made me more tech-savvy, and now I actually enjoy using the terminal over GUI. Lately exploring Generative AI and making useful RAG chatbots for my web applications.
+         I love creating things which can be helpful for either me or others. Mostly a JS full-stack dev (I like working on the backend more heh!) and exploring cloud and Devops stuff like AWS, Docker. I also like Linux as it’s made me more tech-savvy, and now I actually enjoy using the terminal over GUI. Lately exploring Generative AI and making useful RAG chatbots for my web applications.
           </p>
 
           {/* Resume and Blog Buttons */}
