@@ -5,13 +5,11 @@ import javascriptLogo from "./assets/tech_logo/javascript.png";
 import reactjsLogo from "./assets/tech_logo/reactjs.png";
 import nodejsLogo from "./assets/tech_logo/nodejs.png";
 import expressjsLogo from "./assets/tech_logo/express.png";
-import nextjsLogo from "./assets/tech_logo/nextjs.png";
 import tailwindcssLogo from "./assets/tech_logo/tailwindcss.png";
 import reduxLogo from "./assets/tech_logo/redux.png";
 import mysqlLogo from "./assets/tech_logo/mysql.png";
 import mongodbLogo from "./assets/tech_logo/mongodb2.png";
 import postgreLogo from "./assets/tech_logo/postgre.png";
-import firebaseLogo from "./assets/tech_logo/firebase.png";
 import cLogo from "./assets/tech_logo/c.png";
 import cppLogo from "./assets/tech_logo/cpp.png";
 import pythonLogo from "./assets/tech_logo/python.png";
@@ -22,7 +20,6 @@ import postmanLogo from "./assets/tech_logo/postman.png";
 import dockerLogo from "./assets/tech_logo/dockerlogo.png";
 import awsLogo from "./assets/tech_logo/aws.png";
 import vercelLogo from "./assets/tech_logo/vercel.png";
-import netlifyLogo from "./assets/tech_logo/netlify.png";
 import langchainLogo from "./assets/tech_logo/langchain.png";
 import openaiLogo from "./assets/tech_logo/openai.png";
 import pineconeLogo from "./assets/tech_logo/pinecone.png";
@@ -51,9 +48,7 @@ import bhiwaniLogo from "./assets/education_logo/bhiwani_logo.png";
 import medicalChatbotLogo from "./assets/work_logo/medi.png";
 import hospitalManagementLogo from "./assets/work_logo/curedesk.png";
 import pdfToolkitLogo from "./assets/work_logo/pdf-toolkit.png";
-import portfolioLogo from "./assets/work_logo/portfolio2.png";
 import todoAppLogo from "./assets/work_logo/todo_app.png";
-import passwordGenLogo from "./assets/work_logo/password_gen.png";
 import ticmepng from "./assets/work_logo/tickme.png";
 import blogspace from "./assets/work_logo/blogspace.png";
 
@@ -306,13 +301,10 @@ export const projects = [
       "Node.js",
       "Express.js",
       "MongoDB",
-      "JWT",
-      "Role-Based Access",
       "Razorpay",
-      "Stream Video API",
+      "Stream Video",
       "RAG Chatbot",
-      "Chat History",
-      "Legal Tech",
+      "Tailwind CSS"
     ],
     github: "https://github.com/Divyansh1552005/Law_Bridge_Application",
     webapp: "https://github.com/Divyansh1552005/Law_Bridge_Application",
@@ -330,10 +322,7 @@ export const projects = [
       "Node.js",
       "Express.js",
       "MongoDB",
-      "Socket.io",
-      "JWT",
-      "Redux",
-      "JavaScript",
+      "Tailwind CSS"
     ],
     github: "https://github.com/Divyansh1552005/Cure_Desk",
     webapp: "https://curedesk.vercel.app/",
@@ -375,7 +364,6 @@ export const projects = [
       "Appwrite",
       "React Hook Form",
       "TinyMCE",
-      "Vite",
     ],
     github: "https://github.com/Divyansh1552005/BlogSpace",
     webapp: "https://blogspace-alpha.vercel.app/",
@@ -394,7 +382,6 @@ export const projects = [
       "Electron",
       "File Processing",
       "Desktop App",
-      "JavaScript",
     ],
     github: "https://github.com/Divyansh1552005/PDF-IMG-Toolkit.git",
     webapp: "https://pdf-img-editor-converter-toolkit-so.vercel.app/",
@@ -436,7 +423,7 @@ export const projects = [
       "Task Manager",
     ],
     github: "https://github.com/Divyansh1552005/TickMe",
-    webapp: "#",
+    webapp: "https://github.com/Divyansh1552005/TickMe",
   },
 
   {
@@ -453,8 +440,6 @@ export const projects = [
       "RAG",
       "Gemini API",
       "YouTube Transcript API",
-      "NLP",
-      "Vector Search",
     ],
     github: "https://github.com/Divyansh1552005/YoutubeVideo_Chat",
     webapp: "https://github.com/Divyansh1552005/YoutubeVideo_Chat",
@@ -473,9 +458,6 @@ export const projects = [
       "RAG",
       "LangChain",
       "Vector Database",
-      "AI QnA",
-      "PDF QnA",
-      "YouTube QnA",
     ],
     github: "#",
     webapp: "#",
@@ -511,11 +493,3 @@ export const contactInfo = {
   github: "https://github.com/Divyansh1552005",
 };
 
-export const personalInfo = {
-  name: "Divyansh Sharma",
-  title: "Full-Stack Developer in the Making",
-  description:
-    "Currently mastering the MERN stack with a focus on backend development and integrating cutting-edge AI solutions into real-world applications. Passionate about leveraging AI and technology to tackle complex challenges, with a goal to create meaningful solutions that make a difference in people's lives.",
-  location: "Una, Himachal Pradesh, India",
-  currentStatus: "Open to work and collaboration opportunities",
-};

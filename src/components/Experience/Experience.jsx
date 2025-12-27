@@ -136,10 +136,10 @@ const Experience = () => {
                   transition={{ duration: 0.4, delay: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h4 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
-                    Technologies
+                  <h4 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">
+                    Tech Stack
                   </h4>
-                  <div className="flex flex-wrap gap-2 sm:gap-3">
+                  <div className="flex flex-wrap gap-3">
                     {experience.skills.map((skill, skillIndex) => (
                       <motion.span
                         key={skillIndex}
@@ -150,7 +150,8 @@ const Experience = () => {
                           delay: 0.6 + skillIndex * 0.03,
                         }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-xs sm:text-sm font-medium text-gray-300 hover:bg-gray-800 hover:border-gray-600 hover:text-white transition-all duration-200 min-h-[44px] sm:min-h-0"
+                        whileHover={{ scale: 1.05 }}
+                        className="text-sm font-semibold text-blue-300 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-500/30 rounded-xl px-4 py-2.5 hover:border-blue-400/50 hover:bg-blue-500/20 transition-all duration-300"
                       >
                         {skill}
                       </motion.span>

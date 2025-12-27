@@ -76,7 +76,7 @@ const Skills = () => {
         aria-labelledby="skills-heading"
       >
         <div className="max-w-7xl mx-auto">
-          {/* Section Title */}
+          {/* TITLE - SKILLS & TECHNOLOGIES */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -104,7 +104,7 @@ const Skills = () => {
             </p>
           </motion.div>
 
-          {/* Category Filter Bar */}
+          {/* FILTER */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +139,6 @@ const Skills = () => {
             </div>
           </motion.div>
 
-          {/* Skills Display - Floating Card Design */}
           <AnimatePresence mode="wait">
             {activeCategoryData && (
               <motion.div
@@ -150,7 +149,7 @@ const Skills = () => {
                 transition={{ duration: 0.5 }}
                 className="relative"
               >
-                {/* Skills Grid - No Container Box */}
+
                 <motion.div
                   variants={containerVariants}
                   initial="hidden"
@@ -178,7 +177,7 @@ const Skills = () => {
                       className="group relative flex flex-col items-center justify-center gap-4 focus:outline-none"
                       aria-label={`Learn more about ${skill.name}`}
                     >
-                      {/* Skill Logo */}
+                      
                       <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-3 sm:p-4 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300">
                         {skill.logo && (
                           <img
@@ -190,7 +189,7 @@ const Skills = () => {
                         )}
                       </div>
 
-                      {/* Skill Name */}
+                      
                       <motion.span
                         className="text-gray-400 group-hover:text-white font-semibold transition-colors duration-300 text-center leading-tight text-sm sm:text-base"
                         initial={{ opacity: 0.8 }}
