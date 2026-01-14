@@ -69,10 +69,10 @@ const Skills = () => {
 
   return (
     <>
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
       <section
         id="skills"
-        className="relative py-16 px-4 sm:px-6 lg:px-8 font-sans"
+        className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#0b0b0b] font-sans"
         aria-labelledby="skills-heading"
       >
         <div className="max-w-7xl mx-auto">
@@ -82,35 +82,30 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
             <h2
               id="skills-heading"
-              className="text-3xl sm:text-4xl font-bold text-white mb-3"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight"
             >
-              SKILLS & TECHNOLOGIES
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: 128 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: false }}
-                className="h-1 bg-blue-500 mx-auto mt-4"
-              />
+              Skills
             </h2>
-
-            <p className="text-gray-400 mt-4 text-lg font-semibold">
-              A comprehensive showcase of my technical proficiencies and domain
-              knowledge
-            </p>
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: 80 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: false }}
+              className="h-1.5 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 mx-auto rounded-full"
+            />
           </motion.div>
 
-          {/* FILTER */}
+          {/* FILTER BUTTONS */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: false }}
-            className="mb-12"
+            className="mb-16"
           >
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
               {categories.map((category) => (
@@ -119,26 +114,39 @@ const Skills = () => {
                   onClick={() => setActiveCategory(category.id)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`relative px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold text-sm sm:text-base transition-all duration-300 ${
+                  className={`relative px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0b0b0b] ${
                     activeCategory === category.id
                       ? "text-white"
-                      : "text-gray-400 bg-transparent border border-gray-700 hover:border-blue-500 hover:text-white"
+                      : "text-gray-400 bg-gray-900/50 border border-gray-800 hover:border-blue-500/50 hover:text-white hover:bg-gray-800/70"
                   }`}
                   style={
                     activeCategory === category.id
                       ? {
                           background:
-                            "linear-gradient(135deg, #2563eb, #1d4ed8)",
+                            "linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%)",
                         }
                       : {}
                   }
                 >
-                  {category.label}
+                  <span className="relative z-10">{category.label}</span>
+                  {activeCategory === category.id && (
+                    <motion.div
+                      layoutId="activeTab"
+                      className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500"
+                      style={{ borderRadius: 9999 }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.2,
+                        duration: 0.6,
+                      }}
+                    />
+                  )}
                 </motion.button>
               ))}
             </div>
           </motion.div>
 
+          {/* SKILLS GRID - HORIZONTAL COMPACT CARDS */}
           <AnimatePresence mode="wait">
             {activeCategoryData && (
               <motion.div
@@ -146,16 +154,15 @@ const Skills = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.4 }}
                 className="relative"
               >
-
                 <motion.div
                   variants={containerVariants}
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-8 md:gap-10"
+                  className="flex flex-wrap justify-center gap-3 sm:gap-4"
                 >
                   {activeCategoryData.skills.map((skill) => (
                     <motion.a
@@ -164,9 +171,9 @@ const Skills = () => {
                       whileHover={
                         !isMobile
                           ? {
-                              scale: 1.15,
-                              y: -12,
-                              transition: { duration: 0.3, ease: "easeOut" },
+                              scale: 1.05,
+                              y: -4,
+                              transition: { duration: 0.2, ease: "easeOut" },
                             }
                           : {}
                       }
@@ -174,11 +181,14 @@ const Skills = () => {
                       href={skill.docs}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative flex flex-col items-center justify-center gap-4 focus:outline-none"
+                      className="group relative flex items-center gap-3 px-4 py-2.5 bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-800/50 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0b0b0b]"
                       aria-label={`Learn more about ${skill.name}`}
                     >
-                      
-                      <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-3 sm:p-4 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300">
+                      {/* Glow effect on hover */}
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300" />
+
+                      {/* SMALL ICON */}
+                      <div className="relative z-10 w-8 h-8 flex items-center justify-center flex-shrink-0">
                         {skill.logo && (
                           <img
                             src={skill.logo}
@@ -189,14 +199,10 @@ const Skills = () => {
                         )}
                       </div>
 
-                      
-                      <motion.span
-                        className="text-gray-400 group-hover:text-white font-semibold transition-colors duration-300 text-center leading-tight text-sm sm:text-base"
-                        initial={{ opacity: 0.8 }}
-                        whileHover={{ opacity: 1 }}
-                      >
+                      {/* SKILL NAME */}
+                      <span className="relative z-10 text-gray-400 group-hover:text-white font-medium transition-colors duration-300 text-sm whitespace-nowrap">
                         {skill.name}
-                      </motion.span>
+                      </span>
                     </motion.a>
                   ))}
                 </motion.div>

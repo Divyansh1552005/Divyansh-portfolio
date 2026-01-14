@@ -1,56 +1,56 @@
 // Skills Section Logo's - Import your logo images here
-import htmlLogo from "./assets/tech_logo/html.png";
-import cssLogo from "./assets/tech_logo/css.png";
-import javascriptLogo from "./assets/tech_logo/javascript.png";
-import reactjsLogo from "./assets/tech_logo/reactjs.png";
-import nodejsLogo from "./assets/tech_logo/nodejs.png";
-import expressjsLogo from "./assets/tech_logo/express.png";
-import tailwindcssLogo from "./assets/tech_logo/tailwindcss.png";
-import reduxLogo from "./assets/tech_logo/redux.png";
-import mysqlLogo from "./assets/tech_logo/mysql.png";
-import mongodbLogo from "./assets/tech_logo/mongodb2.png";
-import postgreLogo from "./assets/tech_logo/postgre.png";
-import cLogo from "./assets/tech_logo/c.png";
-import cppLogo from "./assets/tech_logo/cpp.png";
-import pythonLogo from "./assets/tech_logo/python.png";
-import gitLogo from "./assets/tech_logo/git.png";
-import githubLogo from "./assets/tech_logo/github.jpg";
-import vscodeLogo from "./assets/tech_logo/vscode.png";
-import postmanLogo from "./assets/tech_logo/postman.png";
-import dockerLogo from "./assets/tech_logo/dockerlogo.png";
-import awsLogo from "./assets/tech_logo/aws.png";
-import vercelLogo from "./assets/tech_logo/vercel.png";
-import langchainLogo from "./assets/tech_logo/langchain.png";
-import openaiLogo from "./assets/tech_logo/openai.png";
-import pineconeLogo from "./assets/tech_logo/pinecone.png";
-import appwriteLogo from "./assets/tech_logo/appwrite.png";
-import linuxLogo from "./assets/tech_logo/linux.png";
-import socketioLogo from "./assets/tech_logo/socket.io.png";
-import framermotionlogo from "./assets/tech_logo/framer-motion.svg";
-import geminilogo from "./assets/tech_logo/gemini.svg";
-import chromadb from "./assets/tech_logo/chromadb.png";
-import lawbridgelogo from "./assets/work_logo/lawbridgelogo.png"
-import zedlogo from "./assets/tech_logo/zed.png"
-import renderlogo from "./assets/tech_logo/Renderlogo.svg"
-import ytrag from "./assets/work_logo/ytrag.png"
-import lawbridgechatbotlogo from "./assets/work_logo/lawbridgechatbot.png"
+import htmlLogo from "./assets/tech_logo/html.webp";
+import cssLogo from "./assets/tech_logo/css.webp";
+import javascriptLogo from "./assets/tech_logo/javascript.webp";
+import reactjsLogo from "./assets/tech_logo/reactjs.webp";
+import nodejsLogo from "./assets/tech_logo/nodejs.webp";
+import expressjsLogo from "./assets/tech_logo/express.webp";
+import tailwindcssLogo from "./assets/tech_logo/tailwindcss.webp";
+import reduxLogo from "./assets/tech_logo/redux.webp";
+import mysqlLogo from "./assets/tech_logo/mysql.webp";
+import mongodbLogo from "./assets/tech_logo/mongodb2.webp";
+import postgreLogo from "./assets/tech_logo/postgre.webp";
+import cLogo from "./assets/tech_logo/c.webp";
+import cppLogo from "./assets/tech_logo/cpp.webp";
+import pythonLogo from "./assets/tech_logo/python.webp";
+import gitLogo from "./assets/tech_logo/git.webp";
+import githubLogo from "./assets/tech_logo/github.webp";
+import vscodeLogo from "./assets/tech_logo/vscode.webp";
+import postmanLogo from "./assets/tech_logo/postman.webp";
+import dockerLogo from "./assets/tech_logo/dockerlogo.webp";
+import awsLogo from "./assets/tech_logo/aws.webp";
+import vercelLogo from "./assets/tech_logo/vercel.webp";
+import langchainLogo from "./assets/tech_logo/langchain.webp";
+import openaiLogo from "./assets/tech_logo/openai.webp";
+import pineconeLogo from "./assets/tech_logo/pinecone.webp";
+import appwriteLogo from "./assets/tech_logo/appwrite.webp";
+import linuxLogo from "./assets/tech_logo/linux.webp";
+import socketioLogo from "./assets/tech_logo/socket.io.webp";
+import framermotionlogo from "./assets/tech_logo/framer-motion.webp";
+import geminilogo from "./assets/tech_logo/gemini.webp";
+import chromadb from "./assets/tech_logo/chromadb.webp";
+import lawbridgelogo from "./assets/work_logo/lawbridgelogo.webp";
+import zedlogo from "./assets/tech_logo/zed.webp";
+import renderlogo from "./assets/tech_logo/Renderlogo.webp";
+import ytrag from "./assets/work_logo/ytrag.webp";
+import lawbridgechatbotlogo from "./assets/work_logo/lawbridgechatbot.webp";
 import { SiExpress } from "react-icons/si";
 
 // Experience Section Logo's
-import companyLogo from "./assets/company_logo/outlier.png";
-import Philogo from "./assets/company_logo/Phi.png"
+import companyLogo from "./assets/company_logo/outlier.webp";
+import Philogo from "./assets/company_logo/Phi.webp";
 
 // Education Section Logo's
-import iiitLogo from "./assets/education_logo/iiit_logo.png";
-import bhiwaniLogo from "./assets/education_logo/bhiwani_logo.png";
+import iiitLogo from "./assets/education_logo/iiit_logo.webp";
+import bhiwaniLogo from "./assets/education_logo/bhiwani_logo.webp";
 
 // Project Section Logo's
-import medicalChatbotLogo from "./assets/work_logo/medi.png";
-import hospitalManagementLogo from "./assets/work_logo/curedesk.png";
-import pdfToolkitLogo from "./assets/work_logo/pdf-toolkit.png";
-import todoAppLogo from "./assets/work_logo/todo_app.png";
-import ticmepng from "./assets/work_logo/tickme.png";
-import blogspace from "./assets/work_logo/blogspace.png";
+import medicalChatbotLogo from "./assets/work_logo/medi.webp";
+import hospitalManagementLogo from "./assets/work_logo/curedesk.webp";
+import pdfToolkitLogo from "./assets/work_logo/pdf-toolkit.webp";
+import todoAppLogo from "./assets/work_logo/todo_app.webp";
+import ticmepng from "./assets/work_logo/tickme.webp";
+import blogspace from "./assets/work_logo/blogspace.webp";
 
 export const SkillsInfo = [
   {
@@ -231,9 +231,12 @@ export const SkillsInfo = [
         docs: "https://www.kernel.org/doc/html/latest/",
       },
       { name: "Docker", logo: dockerLogo, docs: "https://docs.docker.com/" },
-      {name: "Zed", logo: zedlogo, docs: "https://zed.dev/" },
-      {name: "Render", logo: renderlogo, docs: "https://dashboard.render.com/"},
-      
+      { name: "Zed", logo: zedlogo, docs: "https://zed.dev/" },
+      {
+        name: "Render",
+        logo: renderlogo,
+        docs: "https://dashboard.render.com/",
+      },
     ],
   },
 ];
@@ -245,7 +248,7 @@ export const experiences = [
     role: "Frontend Developer",
     company: "Phi Launcher",
     date: "Oct 2025 - Dec 2025",
-    desc: "Designed and developed the official website for Phi Launcher, focusing on a clean, minimal, and performance-oriented user experience. Built responsive UI components, optimized page load times, and ensured smooth navigation across devices. The website reflects the core philosophy of Phi Launcher — speed, simplicity, and zero clutter.",
+    desc: "Improved website performance drastically by implementing lazy loading and route-based code splitting on pages. Designed the whole UI and followed all modern practices for React. Optimized performance, accessibility and SEO using Google Lighthouse and React Profiler. Made on-demand loading of iframes to reduce initial load times.",
     skills: [
       "React JS",
       "JavaScript",
@@ -256,7 +259,6 @@ export const experiences = [
     ],
   },
 ];
-
 
 export const education = [
   {
@@ -294,7 +296,7 @@ export const projects = [
     title: "LawBridge - Online Lawyer Appointment Platform",
     category: "webdev",
     description:
-      "A full-stack legal services platform connecting clients with verified lawyers for online consultations and appointment booking. Includes lawyer discovery by specialization, secure authentication, appointment scheduling, case inquiries, real-time chat, and online payments. Features an integrated AI legal assistant that supports intelligent legal search, contextual question answering, and maintains chat history for continuous case-related discussions.",
+      "A full-stack legal services platform connecting clients with verified lawyers for online consultations and appointment booking. Features lawyer discovery, secure authentication, appointment scheduling, real-time chat, online payments, and an integrated AI legal assistant for intelligent legal search and case-related discussions.",
     image: lawbridgelogo,
     tags: [
       "React JS",
@@ -304,7 +306,7 @@ export const projects = [
       "Razorpay",
       "Stream Video",
       "RAG Chatbot",
-      "Tailwind CSS"
+      "Tailwind CSS",
     ],
     github: "https://github.com/Divyansh1552005/Law_Bridge_Application",
     webapp: "https://github.com/Divyansh1552005/Law_Bridge_Application",
@@ -315,15 +317,9 @@ export const projects = [
     title: "Cure Desk - Hospital Management System",
     category: "webdev",
     description:
-      "Comprehensive MERN Stack healthcare platform with integrated AI chatbot, patient management, and appointment scheduling. Includes doctor profiles, patient records, appointment booking, prescription management, and real-time notifications for efficient healthcare delivery.",
+      "Comprehensive MERN Stack healthcare platform with integrated AI chatbot for patient management and appointment scheduling. Features doctor profiles, patient records, prescription management, and real-time notifications for efficient healthcare delivery.",
     image: hospitalManagementLogo,
-    tags: [
-      "React JS",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Tailwind CSS"
-    ],
+    tags: ["React JS", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/Divyansh1552005/Cure_Desk",
     webapp: "https://curedesk.vercel.app/",
   },
@@ -333,7 +329,7 @@ export const projects = [
     title: "Medibot - AI Medical Chatbot (RAG)",
     category: "genai",
     description:
-      "AI-powered medical chatbot built using Retrieval-Augmented Generation for accurate and context-aware healthcare responses. Utilizes vector databases for efficient document retrieval and advanced NLP techniques to answer medical queries safely.",
+      "AI-powered medical chatbot using Retrieval-Augmented Generation for accurate healthcare responses. Utilizes vector databases and advanced NLP techniques to answer medical queries safely and contextually.",
     image: medicalChatbotLogo,
     tags: [
       "Python",
@@ -355,7 +351,7 @@ export const projects = [
     title: "BlogSpace - Modern Blogging Platform",
     category: "webdev",
     description:
-      "A full-featured blogging platform built with React and Appwrite for seamless content creation and discovery. Includes rich text editor, secure authentication, image uploads, dark mode, real-time notifications, and a personalized dashboard.",
+      "A modern blogging platform built with React and Appwrite for seamless content creation. Features rich text editor, secure authentication, image uploads, dark mode, and a personalized dashboard.",
     image: blogspace,
     tags: [
       "React JS",
@@ -374,7 +370,7 @@ export const projects = [
     title: "Pdf Img Toolkit",
     category: "misc",
     description:
-      "Cross-platform desktop application for PDF and image manipulation. Supports PDF-to-image, image-to-PDF conversion, batch processing, and modern UI, packaged using Electron for Windows and Linux.",
+      "Cross-platform desktop application for PDF and image manipulation. Supports PDF-to-image conversion, image-to-PDF conversion, and batch processing with a modern UI built using Electron.",
     image: pdfToolkitLogo,
     tags: [
       "React JS",
@@ -392,7 +388,7 @@ export const projects = [
     title: "List-Tasks Application",
     category: "webdev",
     description:
-      "A responsive React-based task management application with categorized todos, real-time search, progress tracking, and full CRUD functionality. Includes priorities, due dates, and completion statistics.",
+      "A responsive React-based task management application with categorized todos and real-time search. Features full CRUD functionality, priorities, due dates, and completion statistics.",
     image: todoAppLogo,
     tags: [
       "React JS",
@@ -412,7 +408,7 @@ export const projects = [
     title: "TickMe - Task Manager Extension",
     category: "misc",
     description:
-      "A lightweight browser extension for managing daily tasks with reminder notifications. Features task creation, time-based alerts, dark/light theme toggle, and a clean minimal interface built using vanilla JavaScript.",
+      "A lightweight browser extension for managing daily tasks with reminder notifications. Features task creation, time-based alerts, theme toggle, and a clean minimal interface.",
     image: ticmepng,
     tags: [
       "HTML",
@@ -431,7 +427,7 @@ export const projects = [
     title: "YouTube Video Chat (RAG)",
     category: "genai",
     description:
-      "AI-powered application that enables interactive question answering with YouTube videos using transcript analysis. Implements Retrieval-Augmented Generation with FAISS vector search and Gemini AI for accurate, context-aware responses across long-form video content.",
+      "AI-powered application for interactive Q&A with YouTube videos using transcript analysis. Implements RAG with FAISS vector search and Gemini AI for accurate, context-aware responses.",
     image: ytrag,
     tags: [
       "Python",
@@ -450,15 +446,9 @@ export const projects = [
     title: "YT Chat - Multi-Source QnA Platform",
     category: "genai",
     description:
-      "A multi-source AI-powered QnA platform supporting website page–based question answering, YouTube video QnA using transcript analysis, and document-based QnA for PDFs or other uploaded files. Uses Retrieval-Augmented Generation with vector search to provide accurate, context-aware responses across different content sources. Browser extension support will be added soon.",
+      "A multi-source AI-powered QnA platform supporting website pages, YouTube videos, and PDF documents. Uses Retrieval-Augmented Generation with vector search for accurate, context-aware responses across different content sources.",
     image: ytrag,
-    tags: [
-      "React JS",
-      "FastAPI",
-      "RAG",
-      "LangChain",
-      "Vector Database",
-    ],
+    tags: ["React JS", "FastAPI", "RAG", "LangChain", "Vector Database"],
     github: "#",
     webapp: "#",
   },
@@ -467,7 +457,7 @@ export const projects = [
     title: "LawBridge – AI Legal Chatbot",
     category: "genai",
     description:
-      "AI-powered legal chatbot integrated into the LawBridge platform to provide context-aware legal assistance. The chatbot retains previous conversation context and securely stores complete chat history, enabling coherent multi-turn interactions and personalized follow-up responses. Built using modern NLP techniques to assist users with legal queries, intelligent legal search, and accurate information retrieval while prioritizing safety and reliability.",
+      "AI-powered legal chatbot for context-aware legal assistance integrated into LawBridge. Retains conversation context and securely stores chat history for coherent multi-turn interactions. Built using modern NLP for intelligent legal search and accurate information retrieval.",
     image: lawbridgechatbotlogo,
     tags: [
       "Python",
@@ -481,10 +471,8 @@ export const projects = [
     ],
     github: "https://github.com/Divyansh1552005/Law_Bridge_Application",
     webapp: "https://github.com/Divyansh1552005/Law_Bridge_Application",
-  }
-
+  },
 ];
-
 
 export const contactInfo = {
   email: "officialdslc1552005@gmail.com",
@@ -492,4 +480,3 @@ export const contactInfo = {
   twitter: "https://x.com/divyansh1552005",
   github: "https://github.com/Divyansh1552005",
 };
-

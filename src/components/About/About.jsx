@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { FiExternalLink } from "react-icons/fi";
-import { FaHashnode } from "react-icons/fa6";
-import profileImage from "../../assets/profile.png";
+import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { SiHashnode } from "react-icons/si";
+import { motion } from "framer-motion";
+import profileImage from "../../assets/profile.webp";
 
 const About = () => {
   const [currentText, setCurrentText] = useState("");
@@ -39,84 +41,127 @@ const About = () => {
   }, [currentText, currentIndex, isDeleting, charIndex, texts]);
 
   return (
-    <section
-      id="about"
-      className="pt-4 pb-16 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-8 md:mt-12 lg:mt-16"
-    >
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-10 lg:gap-16">
-          {/* Left Side - Content */}
-          <div className="flex-1 text-center md:text-left mt-8 md:mt-0 w-full md:max-w-xl lg:max-w-2xl">
-            {/* Greeting */}
-            <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight">
-              Hi, I am
-            </h1>
+    <>
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+      <section
+        id="about"
+        className="relative min-h-screen md:min-h-0 py-20 px-4 sm:px-6 lg:px-8 bg-[#0b0b0b] font-sans flex items-center"
+      >
+        <div className="max-w-6xl mx-auto w-full">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-start">
+            {/* Left Side - Profile Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="flex-shrink-0 mx-auto md:mx-0"
+            >
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-gray-800/50 shadow-2xl shadow-blue-500/10">
+                <img
+                  src={profileImage}
+                  alt="Divyansh Sharma"
+                  className="w-full h-full object-cover"
+                />
+                {/* Subtle glow */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/5 to-transparent"></div>
+              </div>
+            </motion.div>
 
-            {/* Name */}
-            <h2 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6 leading-tight bg-gradient-to-r from-blue-400 via-cyan-400 to-sky-400 bg-clip-text text-transparent">
-              Divyansh Sharma
-            </h2>
-
-            {/* Skills Heading with Custom Typing Effect */}
-            <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-semibold mb-6 lg:mb-8 leading-tight">
-              <span className="text-white">I am a </span>
-              <span className="text-[#3b82f6]">
-                {currentText}
-                <span className="animate-pulse text-[#3b82f6]">|</span>
-              </span>
-            </h3>
-
-            {/* About Me Paragraph */}
-            <p className="text-base sm:text-lg md:text-base lg:text-lg text-gray-400 mb-8 leading-relaxed">
-              I love creating things which can be helpful for either me or
-              others. Mostly a JS full-stack dev (I like working on the backend
-              more heh!) and exploring cloud and DevOps stuff like AWS, Docker.
-              I also like Linux as it's made me more tech-savvy, and now I
-              actually enjoy using the terminal over GUI. Lately exploring
-              Generative AI and making useful RAG chatbots for my web
-              applications.
-            </p>
-
-            {/* Resume and Blog Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
-              <a
-                href="https://drive.google.com/file/d/1BbydskQ4dldy-QOdRZt8rFbAJ4qBykAO/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 text-white py-3 px-8 rounded-full text-base lg:text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700"
+            {/* Right Side - Content */}
+            <div className="flex-1 text-center md:text-left flex flex-col justify-between md:block min-h-[calc(100vh-20rem)] md:min-h-0">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
               >
-                View My Resume
-                <FiExternalLink size={20} />
-              </a>
+                {/* Name with verified icon */}
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                    Divyansh Sharma
+                  </h1>
+                  <svg
+                    className="w-6 h-6 sm:w-7 sm:h-7 text-blue-500 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
 
-              <a
-                href="https://divyanshblogs.hashnode.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 text-white py-3 px-8 rounded-full text-base lg:text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-xl border-2 border-blue-500 hover:border-blue-400 hover:bg-blue-600/10 w-full sm:w-auto relative overflow-hidden group bg-blue-500/5 backdrop-blur-sm"
+                {/* Meta line with typing animation */}
+                <div className="mb-8">
+                  <p className="text-base sm:text-lg text-gray-400 font-medium">
+                    <span className="text-blue-400">{currentText}</span>
+                    <span className="animate-pulse text-blue-400">|</span>
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Engineer • Developer • Builder
+                  </p>
+                </div>
+
+                {/* Divider */}
+                <div className="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent mb-8"></div>
+
+                {/* About heading */}
+                <h2 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
+                  About
+                </h2>
+
+                {/* Description */}
+                <p className="text-sm sm:text-base text-gray-400 leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0">
+                  I love creating things which can be helpful for either me or
+                  others. Mostly a JS full-stack dev (I like working on the
+                  backend more heh!) and exploring cloud and DevOps stuff like
+                  AWS, Docker. I also like Linux as it's made me more
+                  tech-savvy, and now I actually enjoy using the terminal over
+                  GUI. Lately exploring Generative AI and making useful RAG
+                  chatbots for my web applications.
+                </p>
+              </motion.div>
+
+              {/* Action Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-auto pt-8 md:pt-0"
               >
-                <span className="relative z-10 flex items-center gap-2">
-                  Read My Blog
-                  <FaHashnode className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </a>
-            </div>
-          </div>
+                <motion.a
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  href="https://drive.google.com/file/d/1BbydskQ4dldy-QOdRZt8rFbAJ4qBykAO/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base"
+                >
+                  View Resume
+                  <FiExternalLink size={18} />
+                </motion.a>
 
-          {/* Right Side - Profile Image */}
-          <div className="flex-shrink-0">
-            <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] border-4 border-blue-600 rounded-full overflow-hidden bg-gray-900">
-              <img
-                src={profileImage}
-                alt="Divyansh Sharma"
-                className="w-full h-full object-cover"
-              />
+                <motion.a
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  href="https://divyanshblogs.hashnode.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-gray-800/50 hover:bg-gray-700/70 text-gray-300 hover:text-white py-3 px-6 rounded-lg border border-gray-700/50 hover:border-gray-600 font-semibold transition-all duration-300 text-sm sm:text-base"
+                >
+                  Read Blog
+                  <SiHashnode size={18} />
+                </motion.a>
+              </motion.div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

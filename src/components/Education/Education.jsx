@@ -1,123 +1,115 @@
 import React from "react";
-import { education } from "../../constants"; // Import the education data
-import { motion } from 'framer-motion';
-
+import { education } from "../../constants";
+import { motion } from "framer-motion";
 
 const Education = () => {
   return (
-    <section
-      id="education"
-      className="py-16 pb-16 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
-    >
-      {/* Section Title */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">EDUCATION</h2>
-        <div className="w-32 h-1 bg-blue-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          My education has been a journey of learning and development. Here are the details of my academic background
-        </p>
-      </div>
-
-      {/* Education Timeline */}
-      <div className="relative">
-        {/* Desktop: Horizontal Layout */}
-        <div className="hidden md:flex md:space-x-8 lg:space-x-12 justify-center items-stretch">
-          {education.map((edu, index) => (
-            <motion.div
-              key={edu.id}
-              className="flex-1 max-w-sm flex"
-              initial={{ opacity: 0, x: -80 }} // start hidden & left
-              whileInView={{ opacity: 1, x: 0 }} // animate to visible & normal position
-              transition={{
-                duration: 0.6,
-                ease: "easeOut",
-                delay: index * 0.2, // staggered animation for each card
-              }}
-              viewport={{ once: false, amount: 0.3 }} // animate when 30% visible (once)
+    <>
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+      <section
+        id="education"
+        className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#0b0b0b] font-sans"
+        aria-labelledby="education-heading"
+      >
+        <div className="max-w-5xl mx-auto">
+          {/* Section Title */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="mb-16 text-center"
+          >
+            <h2
+              id="education-heading"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
             >
-              {/* Content Section */}
-              <div className="w-full p-4 sm:p-6 rounded-2xl border border-white bg-[#0d0d0d] backdrop-blur-md shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] transform transition-transform duration-300 hover:scale-105 flex flex-col h-full">
-                {/* Flex container for image and text */}
-                <div className="flex flex-col items-center text-center space-y-4 flex-shrink-0">
-                  <div className="w-16 h-16 bg-white rounded-full overflow-hidden flex-shrink-0">
+              Education
+            </h2>
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: 80 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: false }}
+              className="h-1.5 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 mt-4 rounded-full mx-auto"
+            />
+          </motion.div>
+
+          {/* Education List */}
+          <div className="space-y-8">
+            {education.map((edu, index) => (
+              <motion.div
+                key={edu.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                className="group"
+              >
+                <div className="flex gap-4 sm:gap-6">
+                  {/* School Logo */}
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white flex items-center justify-center p-2">
                     <img
                       src={edu.img}
-                      alt={edu.school}
-                      className="w-full h-full object-contain p-2"
+                      alt={`${edu.school} logo`}
+                      className="w-full h-full object-contain"
+                      loading="lazy"
                     />
                   </div>
 
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      {edu.degree}
-                    </h3>
-                    <h4 className="text-sm text-gray-300 mb-2">
-                      {edu.school}
-                    </h4>
-                    <p className="text-sm text-gray-500 mb-2">{edu.date}</p>
-                    <p className="text-gray-400 font-bold">
-                      Grade: <span className="text-blue-400">{edu.grade}</span>
-                    </p>
-                  </div>
-                </div>
-
-                <p className="mt-4 text-gray-400 text-sm leading-relaxed flex-grow">{edu.desc}</p>
-              </div>
-            </motion.div>
-          ))}
-
-        </div>
-
-        {/* Mobile: Vertical Layout (Original) */}
-        <div className="md:hidden">
-          {/* Vertical line - hidden on mobile */}
-          <div className="absolute left-0 transform -translate-x-1/2 w-1 bg-white h-full hidden"></div>
-
-          {education.map((edu, index) => (
-            <motion.div
-              key={edu.id}
-              className="flex flex-col items-center mb-16"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: false, amount: 0.3 }}
-            >
-              {/* Content Section */}
-              <div className="w-full max-w-md p-4 rounded-2xl border border-white bg-[#0d0d0d] backdrop-blur-md shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] mx-auto transform transition-transform duration-300 hover:scale-105">
-                {/* Flex container for image and text */}
-                <div className="flex items-center space-x-6">
-                  {/* School Logo/Image */}
-                  <div className="w-16 h-16 bg-white rounded-full overflow-hidden flex-shrink-0">
-                    <img
-                      src={edu.img}
-                      alt={edu.school}
-                      className="w-full h-full object-contain p-2"
-                    />
-                  </div>
-
-                  {/* Degree, School Name, and Date */}
-                  <div className="flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">
-                        {edu.degree}
-                      </h3>
-                      <h4 className="text-sm text-gray-300 mb-2">
-                        {edu.school}
-                      </h4>
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    {/* Title and Date */}
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4 mb-2">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-base sm:text-lg font-bold text-white">
+                          {edu.degree}
+                        </h3>
+                        <p className="text-sm text-gray-400 font-medium">
+                          {edu.school}
+                        </p>
+                      </div>
+                      <span className="text-xs sm:text-sm text-gray-500 font-medium whitespace-nowrap">
+                        {edu.date}
+                      </span>
                     </div>
-                    {/* Date at the bottom */}
-                    <p className="text-sm text-gray-500 mb-2">{edu.date}</p>
-                    <p className="text-gray-400 font-bold">Grade: <span className="text-blue-400">{edu.grade}</span></p>
+
+                    {/* Grade */}
+                    <p className="text-xs sm:text-sm text-gray-500 mb-2">
+                      Grade:{" "}
+                      <span className="text-blue-400 font-medium">
+                        {edu.grade}
+                      </span>
+                    </p>
+
+                    {/* Description as bullet points */}
+                    <ul className="space-y-2 text-sm sm:text-base text-gray-400 leading-relaxed">
+                      {edu.desc
+                        .split(". ")
+                        .filter((point) => point.trim())
+                        .map((point, idx) => (
+                          <li key={idx} className="flex gap-3">
+                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
+                            <span>
+                              {point.trim()}
+                              {point.endsWith(".") ? "" : "."}
+                            </span>
+                          </li>
+                        ))}
+                    </ul>
                   </div>
                 </div>
 
-                <p className="mt-4 text-gray-400 text-sm leading-relaxed">{edu.desc}</p>
-              </div>
-            </motion.div>
-          ))}
+                {/* Divider */}
+                {index < education.length - 1 && (
+                  <div className="mt-8 h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+                )}
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

@@ -8,7 +8,6 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
 
-
   // Change navbar style on scroll ie animation style sa laga diya uspe
   useEffect(() => {
     const handleScroll = () => {
@@ -19,17 +18,16 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Handle menu item click ie scroll to section and close mobile menu 
+  // Handle menu item click ie scroll to section and close mobile menu
   const handleMenuItemClick = (sectionId) => {
     setActiveSection(sectionId);
     setIsOpen(false);
 
     const section = document.getElementById(sectionId);
-    if (section){
+    if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-
 
   // Update active section on scroll in the page
   // useEffect(() => {
@@ -57,22 +55,22 @@ const Navbar = () => {
 
   // better and optimized way using Intersection Observer API
   useEffect(() => {
-  const sections = document.querySelectorAll("section");
-  const options = { threshold: 0.5 }; // 50% visible hote hi trigger hoga
-    
-  const observer = new IntersectionObserver((entries) => {
-    // looping entries to find which section is in viewport since we are observing multiple sections
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) { // isIntersecting means visible in viewport
-        setActiveSection(entry.target.id);
-      }
-    });
-  }, options); 
+    const sections = document.querySelectorAll("section");
+    const options = { threshold: 0.5 }; // 50% visible hote hi trigger hoga
 
-  sections.forEach((section) => observer.observe(section));
-  return () => observer.disconnect();
-}, []);
+    const observer = new IntersectionObserver((entries) => {
+      // looping entries to find which section is in viewport since we are observing multiple sections
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // isIntersecting means visible in viewport
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, options);
 
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   const menuItems = [
     { id: "about", label: "About" },
@@ -89,15 +87,17 @@ const Navbar = () => {
         isScrolled ? "" : "px-[7vw] md:px-[7vw] lg:px-[20vw]"
       }`}
     >
-      <div className={`text-white flex justify-between items-center transition-all duration-500 ${
-        isScrolled 
-          ? "bg-[#0d0d0d]/80 backdrop-blur-xl shadow-2xl border-b border-white/5 px-[7vw] md:px-[7vw] lg:px-[20vw] py-3" 
-          : "px-0 py-4"
-      }`}>
+      <div
+        className={`text-white flex justify-between items-center transition-all duration-500 ${
+          isScrolled
+            ? "bg-[#0d0d0d]/80 backdrop-blur-xl shadow-2xl border-b border-white/5 px-[7vw] md:px-[7vw] lg:px-[20vw] py-3"
+            : "px-0 py-4"
+        }`}
+      >
         {/* Logo */}
-        <div 
+        <div
           className="text-lg font-bold cursor-pointer hover:opacity-80 transition-opacity duration-300"
-          onClick={() => handleMenuItemClick('about')}
+          onClick={() => handleMenuItemClick("about")}
         >
           <span className="text-[#3b82f6]">&lt;</span>
           <span className="text-white">Divyansh </span>
@@ -116,11 +116,11 @@ const Navbar = () => {
                   activeSection === item.id ? "text-white" : ""
                 }`}
               >
-                <button 
+                <button
                   onClick={() => handleMenuItemClick(item.id)}
                   className={`px-5 py-2 rounded-full transition-all duration-300 font-medium text-sm ${
-                    activeSection === item.id 
-                      ? "bg-[#1e50d6] text-white" 
+                    activeSection === item.id
+                      ? "bg-[#1e50d6] text-white"
                       : "hover:bg-white/5 hover:text-white"
                   }`}
                 >
@@ -203,8 +203,8 @@ const Navbar = () => {
               <SiHashnode size={16} />
             </a> */}
           </div>
-          
-          <button 
+
+          <button
             className="p-2 rounded-full bg-[#3b82f6]/20 border border-[#3b82f6]/30 hover:bg-[#3b82f6]/30 transition-all duration-300"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -222,15 +222,12 @@ const Navbar = () => {
         <div className="absolute top-[70px] left-1/2 transform -translate-x-1/2 w-[85%] bg-[#0d0d0d]/95 backdrop-blur-xl z-50 rounded-2xl shadow-2xl border border-white/10 md:hidden overflow-hidden">
           <ul className="flex flex-col items-center space-y-1 py-3 text-gray-300">
             {menuItems.map((item) => (
-              <li
-                key={item.id}
-                className="w-[90%]"
-              >
-                <button 
+              <li key={item.id} className="w-[90%]">
+                <button
                   onClick={() => handleMenuItemClick(item.id)}
                   className={`w-full py-3 px-6 rounded-xl transition-all duration-300 font-medium ${
-                    activeSection === item.id 
-                      ? "bg-[#1e50d6] text-white" 
+                    activeSection === item.id
+                      ? "bg-[#1e50d6] text-white"
                       : "hover:bg-white/5 hover:text-white text-center"
                   }`}
                 >
@@ -240,7 +237,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-      )} 
+      )}
     </nav>
   );
 };

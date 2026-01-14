@@ -18,7 +18,6 @@ function App() {
         <div className="relative pt-20">
           <Navbar />
           <About />
-          <Skills />
 
           {/* Separator Line */}
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
@@ -29,6 +28,11 @@ function App() {
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
 
           <Work />
+
+          {/* Separator Line */}
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
+          <Skills />
 
           {/* Separator Line */}
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
