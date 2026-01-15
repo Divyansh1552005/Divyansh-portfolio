@@ -51,6 +51,8 @@ import pdfToolkitLogo from "./assets/work_logo/pdf-toolkit.webp";
 import todoAppLogo from "./assets/work_logo/todo_app.webp";
 import ticmepng from "./assets/work_logo/tickme.webp";
 import blogspace from "./assets/work_logo/blogspace.webp";
+import linkshrinklogo from "./assets/work_logo/linkshrinklogo.webp";
+import querynestlogo from "./assets/work_logo/querynestlogo.webp";
 
 export const SkillsInfo = [
   {
@@ -326,6 +328,67 @@ export const projects = [
 
   {
     id: 2,
+    title: "QueryNest - RAG-Based QnA Platform",
+    category: "genai",
+    description:
+      "QueryNest is a FAISS-first Retrieval-Augmented Generation platform supporting QnA over websites, YouTube videos, and documents. Designed as a modular CLI-first system with future web and extension support, it focuses on efficient retrieval, clean architecture, and scalable GenAI workflows.",
+    image: querynestlogo,
+    tags: [
+      "Python",
+      "FAISS",
+      "RAG",
+      "LangChain",
+      "Gemini API",
+      "CLI Tool",
+      "Vector Search",
+      "GenAI",
+    ],
+    github: "https://github.com/Divyansh1552005/QueryNest",
+    webapp: "https://github.com/Divyansh1552005/QueryNest",
+  },
+
+  {
+    id: 3,
+    title: "LawBridge – AI Legal Chatbot",
+    category: "genai",
+    description:
+      "AI-powered legal chatbot for context-aware legal assistance integrated into LawBridge. Retains conversation context and securely stores chat history for coherent multi-turn interactions. Built using modern NLP for intelligent legal search and accurate information retrieval.",
+    image: lawbridgechatbotlogo,
+    tags: [
+      "Python",
+      "FastAPI",
+      "Gemini",
+      "Embeddings",
+      "Pinecone",
+      "Context Management",
+      "Conversation History",
+      "REST APIs",
+    ],
+    github: "https://github.com/Divyansh1552005/Law_Bridge_Application",
+    webapp: "https://github.com/Divyansh1552005/Law_Bridge_Application",
+  },
+
+  {
+    id: 4,
+    title: "YouTube Video Chat (RAG)",
+    category: "genai",
+    description:
+      "AI-powered application for interactive Q&A with YouTube videos using transcript analysis. Implements RAG with FAISS vector search and Gemini AI for accurate, context-aware responses.",
+    image: ytrag,
+    tags: [
+      "Python",
+      "LangChain",
+      "FAISS",
+      "RAG",
+      "Gemini API",
+      "YouTube Transcript API",
+    ],
+    github: "https://github.com/Divyansh1552005/YoutubeVideo_Chat",
+    webapp: "https://github.com/Divyansh1552005/YoutubeVideo_Chat",
+  },
+
+  {
+    id: 5,
     title: "Medibot - AI Medical Chatbot (RAG)",
     category: "genai",
     description:
@@ -347,7 +410,7 @@ export const projects = [
   },
 
   {
-    id: 3,
+    id: 6,
     title: "BlogSpace - Modern Blogging Platform",
     category: "webdev",
     description:
@@ -366,7 +429,7 @@ export const projects = [
   },
 
   {
-    id: 4,
+    id: 7,
     title: "Pdf Img Toolkit",
     category: "misc",
     description:
@@ -384,27 +447,7 @@ export const projects = [
   },
 
   {
-    id: 5,
-    title: "List-Tasks Application",
-    category: "webdev",
-    description:
-      "A responsive React-based task management application with categorized todos and real-time search. Features full CRUD functionality, priorities, due dates, and completion statistics.",
-    image: todoAppLogo,
-    tags: [
-      "React JS",
-      "Tailwind CSS",
-      "Local Storage",
-      "CRUD",
-      "Responsive Design",
-      "JavaScript",
-    ],
-    github:
-      "https://github.com/Divyansh1552005/React_Beginner_Projects/tree/main/10TodoApp",
-    webapp: "https://listtasks.vercel.app/",
-  },
-
-  {
-    id: 6,
+    id: 8,
     title: "TickMe - Task Manager Extension",
     category: "misc",
     description:
@@ -423,54 +466,24 @@ export const projects = [
   },
 
   {
-    id: 7,
-    title: "YouTube Video Chat (RAG)",
-    category: "genai",
-    description:
-      "AI-powered application for interactive Q&A with YouTube videos using transcript analysis. Implements RAG with FAISS vector search and Gemini AI for accurate, context-aware responses.",
-    image: ytrag,
-    tags: [
-      "Python",
-      "LangChain",
-      "FAISS",
-      "RAG",
-      "Gemini API",
-      "YouTube Transcript API",
-    ],
-    github: "https://github.com/Divyansh1552005/YoutubeVideo_Chat",
-    webapp: "https://github.com/Divyansh1552005/YoutubeVideo_Chat",
-  },
-
-  {
-    id: 8,
-    title: "YT Chat - Multi-Source QnA Platform",
-    category: "genai",
-    description:
-      "A multi-source AI-powered QnA platform supporting website pages, YouTube videos, and PDF documents. Uses Retrieval-Augmented Generation with vector search for accurate, context-aware responses across different content sources.",
-    image: ytrag,
-    tags: ["React JS", "FastAPI", "RAG", "LangChain", "Vector Database"],
-    github: "#",
-    webapp: "#",
-  },
-  {
     id: 9,
-    title: "LawBridge – AI Legal Chatbot",
-    category: "genai",
+    title: "LinkShrink - URL Shortener Platform",
+    category: "webdev",
     description:
-      "AI-powered legal chatbot for context-aware legal assistance integrated into LawBridge. Retains conversation context and securely stores chat history for coherent multi-turn interactions. Built using modern NLP for intelligent legal search and accurate information retrieval.",
-    image: lawbridgechatbotlogo,
+      "LinkShrink is a lightweight and scalable URL shortener built using the PERN stack with Docker-based containerization. It provides fast and reliable URL shortening, redirection, and analytics with a clean backend architecture optimized for performance and scalability.",
+    image: linkshrinklogo,
     tags: [
-      "Python",
-      "FastAPI",
-      "Gemini",
-      "Embeddings",
-      "Pinecone",
-      "Context Management",
-      "Conversation History",
+      "PostgreSQL",
+      "Express.js",
+      "React JS",
+      "Node.js",
+      "Docker",
       "REST APIs",
+      "URL Shortener",
+      "Scalable Architecture",
     ],
-    github: "https://github.com/Divyansh1552005/Law_Bridge_Application",
-    webapp: "https://github.com/Divyansh1552005/Law_Bridge_Application",
+    github: "https://github.com/Divyansh1552005/link-shrink",
+    webapp: "https://github.com/Divyansh1552005/link-shrink",
   },
 ];
 
