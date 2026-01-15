@@ -56,7 +56,7 @@ const Navbar = () => {
   // better and optimized way using Intersection Observer API
   useEffect(() => {
     const sections = document.querySelectorAll("section");
-    const options = { threshold: 0.5 }; // 50% visible hote hi trigger hoga
+    const options = { threshold: 0.6, rootMargin: "-100px 0px -100px 0px" }; // 60% visible hote hi trigger hoga with margin adjustment
 
     const observer = new IntersectionObserver((entries) => {
       // looping entries to find which section is in viewport since we are observing multiple sections
@@ -74,9 +74,9 @@ const Navbar = () => {
 
   const menuItems = [
     { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
     { id: "work", label: "Projects" },
+    { id: "skills", label: "Skills" },
     { id: "education", label: "Education" },
     { id: "contact", label: "Contact" },
   ];

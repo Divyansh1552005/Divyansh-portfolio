@@ -145,7 +145,7 @@ const Experience = () => {
                                     (skill, skillIndex) => (
                                       <span
                                         key={skillIndex}
-                                        className="text-xs sm:text-sm px-3 py-1.5 bg-gray-900/60 border border-gray-800 rounded-md text-gray-400 font-medium"
+                                        className="text-xs sm:text-sm px-3 py-1.5 bg-blue-500/10 border border-blue-500/30 rounded-md text-blue-400 font-medium hover:bg-blue-500/20 transition-colors duration-300"
                                       >
                                         {skill}
                                       </span>

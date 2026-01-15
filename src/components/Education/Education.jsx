@@ -37,7 +37,7 @@ const Education = () => {
 
           {/* Education List */}
           <div className="space-y-8">
-            {education.map((edu, index) => (
+            {[...education].reverse().map((edu, index) => (
               <motion.div
                 key={edu.id}
                 initial={{ opacity: 0, y: 20 }}
