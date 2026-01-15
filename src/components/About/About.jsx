@@ -42,7 +42,6 @@ const About = () => {
 
   return (
     <>
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
       <section
         id="about"
         className="relative min-h-screen md:min-h-0 py-20 px-4 sm:px-6 lg:px-8 bg-[#0b0b0b] font-sans flex items-center"

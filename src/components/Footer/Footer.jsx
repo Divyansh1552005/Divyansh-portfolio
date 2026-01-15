@@ -53,18 +53,10 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row justify-center items-center text-sm text-gray-500">
               {/* Copyright */}
               <p className="mb-2 sm:mb-0 text-center">
-                © 2025 Divyansh Sharma. All rights reserved.
+                © {new Date().getFullYear()} Divyansh Sharma. All rights
+                reserved.
               </p>
 
-              {/* Additional Links */}
-              {/* <div className="flex space-x-4">
-              <a href="#" className="hover:text-purple-400 transition-colors duration-300">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:text-purple-400 transition-colors duration-300">
-                Terms of Service
-              </a>
-            </div> */}
             </div>
           </div>
         </div>
