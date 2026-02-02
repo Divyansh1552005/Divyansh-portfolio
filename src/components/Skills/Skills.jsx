@@ -185,7 +185,7 @@ const Skills = () => {
                       aria-label={`Learn more about ${skill.name}`}
                     >
                       {/* Glow effect on hover */}
-                      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300" />
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:to-blue-500/10 transition-all duration-300" />
 
                       {/* SMALL ICON */}
                       <div className="relative z-10 w-8 h-8 flex items-center justify-center flex-shrink-0">
