@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FiExternalLink } from "react-icons/fi";
-import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { SiHashnode } from "react-icons/si";
 import { motion } from "framer-motion";
 import profileImage from "../../assets/profile.webp";
+
+const texts = [
+  "Fullstack Developer",
+  "Gen AI Developer",
+  "Linux Systems & DevOps",
+];
 
 const About = () => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
-
-  const texts = [
-    "Fullstack Developer",
-    "Gen AI Developer",
-    "Cloud Architect",
-    "Linux Enthusiast",
-  ];
 
   useEffect(() => {
     const typeSpeed = isDeleting ? 50 : 100;
@@ -38,7 +36,7 @@ const About = () => {
     }, typeSpeed);
 
     return () => clearTimeout(timer);
-  }, [currentText, currentIndex, isDeleting, charIndex, texts]);
+  }, [currentText, currentIndex, isDeleting, charIndex]);
 
   return (
     <>
@@ -104,15 +102,12 @@ const About = () => {
                   </p>
                 </div>
 
-                {/* Divider */}
                 <div className="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent mb-8"></div>
 
-                {/* About heading */}
                 <h2 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
                   About
                 </h2>
 
-                {/* Description */}
                 <p className="text-sm sm:text-base text-gray-400 leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0">
                   I love creating things which can be helpful for either me or
                   others. Mostly a JS full-stack dev (I like working on the
@@ -124,7 +119,6 @@ const About = () => {
                 </p>
               </motion.div>
 
-              {/* Action Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +129,7 @@ const About = () => {
                 <motion.a
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  href="https://drive.google.com/file/d/1BbydskQ4dldy-QOdRZt8rFbAJ4qBykAO/view?usp=sharing"
+                  href="https://drive.google.com/file/d/13XTyb6TSOhkb-Xoc8rIw-RtBnE1Yfu5m/view"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base"

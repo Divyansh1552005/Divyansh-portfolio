@@ -23,7 +23,7 @@ const Footer = () => {
               Divyansh Sharma
             </h2>
             <p className="text-gray-500 mt-2 text-sm">
-              Full Stack and Gen AI Developer
+              Full Stack Developer
             </p>
 
             {/* Navigation Links - Responsive */}
