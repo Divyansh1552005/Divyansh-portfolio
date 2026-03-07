@@ -7,6 +7,7 @@ import Work from "./components/Work/Work";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Github_heatmap from "./components/Github_heatmap/Github_heatmap";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <div className="relative pt-20">
           <Navbar />
           <About />
+
+
 
           {/* Separator Line */}
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
@@ -25,6 +28,11 @@ function App() {
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
 
           <Work />
+
+          {/* Separator Line */}
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
+          <Github_heatmap />
 
           {/* Separator Line */}
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>

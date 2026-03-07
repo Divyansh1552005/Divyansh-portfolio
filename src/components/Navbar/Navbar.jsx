@@ -83,16 +83,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled ? "" : "px-[7vw] md:px-[7vw] lg:px-[20vw]"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "" : "px-[7vw] md:px-[7vw] lg:px-[20vw]"
+        }`}
     >
       <div
-        className={`text-white flex justify-between items-center transition-all duration-500 ${
-          isScrolled
-            ? "bg-[#0d0d0d]/80 backdrop-blur-xl shadow-2xl border-b border-white/5 px-[7vw] md:px-[7vw] lg:px-[20vw] py-3"
-            : "px-0 py-4"
-        }`}
+        className={`text-white flex justify-between items-center transition-all duration-500 ${isScrolled
+          ? "bg-[#0d0d0d]/80 backdrop-blur-xl shadow-2xl border-b border-white/5 px-[7vw] md:px-[7vw] lg:px-[20vw] py-3"
+          : "px-0 py-4"
+          }`}
       >
         {/* Logo */}
         <div
@@ -112,17 +110,15 @@ const Navbar = () => {
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer transition-all duration-300 ${
-                  activeSection === item.id ? "text-white" : ""
-                }`}
+                className={`cursor-pointer transition-all duration-300 ${activeSection === item.id ? "text-white" : ""
+                  }`}
               >
                 <button
                   onClick={() => handleMenuItemClick(item.id)}
-                  className={`px-5 py-2 rounded-full transition-all duration-300 font-medium text-sm ${
-                    activeSection === item.id
-                      ? "bg-[#1e50d6] text-white"
-                      : "hover:bg-white/5 hover:text-white"
-                  }`}
+                  className={`px-5 py-2 rounded-full transition-all duration-300 font-medium text-sm ${activeSection === item.id
+                    ? "bg-[#1e50d6] text-white"
+                    : "hover:bg-white/5 hover:text-white"
+                    }`}
                 >
                   {item.label}
                 </button>
@@ -131,13 +127,12 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Social Icons - No Pill Style */}
-        <div className="hidden md:flex items-center space-x-2">
+        <div className="hidden md:flex items-center space-x-1">
           <a
             href="https://github.com/Divyansh1552005"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-full text-gray-300 hover:text-white hover:bg-white/10 hover:scale-110 transition-all duration-300 cursor-pointer"
+            className="p-2 text-white"
           >
             <FaGithub size={22} />
           </a>
@@ -145,7 +140,7 @@ const Navbar = () => {
             href="mailto:officialdslc1552005@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-full text-gray-300 hover:text-red-400 hover:bg-red-400/10 hover:scale-110 transition-all duration-300 cursor-pointer"
+            className="p-2 text-[#dc2626]"
           >
             <FaEnvelope size={22} />
           </a>
@@ -153,55 +148,38 @@ const Navbar = () => {
             href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-full text-gray-300 hover:text-blue-500 hover:bg-blue-500/10 hover:scale-110 transition-all duration-300 cursor-pointer"
+            className="p-2 text-[#0A66C2]"
           >
             <FaLinkedin size={22} />
           </a>
-          {/* <a
-            href="https://divyanshblogs.hashnode.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2 rounded-full text-gray-300 hover:text-blue-400 hover:bg-blue-400/10 hover:scale-110 transition-all duration-300 cursor-pointer"
-          >
-            <SiHashnode size={22} />
-          </a> */}
         </div>
 
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden flex items-center space-x-4">
-          <div className="flex space-x-1">
+        <div className="md:hidden flex items-center space-x-3">
+          <div className="flex space-x-1.5">
             <a
               href="https://github.com/Divyansh1552005"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
+              className="p-1.5 text-white"
             >
-              <FaGithub size={18} />
+              <FaGithub size={22} />
             </a>
             <a
               href="mailto:officialdslc1552005@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 rounded-full text-gray-300 hover:text-red-400 hover:bg-red-400/10 transition-all duration-300"
+              className="p-1.5 text-[#dc2626]"
             >
-              <FaEnvelope size={18} />
+              <FaEnvelope size={22} />
             </a>
             <a
               href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 rounded-full text-gray-300 hover:text-blue-500 hover:bg-blue-500/10 transition-all duration-300"
+              className="p-1.5 text-[#0A66C2]"
             >
-              <FaLinkedin size={18} />
+              <FaLinkedin size={22} />
             </a>
-            {/* <a
-              href="https://divyanshblogs.hashnode.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-1.5 rounded-full text-gray-300 hover:text-blue-400 hover:bg-blue-400/10 transition-all duration-300"
-            >
-              <SiHashnode size={16} />
-            </a> */}
           </div>
 
           <button
@@ -225,11 +203,10 @@ const Navbar = () => {
               <li key={item.id} className="w-[90%]">
                 <button
                   onClick={() => handleMenuItemClick(item.id)}
-                  className={`w-full py-3 px-6 rounded-xl transition-all duration-300 font-medium ${
-                    activeSection === item.id
-                      ? "bg-[#1e50d6] text-white"
-                      : "hover:bg-white/5 hover:text-white text-center"
-                  }`}
+                  className={`w-full py-3 px-6 rounded-xl transition-all duration-300 font-medium ${activeSection === item.id
+                    ? "bg-[#1e50d6] text-white"
+                    : "hover:bg-white/5 hover:text-white text-center"
+                    }`}
                 >
                   {item.label}
                 </button>

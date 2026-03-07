@@ -53,6 +53,7 @@ import ticmepng from "./assets/work_logo/tickme.webp";
 import blogspace from "./assets/work_logo/blogspace.webp";
 import linkshrinklogo from "./assets/work_logo/linkshrinklogo.webp";
 import querynestlogo from "./assets/work_logo/querynestlogo.webp";
+import myimg from "./assets/myimg.webp";
 
 export const SkillsInfo = [
   {
@@ -295,10 +296,10 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "LawBridge - Online Lawyer Appointment Platform",
+    title: "LawBridge",
     category: "webdev",
     description:
-      "A full-stack legal services platform connecting clients with verified lawyers for online consultations and appointment booking. Features lawyer discovery, secure authentication, appointment scheduling, real-time chat, online payments, and an integrated AI legal assistant for intelligent legal search and case-related discussions.",
+      "A full-stack legal platform connecting clients with lawyers. Features scheduling, real-time video appointments, and an AI legal assistant.",
     image: lawbridgelogo,
     tags: [
       "React JS",
@@ -316,10 +317,10 @@ export const projects = [
 
   {
     id: 1,
-    title: "Cure Desk - Hospital Management System",
+    title: "Cure Desk",
     category: "webdev",
     description:
-      "Comprehensive MERN Stack healthcare platform with integrated AI chatbot for patient management and appointment scheduling. Features doctor profiles, patient records, prescription management, and real-time notifications for efficient healthcare delivery.",
+      "Comprehensive healthcare platform with integrated AI chatbot. Features doctor profiles, patient records, and real-time notifications.",
     image: hospitalManagementLogo,
     tags: ["React JS", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/Divyansh1552005/Cure_Desk",
@@ -411,10 +412,10 @@ export const projects = [
 
   {
     id: 6,
-    title: "BlogSpace - Modern Blogging Platform",
+    title: "BlogSpace",
     category: "webdev",
     description:
-      "A modern blogging platform built with React and Appwrite for seamless content creation. Features rich text editor, secure authentication, image uploads, dark mode, and a personalized dashboard.",
+      "A modern blogging platform built with React and Appwrite. Features rich text editor, fast image uploads, and customizable user dashboards.",
     image: blogspace,
     tags: [
       "React JS",
@@ -467,10 +468,10 @@ export const projects = [
 
   {
     id: 9,
-    title: "LinkShrink - URL Shortener Platform",
+    title: "LinkShrink",
     category: "webdev",
     description:
-      "LinkShrink is a lightweight and scalable URL shortener built using the PERN stack with Docker-based containerization. It provides fast and reliable URL shortening, redirection, and analytics with a clean backend architecture optimized for performance and scalability.",
+      "A lightweight and scalable URL shortener built using the PERN stack and Docker. Provides fast redirection and analytics.",
     image: linkshrinklogo,
     tags: [
       "PostgreSQL",

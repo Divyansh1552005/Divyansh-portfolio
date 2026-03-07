@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { SiHashnode } from "react-icons/si";
 import { motion } from "framer-motion";
-import profileImage from "../../assets/profile.webp";
+import profileImage from "../../assets/myimg.webp";
 
 const texts = [
   "Fullstack Developer",
@@ -104,9 +104,11 @@ const About = () => {
 
                 <div className="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent mb-8"></div>
 
-                <h2 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-                  About
-                </h2>
+                <div className="mb-4">
+                  <h2 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
+                    About
+                  </h2>
+                </div>
 
                 <p className="text-sm sm:text-base text-gray-400 leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0">
                   I love creating things which can be helpful for either me or

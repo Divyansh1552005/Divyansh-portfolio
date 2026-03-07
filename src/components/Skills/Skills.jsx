@@ -6,18 +6,24 @@ const Skills = () => {
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   const categories = [
-    { id: "frontend", label: "Frontend", dataKey: "Frontend" },
-    { id: "backend", label: "Backend", dataKey: "Backend" },
-    { id: "genai", label: "Gen AI", dataKey: "Generative AI" },
-    { id: "devops", label: "DevOps & Tools", dataKey: "Tools & Cloud" },
+    { id: "development", label: "Development" },
+    { id: "genai", label: "Generative AI" },
+    { id: "devops", label: "DevOps and Tools" },
   ];
 
-  const [activeCategory, setActiveCategory] = useState("frontend");
+  const [activeCategory, setActiveCategory] = useState("development");
 
   const getActiveCategoryData = () => {
+    if (activeCategory === "development") {
+      const frontend = SkillsInfo.find((s) => s.title === "Frontend");
+      const backend = SkillsInfo.find((s) => s.title === "Backend");
+      return {
+        title: "Development",
+        skills: [...(frontend?.skills || []), ...(backend?.skills || [])],
+      };
+    }
+
     const categoryMap = {
-      frontend: "Frontend",
-      backend: "Backend",
       genai: "Generative AI",
       devops: "Tools & Cloud",
     };
@@ -114,17 +120,16 @@ const Skills = () => {
                   onClick={() => setActiveCategory(category.id)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`relative px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0b0b0b] ${
-                    activeCategory === category.id
-                      ? "text-white"
-                      : "text-gray-400 bg-gray-900/50 border border-gray-800 hover:border-blue-500/50 hover:text-white hover:bg-gray-800/70"
-                  }`}
+                  className={`relative px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0b0b0b] ${activeCategory === category.id
+                    ? "text-white"
+                    : "text-gray-400 bg-gray-900/50 border border-gray-800 hover:border-blue-500/50 hover:text-white hover:bg-gray-800/70"
+                    }`}
                   style={
                     activeCategory === category.id
                       ? {
-                          background:
-                            "linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%)",
-                        }
+                        background:
+                          "linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%)",
+                      }
                       : {}
                   }
                 >
@@ -171,21 +176,19 @@ const Skills = () => {
                       whileHover={
                         !isMobile
                           ? {
-                              scale: 1.05,
-                              y: -4,
-                              transition: { duration: 0.2, ease: "easeOut" },
-                            }
+                            scale: 1.05,
+                            y: -4,
+                            transition: { duration: 0.2, ease: "easeOut" },
+                          }
                           : {}
                       }
                       whileTap={{ scale: 0.95 }}
                       href={skill.docs}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative flex items-center gap-3 px-4 py-2.5 bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-800/50 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0b0b0b]"
+                      className="group relative flex items-center gap-3 px-3 py-2 border border-white/20 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0b0b0b] hover:border-white/50 hover:scale-105"
                       aria-label={`Learn more about ${skill.name}`}
                     >
-                      {/* Glow effect on hover */}
-                      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:to-blue-500/10 transition-all duration-300" />
 
                       {/* SMALL ICON */}
                       <div className="relative z-10 w-8 h-8 flex items-center justify-center flex-shrink-0">
