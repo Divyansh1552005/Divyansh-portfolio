@@ -121,31 +121,11 @@ const Skills = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className={`relative px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0b0b0b] ${activeCategory === category.id
-                    ? "text-white"
+                    ? "text-white bg-gradient-to-r from-blue-600 to-blue-700 shadow-lg shadow-blue-500/20"
                     : "text-gray-400 bg-gray-900/50 border border-gray-800 hover:border-blue-500/50 hover:text-white hover:bg-gray-800/70"
                     }`}
-                  style={
-                    activeCategory === category.id
-                      ? {
-                        background:
-                          "linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%)",
-                      }
-                      : {}
-                  }
                 >
                   <span className="relative z-10">{category.label}</span>
-                  {activeCategory === category.id && (
-                    <motion.div
-                      layoutId="activeTab"
-                      className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500"
-                      style={{ borderRadius: 9999 }}
-                      transition={{
-                        type: "spring",
-                        bounce: 0.2,
-                        duration: 0.6,
-                      }}
-                    />
-                  )}
                 </motion.button>
               ))}
             </div>
