@@ -54,7 +54,7 @@ const Experience = () => {
                 {/* Main Card */}
                 <div
                   onClick={() => toggleExpand(experience.id)}
-                  className="cursor-pointer py-6 px-4 sm:px-6 hover:bg-gray-900/30 transition-all duration-300 rounded-lg border border-gray-800/50 hover:border-gray-700 hover:shadow-lg hover:shadow-blue-500/5"
+                  className="cursor-pointer py-6 px-4 sm:px-6 bg-[#111111] hover:bg-[#151515] transition-all duration-300 rounded-xl border border-gray-800/50 hover:border-blue-500/30"
                   role="button"
                   aria-expanded={expandedId === experience.id}
                   tabIndex={0}
@@ -124,7 +124,7 @@ const Experience = () => {
                               .filter((point) => point.trim())
                               .map((point, idx) => (
                                 <li key={idx} className="flex gap-3">
-                                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
+                                  <span className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
                                   <span>
                                     {point.trim()}
                                     {point.endsWith(".") ? "" : "."}
