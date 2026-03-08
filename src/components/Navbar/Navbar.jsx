@@ -56,7 +56,7 @@ const Navbar = () => {
   // better and optimized way using Intersection Observer API
   useEffect(() => {
     const sections = document.querySelectorAll("section");
-    const options = { threshold: 0.6, rootMargin: "-100px 0px -100px 0px" }; // 60% visible hote hi trigger hoga with margin adjustment
+    const options = { threshold: 0.5, rootMargin: "-100px 0px -100px 0px" }; // 50% visible hote hi trigger hoga with margin adjustment
 
     const observer = new IntersectionObserver((entries) => {
       // looping entries to find which section is in viewport since we are observing multiple sections
@@ -83,18 +83,18 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "" : "px-[7vw] md:px-[7vw] lg:px-[20vw]"
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "" : "px-[6vw] md:px-[6vw] lg:px-[8vw] xl:px-[12vw] 2xl:px-[20vw]"
         }`}
     >
       <div
         className={`text-white flex justify-between items-center transition-all duration-500 ${isScrolled
-          ? "bg-[#0d0d0d]/80 backdrop-blur-xl shadow-2xl border-b border-white/5 px-[7vw] md:px-[7vw] lg:px-[20vw] py-3"
+          ? "bg-[#0d0d0d]/80 backdrop-blur-xl shadow-2xl border-b border-white/5 px-[6vw] md:px-[6vw] lg:px-[8vw] xl:px-[12vw] 2xl:px-[20vw] py-3"
           : "px-0 py-4"
           }`}
       >
         {/* Logo */}
         <div
-          className="text-lg font-bold cursor-pointer hover:opacity-80 transition-opacity duration-300"
+          className="text-lg font-bold cursor-pointer hover:opacity-80 transition-opacity duration-300 flex-shrink-0 whitespace-nowrap"
           onClick={() => handleMenuItemClick("about")}
         >
           <span className="text-[#3b82f6]">&lt;</span>
@@ -105,7 +105,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu - Pill Style */}
-        <div className="hidden md:flex items-center bg-[#0d0d0d]/60 backdrop-blur-md rounded-full px-2 py-2 border border-white/10 shadow-lg">
+        <div className="hidden lg:flex items-center bg-[#0d0d0d]/60 backdrop-blur-md rounded-full px-2 py-2 border border-white/10 shadow-lg">
           <ul className="flex space-x-1 text-gray-300">
             {menuItems.map((item) => (
               <li
@@ -127,69 +127,69 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="hidden md:flex items-center space-x-1">
+        <div className="hidden lg:flex items-center space-x-2">
           <a
             href="https://github.com/Divyansh1552005"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-white"
+            className="p-2.5 bg-[#181717] rounded-full hover:bg-[#24292e] transition-all duration-300"
           >
-            <FaGithub size={22} />
+            <FaGithub className="text-white text-xl" />
           </a>
           <a
             href="mailto:officialdslc1552005@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-[#dc2626]"
+            className="p-2.5 bg-red-600 rounded-full hover:bg-red-700 transition-all duration-300"
           >
-            <FaEnvelope size={22} />
+            <FaEnvelope className="text-white text-xl" />
           </a>
           <a
             href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-[#0A66C2]"
+            className="p-2.5 bg-[#0A66C2] rounded-full hover:bg-[#084e96] transition-all duration-300"
           >
-            <FaLinkedin size={22} />
+            <FaLinkedin className="text-white text-xl" />
           </a>
         </div>
 
-        <div className="md:hidden flex items-center space-x-3">
-          <div className="flex space-x-1.5">
+        <div className="lg:hidden flex items-center space-x-3">
+          <div className="flex space-x-2">
             <a
               href="https://github.com/Divyansh1552005"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 text-white"
+              className="p-2 bg-[#181717] rounded-full hover:bg-[#24292e] transition-all duration-300"
             >
-              <FaGithub size={22} />
+              <FaGithub className="text-white text-lg" />
             </a>
             <a
               href="mailto:officialdslc1552005@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 text-[#dc2626]"
+              className="p-2 bg-red-600 rounded-full hover:bg-red-700 transition-all duration-300"
             >
-              <FaEnvelope size={22} />
+              <FaEnvelope className="text-white text-lg" />
             </a>
             <a
               href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 text-[#0A66C2]"
+              className="p-2 bg-[#0A66C2] rounded-full hover:bg-[#084e96] transition-all duration-300"
             >
-              <FaLinkedin size={22} />
+              <FaLinkedin className="text-white text-lg" />
             </a>
           </div>
 
           <button
-            className="p-2 rounded-full bg-[#3b82f6]/20 border border-[#3b82f6]/30 hover:bg-[#3b82f6]/30 transition-all duration-300"
+            className="p-2 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-all duration-300"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              <FiX className="text-2xl text-[#1e50d6]" />
+              <FiX className="text-2xl text-white" />
             ) : (
-              <FiMenu className="text-2xl text-[#3b82f6]" />
+              <FiMenu className="text-2xl text-white" />
             )}
           </button>
         </div>
@@ -197,7 +197,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-[70px] left-1/2 transform -translate-x-1/2 w-[85%] bg-[#0d0d0d]/95 backdrop-blur-xl z-50 rounded-2xl shadow-2xl border border-white/10 md:hidden overflow-hidden">
+        <div className="absolute top-[70px] left-1/2 transform -translate-x-1/2 w-[85%] bg-[#0d0d0d]/95 backdrop-blur-xl z-50 rounded-2xl shadow-2xl border border-white/10 lg:hidden overflow-hidden">
           <ul className="flex flex-col items-center space-y-1 py-3 text-gray-300">
             {menuItems.map((item) => (
               <li key={item.id} className="w-[90%]">
