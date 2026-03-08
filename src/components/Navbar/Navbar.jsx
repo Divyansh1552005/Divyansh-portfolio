@@ -132,7 +132,7 @@ const Navbar = () => {
             href="https://github.com/Divyansh1552005"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2.5 bg-[#181717] rounded-full hover:bg-[#24292e] transition-all duration-300"
+            className="p-2.5 bg-[#1e1e1e] border border-white/10 rounded-full hover:bg-[#2a2a2a] transition-all duration-300"
           >
             <FaGithub className="text-white text-xl" />
           </a>
@@ -160,7 +160,7 @@ const Navbar = () => {
               href="https://github.com/Divyansh1552005"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-[#181717] rounded-full hover:bg-[#24292e] transition-all duration-300"
+              className="p-2 bg-[#1e1e1e] border border-white/10 rounded-full hover:bg-[#2a2a2a] transition-all duration-300"
             >
               <FaGithub className="text-white text-lg" />
             </a>
