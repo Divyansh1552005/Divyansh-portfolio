@@ -4,10 +4,12 @@ import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { experiences } from "../../constants";
 
 const Experience = () => {
-  const [expandedId, setExpandedId] = useState(0);
+  const [expandedIds, setExpandedIds] = useState([1, 0]);
 
   const toggleExpand = (id) => {
-    setExpandedId(expandedId === id ? null : id);
+    setExpandedIds((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
+    );
   };
 
   return (
@@ -41,7 +43,7 @@ const Experience = () => {
         </motion.div>
 
         {/* Experience Cards */}
-        <div className="space-y-0">
+        <div className="space-y-6">
           {experiences.map((experience, index) => (
             <React.Fragment key={experience.id}>
               <motion.div
@@ -56,7 +58,7 @@ const Experience = () => {
                   onClick={() => toggleExpand(experience.id)}
                   className="cursor-pointer py-6 px-4 sm:px-6 bg-[#111111] hover:bg-[#151515] transition-all duration-300 rounded-xl border border-gray-800/50 hover:border-blue-500/30"
                   role="button"
-                  aria-expanded={expandedId === experience.id}
+                  aria-expanded={expandedIds.includes(experience.id)}
                   tabIndex={0}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
@@ -71,7 +73,7 @@ const Experience = () => {
                       <img
                         src={experience.img}
                         alt={`${experience.company} logo`}
-                        className="w-full h-full object-contain"
+                        className={`w-full h-full object-cover rounded-full ${experience.company === "Deccan AI" ? "scale-110" : ""}`}
                         loading="lazy"
                       />
                     </div>
@@ -95,7 +97,7 @@ const Experience = () => {
                             {experience.date}
                           </span>
                           <div className="text-gray-500 group-hover:text-gray-400 transition-colors duration-300">
-                            {expandedId === experience.id ? (
+                            {expandedIds.includes(experience.id) ? (
                               <FiChevronUp size={20} />
                             ) : (
                               <FiChevronDown size={20} />
@@ -107,16 +109,19 @@ const Experience = () => {
                   </div>
 
                   {/* Expanded Content */}
-                  <AnimatePresence>
-                    {expandedId === experience.id && (
+                  <AnimatePresence initial={false}>
+                    {expandedIds.includes(experience.id) && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        transition={{
+                          duration: 0.4,
+                          ease: [0.04, 0.62, 0.23, 0.98],
+                        }}
                         className="overflow-hidden"
                       >
-                        <div className="mt-6 ml-0 sm:ml-20 space-y-4">
+                        <div className="pt-6 ml-0 sm:ml-20 space-y-4">
                           {/* Description as bullet points */}
                           <ul className="space-y-2 text-sm sm:text-base text-gray-400 leading-relaxed">
                             {experience.desc

@@ -39,6 +39,7 @@ import { SiExpress } from "react-icons/si";
 // Experience Section Logo's
 import companyLogo from "./assets/company_logo/outlier.webp";
 import Philogo from "./assets/company_logo/Phi.webp";
+import deccanAILogo from "./assets/company_logo/deccan_ai_logo.webp";
 
 // Education Section Logo's
 import iiitLogo from "./assets/education_logo/iiit_logo.webp";
@@ -246,12 +247,21 @@ export const SkillsInfo = [
 
 export const experiences = [
   {
+    id: 1,
+    img: deccanAILogo,
+    role: "Freelance AI Reviewer",
+    company: "Deccan AI",
+    date: "Mar 2026 - Present",
+    desc: "Contributed to RLHF pipelines to significantly improve LLM response quality and alignment. Evaluated AI-generated text and code outputs for structural correctness and logic. Performed precise data annotation and labeling while maintaining high accuracy. Identified critical edge cases in AI code to enhance model reliability.",
+    skills: ["RLHF", "LLMs", "Data Annotation", "AI Evaluation"],
+  },
+  {
     id: 0,
     img: Philogo,
     role: "Frontend Developer",
     company: "Phi Launcher",
     date: "Oct 2025 - Dec 2025",
-    desc: "Improved website performance drastically by implementing lazy loading and route-based code splitting on pages. Designed the whole UI and followed all modern practices for React. Optimized performance, accessibility and SEO using Google Lighthouse and React Profiler. Made on-demand loading of iframes to reduce initial load times.",
+    desc: "Improved website performance drastically using lazy loading and route-based code splitting. Designed the complete user interface following modern React design best practices. Optimized performance, accessibility, and SEO rankings using Google Lighthouse metrics. Implemented on-demand iframe loading to significantly reduce initial page load times.",
     skills: [
       "React JS",
       "JavaScript",
