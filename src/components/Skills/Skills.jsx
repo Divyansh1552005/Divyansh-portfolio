@@ -147,7 +147,7 @@ const Skills = () => {
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  className="flex flex-wrap justify-center gap-3 sm:gap-4"
+                  className="grid grid-cols-3 gap-3 max-[425px]:gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8"
                 >
                   {activeCategoryData.skills.map((skill) => (
                     <motion.a
@@ -166,12 +166,12 @@ const Skills = () => {
                       href={skill.docs}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative flex items-center gap-3 px-3 py-2 border border-white/20 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0b0b0b] hover:border-white/50 hover:scale-105"
+                      className="group relative flex flex-col items-center gap-2 px-3 py-4 border border-white/20 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0b0b0b] hover:border-white/50 hover:scale-105 max-[425px]:px-2 max-[425px]:py-3 max-[425px]:gap-1.5"
                       aria-label={`Learn more about ${skill.name}`}
                     >
 
-                      {/* SMALL ICON */}
-                      <div className="relative z-10 w-8 h-8 flex items-center justify-center flex-shrink-0">
+                      {/* ICON */}
+                      <div className="relative z-10 w-12 h-12 flex items-center justify-center flex-shrink-0 max-[425px]:w-10 max-[425px]:h-10">
                         {skill.logo && (
                           <img
                             src={skill.logo}
@@ -183,7 +183,7 @@ const Skills = () => {
                       </div>
 
                       {/* SKILL NAME */}
-                      <span className="relative z-10 text-gray-400 group-hover:text-white font-medium transition-colors duration-300 text-sm whitespace-nowrap">
+                      <span className="relative z-10 text-gray-400 group-hover:text-white font-medium transition-colors duration-300 text-xs text-center leading-tight max-[425px]:text-[10px]">
                         {skill.name}
                       </span>
                     </motion.a>
