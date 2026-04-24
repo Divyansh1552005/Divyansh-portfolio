@@ -322,7 +322,7 @@ export const projects = [
       "Tailwind CSS",
     ],
     github: "https://github.com/Divyansh1552005/Law_Bridge_Application",
-    webapp: "https://github.com/Divyansh1552005/Law_Bridge_Application",
+    webapp: "https://law-bridge-application.vercel.app/",
   },
 
   {
