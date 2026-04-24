@@ -155,30 +155,30 @@ const Navbar = () => {
         </div>
 
         <div className="lg:hidden flex items-center space-x-3">
-          <div className="flex space-x-2">
+          <div className="hidden sm:flex space-x-2">
             <a
               href="https://github.com/Divyansh1552005"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-[#1e1e1e] border border-white/10 rounded-full hover:bg-[#2a2a2a] transition-all duration-300"
+              className="p-2.5 bg-[#1e1e1e] border border-white/10 rounded-full hover:bg-[#2a2a2a] transition-all duration-300"
             >
-              <FaGithub className="text-white text-lg" />
+              <FaGithub className="text-white text-xl" />
             </a>
             <a
               href="mailto:officialdslc1552005@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-red-600 rounded-full hover:bg-red-700 transition-all duration-300"
+              className="p-2.5 bg-red-600 rounded-full hover:bg-red-700 transition-all duration-300"
             >
-              <FaEnvelope className="text-white text-lg" />
+              <FaEnvelope className="text-white text-xl" />
             </a>
             <a
               href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-[#0A66C2] rounded-full hover:bg-[#084e96] transition-all duration-300"
+              className="p-2.5 bg-[#0A66C2] rounded-full hover:bg-[#084e96] transition-all duration-300"
             >
-              <FaLinkedin className="text-white text-lg" />
+              <FaLinkedin className="text-white text-xl" />
             </a>
           </div>
 
@@ -213,6 +213,34 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+
+          {/* Social Icons for Small Screens */}
+          <div className="sm:hidden flex justify-center space-x-3 py-4 border-t border-white/10">
+            <a
+              href="https://github.com/Divyansh1552005"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-[#1e1e1e] border border-white/10 rounded-full hover:bg-[#2a2a2a] transition-all duration-300"
+            >
+              <FaGithub className="text-white text-xl" />
+            </a>
+            <a
+              href="mailto:officialdslc1552005@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-red-600 rounded-full hover:bg-red-700 transition-all duration-300"
+            >
+              <FaEnvelope className="text-white text-xl" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/divyansh-sharma-b05897286/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-[#0A66C2] rounded-full hover:bg-[#084e96] transition-all duration-300"
+            >
+              <FaLinkedin className="text-white text-xl" />
+            </a>
+          </div>
         </div>
       )}
     </nav>
