@@ -8,6 +8,7 @@ import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Github_heatmap from "./components/Github_heatmap/Github_heatmap";
+import Terminal from "./components/Terminal/Terminal";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Navbar />
           <About />
 
-
+          <Terminal />
 
           {/* Separator Line */}
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent"></div>

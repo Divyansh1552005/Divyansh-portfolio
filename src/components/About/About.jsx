@@ -112,11 +112,11 @@ const About = () => {
 
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0">
                   I love creating things which can be helpful for either me or
-                  others. Mostly a JS full-stack dev (I like working on the
-                  backend more heh!) and exploring cloud and DevOps stuff like
+                  others. Mostly I do JS full-stack dev work (I like working on the
+                  backend more 😁) and exploring cloud and DevOps stuff like
                   AWS, Docker. I also like Linux as it's made me more
                   tech-savvy, and now I actually enjoy using the terminal over
-                  GUI. Lately exploring Generative AI and making useful RAG
+                  GUI. Recently, I have been exploring Generative AI, Agents, workflows and making useful RAG
                   chatbots for my web applications.
                 </p>
               </motion.div>
