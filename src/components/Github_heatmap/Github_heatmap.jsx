@@ -2,10 +2,12 @@ import React from "react";
 import { GitHubCalendar } from "react-github-calendar";
 import { motion } from "framer-motion";
 import { FiGithub } from "react-icons/fi";
+import { useTheme } from "../../hooks/useTheme";
 
 const Github_heatmap = () => {
+    const [isDark] = useTheme();
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0b0b0b] font-sans flex items-center justify-center min-h-[50vh]">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0b0b0b] font-sans flex items-center justify-center min-h-[50vh]">
             <div className="max-w-6xl mx-auto w-full flex flex-col items-center">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -14,7 +16,7 @@ const Github_heatmap = () => {
                     viewport={{ once: false, amount: 0.3 }}
                     className="mb-16 text-center"
                 >
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
                         Github Activity
                     </h2>
                     <motion.div
@@ -42,31 +44,43 @@ const Github_heatmap = () => {
                   height: 6px;
                 }
                 .custom-scrollbar::-webkit-scrollbar-track {
-                  background: #0d0d0d;
+                  background: #e5e7eb;
                   border-radius: 10px;
                 }
                 .custom-scrollbar::-webkit-scrollbar-thumb {
-                  background: #333333;
+                  background: #9ca3af;
                   border-radius: 10px;
                 }
                 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-                  background: #444444;
+                  background: #6b7280;
                 }
-                /* Firefox */
                 .custom-scrollbar {
                   scrollbar-width: thin;
+                  scrollbar-color: #9ca3af #e5e7eb;
+                }
+                .dark .custom-scrollbar::-webkit-scrollbar-track {
+                  background: #0d0d0d;
+                }
+                .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+                  background: #333333;
+                }
+                .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                  background: #444444;
+                }
+                .dark .custom-scrollbar {
                   scrollbar-color: #333333 #0d0d0d;
                 }
               `}</style>
                             <div className="flex justify-start min-w-max">
-                                <div className="bg-[#0d0d0d] p-6 md:p-8 rounded-2xl border border-gray-800/50">
+                                <div className="bg-gray-50 dark:bg-[#0d0d0d] p-6 md:p-8 rounded-2xl border border-gray-200 dark:border-gray-800/50">
                                     <GitHubCalendar
                                         username="Divyansh1552005"
-                                        colorScheme="dark"
+                                        colorScheme={isDark ? "dark" : "light"}
                                         fontSize={14}
                                         blockSize={14}
                                         blockMargin={5}
                                         theme={{
+                                            light: ['#ebedf0', '#bfdbfe', '#60a5fa', '#2563eb', '#1d4ed8'],
                                             dark: ['#161b22', '#1e3a8a', '#1d4ed8', '#2563eb', '#3b82f6'],
                                         }}
                                     />
@@ -78,7 +92,7 @@ const Github_heatmap = () => {
                                 href="https://github.com/Divyansh1552005"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm font-medium transition-colors"
+                                className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-sm font-medium transition-colors"
                             >
                                 Follow me on GitHub <FiGithub size={16} />
                             </a>

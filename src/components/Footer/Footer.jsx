@@ -12,9 +12,9 @@ const Footer = () => {
   return (
     <div>
       {/* Separator Line */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent"></div>
 
-      <footer className="bg-[#0d0d0d] text-white py-12 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+      <footer className="bg-white dark:bg-[#0d0d0d] text-gray-900 dark:text-white py-12 px-[12vw] md:px-[7vw] lg:px-[20vw]">
         <div className="container mx-auto">
           {/* Main Footer Content */}
           <div className="text-center">
@@ -39,7 +39,7 @@ const Footer = () => {
                 <button
                   key={index}
                   onClick={() => handleScroll(item.id)}
-                  className="cursor-pointer hover:text-blue-400 text-sm sm:text-base transition-colors duration-300 relative group"
+                  className="cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 text-sm sm:text-base transition-colors duration-300 relative group"
                 >
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
 
           {/* Divider */}
-          <div className="border-t border-gray-800 mt-8 pt-6">
+          <div className="border-t border-gray-200 dark:border-gray-800 mt-8 pt-6">
             <div className="flex flex-col sm:flex-row justify-center items-center text-sm text-gray-500">
               {/* Copyright */}
               <p className="mb-2 sm:mb-0 text-center">

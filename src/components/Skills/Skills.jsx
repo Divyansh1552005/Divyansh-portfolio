@@ -75,10 +75,10 @@ const Skills = () => {
 
   return (
     <>
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-800 to-transparent"></div>
       <section
         id="skills"
-        className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#0b0b0b] font-sans"
+        className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0b0b0b] font-sans"
         aria-labelledby="skills-heading"
       >
         <div className="max-w-7xl mx-auto">
@@ -92,7 +92,7 @@ const Skills = () => {
           >
             <h2
               id="skills-heading"
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight"
             >
               Skills
             </h2>
@@ -120,9 +120,9 @@ const Skills = () => {
                   onClick={() => setActiveCategory(category.id)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`relative px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0b0b0b] ${activeCategory === category.id
+                  className={`relative px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium text-sm sm:text-base transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-[#0b0b0b] ${activeCategory === category.id
                     ? "text-white bg-gradient-to-r from-blue-600 to-blue-700 shadow-lg shadow-blue-500/20"
-                    : "text-gray-400 bg-gray-900/50 border border-gray-800 hover:border-blue-500/50 hover:text-white hover:bg-gray-800/70"
+                    : "text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 hover:border-blue-500/50 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-800/70"
                     }`}
                 >
                   <span className="relative z-10">{category.label}</span>
@@ -166,7 +166,7 @@ const Skills = () => {
                       href={skill.docs}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative flex flex-col items-center gap-2 px-3 py-4 border border-white/20 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0b0b0b] hover:border-white/50 hover:scale-105 max-[425px]:px-2 max-[425px]:py-3 max-[425px]:gap-1.5"
+                      className="group relative flex flex-col items-center gap-2 px-3 py-4 border border-gray-200 dark:border-white/20 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-[#0b0b0b] hover:border-gray-300 dark:hover:border-white/50 hover:scale-105 max-[425px]:px-2 max-[425px]:py-3 max-[425px]:gap-1.5"
                       aria-label={`Learn more about ${skill.name}`}
                     >
 
@@ -183,7 +183,7 @@ const Skills = () => {
                       </div>
 
                       {/* SKILL NAME */}
-                      <span className="relative z-10 text-gray-400 group-hover:text-white font-medium transition-colors duration-300 text-xs text-center leading-tight max-[425px]:text-[10px]">
+                      <span className="relative z-10 text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white font-medium transition-colors duration-300 text-xs text-center leading-tight max-[425px]:text-[10px]">
                         {skill.name}
                       </span>
                     </motion.a>

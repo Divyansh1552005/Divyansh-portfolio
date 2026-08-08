@@ -15,7 +15,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#0b0b0b] font-sans"
+      className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0b0b0b] font-sans"
       aria-labelledby="experience-heading"
     >
       <div className="max-w-5xl mx-auto">
@@ -29,7 +29,7 @@ const Experience = () => {
         >
           <h2
             id="experience-heading"
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-tight"
           >
             Work Experience
           </h2>
@@ -56,7 +56,7 @@ const Experience = () => {
                 {/* Main Card */}
                 <div
                   onClick={() => toggleExpand(experience.id)}
-                  className="cursor-pointer py-6 px-4 sm:px-6 bg-[#111111] hover:bg-[#151515] transition-all duration-300 rounded-xl border border-gray-800/50 hover:border-blue-500/30"
+                  className="cursor-pointer py-6 px-4 sm:px-6 bg-gray-50 hover:bg-gray-100 dark:bg-[#111111] dark:hover:bg-[#151515] transition-all duration-300 rounded-xl border border-gray-200 dark:border-gray-800/50 hover:border-blue-500/30"
                   role="button"
                   aria-expanded={expandedIds.includes(experience.id)}
                   tabIndex={0}
@@ -69,7 +69,7 @@ const Experience = () => {
                 >
                   <div className="flex items-start gap-4 sm:gap-6">
                     {/* Company Logo */}
-                    <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gray-900/80 border border-gray-800 flex items-center justify-center p-2 group-hover:border-gray-700 transition-colors duration-300">
+                    <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gray-100 dark:bg-gray-900/80 border border-gray-200 dark:border-gray-800 flex items-center justify-center p-2 group-hover:border-gray-300 dark:group-hover:border-gray-700 transition-colors duration-300">
                       <img
                         src={experience.img}
                         alt={`${experience.company} logo`}
@@ -83,7 +83,7 @@ const Experience = () => {
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
                         <div className="flex-grow min-w-0">
                           {/* Company Name / Role */}
-                          <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-1">
+                          <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 dark:text-white mb-1">
                             {experience.company}{" "}
                             <span className="text-gray-500 font-normal text-sm sm:text-base">
                               / {experience.role}
@@ -96,7 +96,7 @@ const Experience = () => {
                           <span className="text-xs sm:text-sm text-gray-500 font-medium whitespace-nowrap">
                             {experience.date}
                           </span>
-                          <div className="text-gray-500 group-hover:text-gray-400 transition-colors duration-300">
+                          <div className="text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-400 transition-colors duration-300">
                             {expandedIds.includes(experience.id) ? (
                               <FiChevronUp size={20} />
                             ) : (
@@ -123,7 +123,7 @@ const Experience = () => {
                       >
                         <div className="pt-6 ml-0 sm:ml-20 space-y-4">
                           {/* Description as bullet points */}
-                          <ul className="space-y-2 text-sm sm:text-base text-gray-400 leading-relaxed">
+                          <ul className="space-y-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
                             {experience.desc
                               .split(". ")
                               .filter((point) => point.trim())
@@ -150,7 +150,7 @@ const Experience = () => {
                                     (skill, skillIndex) => (
                                       <span
                                         key={skillIndex}
-                                        className="text-sm px-3 py-1.5 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 font-medium hover:border-blue-400/50 hover:bg-blue-500/20 transition-all duration-300"
+                                        className="text-sm px-3 py-1.5 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-600 dark:text-blue-400 font-medium hover:border-blue-400/50 hover:bg-blue-500/20 transition-all duration-300"
                                       >
                                         {skill}
                                       </span>

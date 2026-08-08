@@ -42,7 +42,7 @@ const About = () => {
     <>
       <section
         id="about"
-        className="relative min-h-screen md:min-h-0 py-20 px-4 sm:px-6 lg:px-8 bg-[#0b0b0b] font-sans flex items-center"
+        className="relative min-h-screen md:min-h-0 py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0b0b0b] font-sans flex items-center"
       >
         <div className="max-w-6xl mx-auto w-full">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-start">
@@ -54,7 +54,7 @@ const About = () => {
               viewport={{ once: true }}
               className="flex-shrink-0 mx-auto md:mx-0"
             >
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-gray-800/50 shadow-2xl shadow-blue-500/10">
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-gray-200 dark:border-gray-800/50 shadow-2xl shadow-blue-500/10">
                 <img
                   src={profileImage}
                   alt="Divyansh Sharma"
@@ -75,7 +75,7 @@ const About = () => {
               >
                 {/* Name with verified icon */}
                 <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
                     Divyansh Sharma
                   </h1>
                   <svg
@@ -93,24 +93,24 @@ const About = () => {
 
                 {/* Meta line with typing animation */}
                 <div className="mb-8">
-                  <p className="text-base sm:text-lg text-gray-400 font-medium">
-                    <span className="text-blue-400">{currentText}</span>
-                    <span className="animate-pulse text-blue-400">|</span>
+                  <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-medium">
+                    <span className="text-blue-600 dark:text-blue-400">{currentText}</span>
+                    <span className="animate-pulse text-blue-600 dark:text-blue-400">|</span>
                   </p>
                   <p className="text-sm text-gray-500 mt-1">
                     Engineer • Developer • Builder
                   </p>
                 </div>
 
-                <div className="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent mb-8"></div>
+                <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-800 to-transparent mb-8"></div>
 
                 <div className="mb-4">
-                  <h2 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
+                  <h2 className="text-xs sm:text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider">
                     About
                   </h2>
                 </div>
 
-                <p className="text-sm sm:text-base text-gray-400 leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0">
                   I love creating things which can be helpful for either me or
                   others. Mostly a JS full-stack dev (I like working on the
                   backend more heh!) and exploring cloud and DevOps stuff like
@@ -146,7 +146,7 @@ const About = () => {
                   href="https://divyanshblogs.hashnode.dev/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-gray-800/50 hover:bg-gray-700/70 text-gray-300 hover:text-white py-3 px-6 rounded-lg border border-gray-700/50 hover:border-gray-600 font-semibold transition-all duration-300 text-sm sm:text-base"
+                  className="inline-flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800/50 dark:hover:bg-gray-700/70 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white py-3 px-6 rounded-lg border border-gray-200 hover:border-gray-300 dark:border-gray-700/50 dark:hover:border-gray-600 font-semibold transition-all duration-300 text-sm sm:text-base"
                 >
                   Read Blog
                   <SiHashnode size={18} />

@@ -12,11 +12,11 @@ const Contact = () => {
 
   return (
     <>
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-800 to-transparent"></div>
       <section
         ref={sectionRef}
         id="contact"
-        className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#0b0b0b] font-sans"
+        className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0b0b0b] font-sans"
         aria-labelledby="contact-heading"
       >
         <ToastContainer />
@@ -32,7 +32,7 @@ const Contact = () => {
           >
             <h2
               id="contact-heading"
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-tight"
             >
               Get In Touch
             </h2>
@@ -158,19 +158,19 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, y: -2 }}
-                className="flex items-start gap-4 p-5 bg-[#111111] rounded-xl border border-gray-800/50 hover:border-red-500/30 transition-all duration-300 group"
+                className="flex items-start gap-4 p-5 bg-gray-50 dark:bg-[#111111] rounded-xl border border-gray-200 dark:border-gray-800/50 hover:border-red-500/30 transition-all duration-300 group"
               >
                 <div className="p-3 bg-red-600 rounded-lg transition-all duration-300">
                   <FaEnvelope className="text-white text-xl" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-white font-semibold mb-1">Email</h4>
-                  <p className="text-white/80 text-sm leading-relaxed mb-2">
+                  <h4 className="text-gray-900 dark:text-white font-semibold mb-1">Email</h4>
+                  <p className="text-gray-600 dark:text-white/80 text-sm leading-relaxed mb-2">
                     Reach out via email. I usually reply within 24–48 hours.
                   </p>
                   <p className="text-sm">
-                    <span className="text-white/60">Email:</span>{" "}
-                    <span className="text-white">
+                    <span className="text-gray-500 dark:text-white/60">Email:</span>{" "}
+                    <span className="text-gray-900 dark:text-white">
                       officialdslc1552005@gmail.com
                     </span>
                   </p>
@@ -183,18 +183,18 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, y: -2 }}
-                className="flex items-start gap-4 p-5 bg-[#111111] rounded-xl border border-gray-800/50 hover:border-white/30 transition-all duration-300 group"
+                className="flex items-start gap-4 p-5 bg-gray-50 dark:bg-[#111111] rounded-xl border border-gray-200 dark:border-gray-800/50 hover:border-white/30 transition-all duration-300 group"
               >
                 <div className="p-3 bg-blue-600 rounded-lg transition-all duration-300">
                   <SiSignal className="text-white text-xl" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-white font-semibold mb-1">Signal</h4>
-                  <p className="text-white/80 text-sm leading-relaxed mb-2">
+                  <h4 className="text-gray-900 dark:text-white font-semibold mb-1">Signal</h4>
+                  <p className="text-gray-600 dark:text-white/80 text-sm leading-relaxed mb-2">
                     For quicker communication, message me on Signal.
                   </p>
-                  <p className="text-white text-sm">
-                    <span className="text-white/60">Username:</span>{" "}
+                  <p className="text-gray-900 dark:text-white text-sm">
+                    <span className="text-gray-500 dark:text-white/60">Username:</span>{" "}
                     divyansh1552005.15
                   </p>
                 </div>
@@ -206,19 +206,19 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, y: -2 }}
-                className="flex items-start gap-4 p-5 bg-[#111111] rounded-xl border border-gray-800/50 hover:border-gray-400/30 transition-all duration-300 group"
+                className="flex items-start gap-4 p-5 bg-gray-50 dark:bg-[#111111] rounded-xl border border-gray-200 dark:border-gray-800/50 hover:border-gray-400/30 transition-all duration-300 group"
               >
                 <div className="p-3 bg-[#181717] rounded-lg group-hover:bg-[#24292e] transition-all duration-300">
                   <FaGithub className="text-white text-xl" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-white font-semibold mb-1">GitHub</h4>
-                  <p className="text-white/80 text-sm leading-relaxed mb-2">
+                  <h4 className="text-gray-900 dark:text-white font-semibold mb-1">GitHub</h4>
+                  <p className="text-gray-600 dark:text-white/80 text-sm leading-relaxed mb-2">
                     Check out my repositories and open source contributions.
                   </p>
                   <p className="text-sm">
-                    <span className="text-white/60">Username:</span>{" "}
-                    <span className="text-white">Divyansh1552005</span>
+                    <span className="text-gray-500 dark:text-white/60">Username:</span>{" "}
+                    <span className="text-gray-900 dark:text-white">Divyansh1552005</span>
                   </p>
                 </div>
               </motion.a>
@@ -229,19 +229,19 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, y: -2 }}
-                className="flex items-start gap-4 p-5 bg-[#111111] rounded-xl border border-gray-800/50 hover:border-blue-400/30 transition-all duration-300 group"
+                className="flex items-start gap-4 p-5 bg-gray-50 dark:bg-[#111111] rounded-xl border border-gray-200 dark:border-gray-800/50 hover:border-blue-400/30 transition-all duration-300 group"
               >
                 <div className="p-3 bg-blue-500 rounded-lg transition-all duration-300">
                   <SiHashnode className="text-white text-xl" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-white font-semibold mb-1">Blogs</h4>
-                  <p className="text-white/80 text-sm leading-relaxed mb-2">
+                  <h4 className="text-gray-900 dark:text-white font-semibold mb-1">Blogs</h4>
+                  <p className="text-gray-600 dark:text-white/80 text-sm leading-relaxed mb-2">
                     I write technical blogs and share what I learn here.
                   </p>
                   <p className="text-sm">
-                    <span className="text-white/60">Blog:</span>{" "}
-                    <span className="text-white">
+                    <span className="text-gray-500 dark:text-white/60">Blog:</span>{" "}
+                    <span className="text-gray-900 dark:text-white">
                       divyanshblogs.hashnode.dev
                     </span>
                   </p>
@@ -254,19 +254,19 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, y: -2 }}
-                className="flex items-start gap-4 p-5 bg-[#111111] rounded-xl border border-gray-800/50 hover:border-[#0A66C2]/30 transition-all duration-300 group"
+                className="flex items-start gap-4 p-5 bg-gray-50 dark:bg-[#111111] rounded-xl border border-gray-200 dark:border-gray-800/50 hover:border-[#0A66C2]/30 transition-all duration-300 group"
               >
                 <div className="p-3 bg-[#0A66C2] rounded-lg transition-all duration-300">
                   <FaLinkedin className="text-white text-xl" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-white font-semibold mb-1">LinkedIn</h4>
-                  <p className="text-white/80 text-sm leading-relaxed mb-2">
+                  <h4 className="text-gray-900 dark:text-white font-semibold mb-1">LinkedIn</h4>
+                  <p className="text-gray-600 dark:text-white/80 text-sm leading-relaxed mb-2">
                     Connect with me professionally on LinkedIn.
                   </p>
                   <p className="text-sm">
-                    <span className="text-white/60">Profile:</span>{" "}
-                    <span className="text-white">
+                    <span className="text-gray-500 dark:text-white/60">Profile:</span>{" "}
+                    <span className="text-gray-900 dark:text-white">
                       /in/divyansh-sharma-b05897286
                     </span>
                   </p>
@@ -279,19 +279,19 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, y: -2 }}
-                className="flex items-start gap-4 p-5 bg-[#111111] rounded-xl border border-gray-800/50 hover:border-white/30 transition-all duration-300 group"
+                className="flex items-start gap-4 p-5 bg-gray-50 dark:bg-[#111111] rounded-xl border border-gray-200 dark:border-gray-800/50 hover:border-white/30 transition-all duration-300 group"
               >
                 <div className="p-3 bg-black rounded-lg transition-all duration-300">
                   <FaXTwitter className="text-white text-xl" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-white font-semibold mb-1">X (Twitter)</h4>
-                  <p className="text-white/80 text-sm leading-relaxed mb-2">
+                  <h4 className="text-gray-900 dark:text-white font-semibold mb-1">X (Twitter)</h4>
+                  <p className="text-gray-600 dark:text-white/80 text-sm leading-relaxed mb-2">
                     I share thoughts and updates on tech, follow me on X.
                   </p>
                   <p className="text-sm">
-                    <span className="text-white/60">Username:</span>{" "}
-                    <span className="text-white">@divyansh1552005</span>
+                    <span className="text-gray-500 dark:text-white/60">Username:</span>{" "}
+                    <span className="text-gray-900 dark:text-white">@divyansh1552005</span>
                   </p>
                 </div>
               </motion.a>

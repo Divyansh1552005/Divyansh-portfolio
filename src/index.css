@@ -1,6 +1,8 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 /* Hide scrollbar for the entire page */
 /* For Webkit browsers (Chrome, Safari, Edge) */
@@ -35,5 +37,54 @@ body {
 
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
+}
+
+/* Theme toggle: circular reveal spreading from the click point */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 2;
+  animation: theme-reveal 0.6s ease-in-out;
+}
+
+@keyframes theme-reveal {
+  from {
+    clip-path: circle(0% at var(--x, 50%) var(--y, 50%));
+  }
+  to {
+    clip-path: circle(150% at var(--x, 50%) var(--y, 50%));
+  }
+}
+
+/* Sun/Moon icon that pops from the toggle button and spreads outward */
+@keyframes theme-icon-pop {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  15% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+.theme-icon-ripple {
+  animation: theme-icon-pop 0.6s ease-out forwards;
 }
 

@@ -15,10 +15,10 @@ const Education = () => {
 
   return (
     <>
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-800 to-transparent"></div>
       <section
         id="education"
-        className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#0b0b0b] font-sans"
+        className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#0b0b0b] font-sans"
         aria-labelledby="education-heading"
       >
         <div className="max-w-5xl mx-auto">
@@ -32,7 +32,7 @@ const Education = () => {
           >
             <h2
               id="education-heading"
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-tight"
             >
               Education
             </h2>
@@ -59,7 +59,7 @@ const Education = () => {
                   {/* Main Card */}
                   <div
                     onClick={() => toggleExpand(edu.id)}
-                    className="cursor-pointer py-6 px-4 sm:px-6 bg-[#111111] hover:bg-[#151515] transition-all duration-300 rounded-xl border border-gray-800/50 hover:border-blue-500/30"
+                    className="cursor-pointer py-6 px-4 sm:px-6 bg-gray-50 hover:bg-gray-100 dark:bg-[#111111] dark:hover:bg-[#151515] transition-all duration-300 rounded-xl border border-gray-200 dark:border-gray-800/50 hover:border-blue-500/30"
                     role="button"
                     aria-expanded={expandedIds.includes(edu.id)}
                     tabIndex={0}
@@ -86,7 +86,7 @@ const Education = () => {
                         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
                           <div className="flex-grow min-w-0">
                             {/* School Name / Degree */}
-                            <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white">
+                            <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 dark:text-white">
                               {edu.school}
                             </h3>
                             <p className="text-sm sm:text-base text-gray-500 font-normal mt-1">
@@ -99,7 +99,7 @@ const Education = () => {
                             <span className="text-xs sm:text-sm text-gray-500 font-medium whitespace-nowrap">
                               {edu.date}
                             </span>
-                            <div className="text-gray-500 group-hover:text-gray-400 transition-colors duration-300">
+                            <div className="text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-400 transition-colors duration-300">
                               {expandedIds.includes(edu.id) ? (
                                 <FiChevronUp size={20} />
                               ) : (
@@ -125,13 +125,13 @@ const Education = () => {
                             {/* Grade */}
                             <p className="text-xs sm:text-sm text-gray-500">
                               Grade:{" "}
-                              <span className="text-blue-400 font-medium">
+                              <span className="text-blue-600 dark:text-blue-400 font-medium">
                                 {edu.grade}
                               </span>
                             </p>
 
                             {/* Description as bullet points */}
-                            <ul className="space-y-2 text-sm sm:text-base text-gray-400 leading-relaxed">
+                            <ul className="space-y-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
                               {edu.desc
                                 .split(". ")
                                 .filter((point) => point.trim())

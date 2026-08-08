@@ -54,6 +54,7 @@ import ticmepng from "./assets/work_logo/tickme.webp";
 import blogspace from "./assets/work_logo/blogspace.webp";
 import linkshrinklogo from "./assets/work_logo/linkshrinklogo.webp";
 import querynestlogo from "./assets/work_logo/querynestlogo.webp";
+import codegradelogo from "./assets/work_logo/codegrade.webp";
 import myimg from "./assets/myimg.webp";
 
 export const SkillsInfo = [
@@ -323,6 +324,29 @@ export const projects = [
     ],
     github: "https://github.com/Divyansh1552005/Law_Bridge_Application",
     webapp: "https://law-bridge-application.vercel.app/",
+  },
+
+  {
+    id: 10,
+    title: "CodeGrade - AI-Powered Code Grading & Doubt Resolution Portal",
+    category: "webdev",
+    description:
+      "A full-stack LMS module where students solve tagged coding problems, graded automatically in a sandbox with AI qualitative feedback, and post doubts that get an AI-drafted answer requiring teacher approval before students can see it. Built with sandboxed code execution, a state-machine-enforced approval workflow, Zod validation, Redis-backed rate limiting, and prompt-injection defenses.",
+    image: codegradelogo,
+    tags: [
+      "React JS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "LangChain",
+      "Gemini API",
+      "Judge0",
+      "Redis",
+      "Zod",
+      "JWT Auth",
+    ],
+    github: "https://github.com/Divyansh1552005/CodeGrade",
+    webapp: "https://code-grade-eight.vercel.app/",
   },
 
   {
