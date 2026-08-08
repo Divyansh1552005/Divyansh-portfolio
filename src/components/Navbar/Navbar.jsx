@@ -135,12 +135,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "" : "px-[6vw] md:px-[6vw] lg:px-[8vw] xl:px-[12vw] 2xl:px-[20vw]"
+      className={`fixed top-0 w-full z-50 border-b border-gray-200 dark:border-white/10 transition-all duration-500 ${isScrolled ? "" : "px-[6vw] md:px-[6vw] lg:px-[8vw] xl:px-[12vw] 2xl:px-[20vw]"
         }`}
     >
       <div
         className={`text-gray-900 dark:text-white flex justify-between items-center transition-all duration-500 ${isScrolled
-          ? "bg-white/80 dark:bg-[#0d0d0d]/80 backdrop-blur-xl shadow-2xl border-b border-gray-200 dark:border-white/5 px-[6vw] md:px-[6vw] lg:px-[8vw] xl:px-[12vw] 2xl:px-[20vw] py-3"
+          ? "bg-white/80 dark:bg-[#0d0d0d]/80 backdrop-blur-xl shadow-2xl px-[6vw] md:px-[6vw] lg:px-[8vw] xl:px-[12vw] 2xl:px-[20vw] py-3"
           : "px-0 py-4"
           }`}
       >
