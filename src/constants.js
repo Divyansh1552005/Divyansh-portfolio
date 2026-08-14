@@ -328,10 +328,10 @@ export const projects = [
 
   {
     id: 10,
-    title: "CodeGrade - AI-Powered Code Grading & Doubt Resolution Portal",
+    title: "CodeGrade",
     category: "webdev",
     description:
-      "A full-stack LMS module where students solve tagged coding problems, graded automatically in a sandbox with AI qualitative feedback, and post doubts that get an AI-drafted answer requiring teacher approval before students can see it. Built with sandboxed code execution, a state-machine-enforced approval workflow, Zod validation, Redis-backed rate limiting, and prompt-injection defenses.",
+      "A full-stack LMS module for coding assessments with sandboxed auto-grading, AI qualitative feedback, and a teacher-approved AI doubt resolution workflow.",
     image: codegradelogo,
     tags: [
       "React JS",

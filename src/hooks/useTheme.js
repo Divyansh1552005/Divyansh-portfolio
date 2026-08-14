@@ -5,10 +5,24 @@ export function useTheme() {
     () => document.documentElement.classList.contains("dark")
   );
 
+  // Sync this instance when another component toggles the theme
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDark);
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  }, [isDark]);
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+    return () => observer.disconnect();
+  }, []);
 
-  return [isDark, setIsDark];
+  const toggle = (value) => {
+    const next = typeof value === "boolean" ? value : !isDark;
+    document.documentElement.classList.toggle("dark", next);
+    localStorage.setItem("theme", next ? "dark" : "light");
+    // MutationObserver will update all instances automatically
+  };
+
+  return [isDark, toggle];
 }
